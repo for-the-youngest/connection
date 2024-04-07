@@ -1,28 +1,29 @@
-let currentIndex = 0;
-    const totalImages = 3; // 총 이미지 수
-    const totalTables = 3; // 총 테이블 수
+let currentSlideIndex = 0;
+    const slides = document.querySelectorAll('.rank-ctn');
+    const tables = document.querySelectorAll('table');
 
-    function changeImage(direction) {
-        currentIndex = (currentIndex + direction + totalImages) % totalImages;
+    function changeSlide(direction) {
+        currentSlideIndex = (currentSlideIndex + direction + slides.length) % slides.length;
 
-        // 이미지를 순환하도록 클래스 조작
-        const images = document.querySelectorAll('.rank-img');
-        images.forEach((image, index) => {
-          if (index === currentIndex) {
-              image.classList.add('active');
-          } else {
-              image.classList.remove('active');
-          }
-      });
+        // 현재 슬라이드로 이동
+        slides.forEach((slide, index) => {
+            if (index === currentSlideIndex) {
+                slide.style.transform = 'translateX(0)';
+            } else if (index === currentSlideIndex - 1 || (currentSlideIndex === 0 && index === slides.length - 1)) {
+                slide.style.transform = 'translateX(-100%)';
+            } else if (index === currentSlideIndex + 1 || (currentSlideIndex === slides.length - 1 && index === 0)) {
+                slide.style.transform = 'translateX(100%)';
+            } else {
+                slide.style.transform = 'translateX(200%)';
+            }
+        });
 
-      // 테이블도 순환하도록 클래스 조작
-      const tables = document.querySelectorAll('table');
-      tables.forEach((table, index) => {
-          if (index === currentIndex) {
-              table.classList.add('rank-show');
-          } else {
-              table.classList.remove('rank-show');
-          }
-      });
-  }
-    
+        // 현재 테이블로 이동
+        tables.forEach((table, index) => {
+            if (index === currentSlideIndex) {
+                table.classList.add('rank-show');
+            } else {
+                table.classList.remove('rank-show');
+            }
+        });
+    }

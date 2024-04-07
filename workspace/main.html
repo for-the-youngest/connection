@@ -18,7 +18,7 @@
       <div class="intro-bar">
         <div class="logo">
           <a href="./default.html">
-            <img src="./Connection.png" alt="">
+            <img src="./img/Connection.png" alt="">
           </a>
         </div>
         <div class="header-nav">
@@ -39,7 +39,7 @@
           </div>
           <div class="profile">
             <a href="">
-              <img src="./profile-img.png" alt="">
+              <img src="./img/profile-img.png" alt="">
             </a>
           </div>
         </div>
@@ -48,13 +48,12 @@
     
     <main class="main">
       <section class="main-rank">
+       <div class="main-ctn-ctn">
+
         <div class="rank-ctn">
-          <img src="./main-banner-img1.PNG" alt="첫번째 이미지" class="rank-img active">
-          <img src="./main-banner-img1.PNG" alt="두번째 이미지" class="rank-img">
-          <img src="./main-banner-img2.PNG" alt="세번째 이미지" class="rank-img"> 
-          <h2 class="rank-img">Take The No.1 Ranking</h2>
-            
-                <table class="rank-show">
+          <img src="./img/main-banner-img1.PNG" alt="첫번째 이미지" class="rank-img active">
+          <table class="rank-show">
+                  <h2 class="rank-img">Take The No.1 Ranking</h2>
                   <tr>
                       <td>1.</td>
                       <td>팀 로고</td>
@@ -80,9 +79,13 @@
                       <td>팀 로고</td>
                       <td>팀 이름</td>
                   </tr>
-              </table> 
-
-              <table>
+              </table>
+        </div> 
+        
+        <div class="rank-ctn">
+          <img src="./img/main-banner-img1.PNG" alt="두번째 이미지" class="rank-img">
+          <table class="rank-show">
+                <h2 class="rank-img">Take The No.2 Ranking</h2>
                 <tr>
                     <td>1.</td>
                     <td>팀 로고</td>
@@ -109,8 +112,12 @@
                     <td>팀 이름</td>
                 </tr>
             </table>
-            
-            <table>
+            </div>
+
+          <div class="rank-ctn">
+            <img src="./img/main-banner-img2.PNG" alt="세번째 이미지" class="rank-img">
+            <table class="rank-show">
+              <h2 class="rank-img">Take The No.3 Ranking</h2>
               <tr>
                   <td>1.</td>
                   <td>팀 로고</td>
@@ -137,10 +144,12 @@
                   <td>팀 이름이란 뭘까 3</td>
               </tr>
           </table> 
+        </div>
 
+      </div>
 
-          <div onclick="changeImage(-1)" class="prev">&lt</div>
-          <div onclick="changeImage(1)" class="next">&gt</div>
+          <div onclick="changeSlide(-1)" class="prev">&lt</div>
+          <div onclick="changeSlide(1)" class="next">&gt</div>
         </div>
       </section>
     </main>
@@ -148,7 +157,7 @@
     <footer>
       <div class="footer-container">
         <div class="footer-logo">
-          <img src="./footer/img/Connection.png" alt="">
+          <img src="./img/footer/img/Connection.png" alt="">
         </div>
         <div class="footer-text">
           <ul>
@@ -164,7 +173,7 @@
           </ul>
         </div>
         <div class="footer-img">
-          <img src="./footer/img/footer-img.jpg" alt="">
+          <img src="./img/footer/img/footer-img.jpg" alt="">
         </div>
       </div>
     </footer>
