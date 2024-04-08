@@ -1,29 +1,53 @@
-let currentSlideIndex = 0;
-    const slides = document.querySelectorAll('.rank-ctn');
-    const tables = document.querySelectorAll('table');
+// //슬라이드 이미지 감싸고 있는 부모요소
+let $bannerBox = $(".main-rank-div");
+// //슬라이드 이미지
+let $bannerImgs = $(".main-backgroundImg");
 
-    function changeSlide(direction) {
-        currentSlideIndex = (currentSlideIndex + direction + slides.length) % slides.length;
+//슬라이드 이미지 너비
+let bannerWidth = 1263;
+//슬라이드 이미지 인덱스 번호
+let currentIdx = 0;
+//총 슬라이드 이미지 수
+let slideCnt = 3;
 
-        // 현재 슬라이드로 이동
-        slides.forEach((slide, index) => {
-            if (index === currentSlideIndex) {
-                slide.style.transform = 'translateX(0)';
-            } else if (index === currentSlideIndex - 1 || (currentSlideIndex === 0 && index === slides.length - 1)) {
-                slide.style.transform = 'translateX(-100%)';
-            } else if (index === currentSlideIndex + 1 || (currentSlideIndex === slides.length - 1 && index === 0)) {
-                slide.style.transform = 'translateX(100%)';
-            } else {
-                slide.style.transform = 'translateX(200%)';
-            }
-        });
+console.log(`slideCnt : ${slideCnt}`);
 
-        // 현재 테이블로 이동
-        tables.forEach((table, index) => {
-            if (index === currentSlideIndex) {
-                table.classList.add('rank-show');
-            } else {
-                table.classList.remove('rank-show');
-            }
-        });
+$(".main-nextBtn-slide").on("click", moveNext);
+function moveNext() {
+    console.log(`슬라이드 다음 클릭`);
+    currentIdx++;
+    console.log(`currentIdx : ${currentIdx}`);
+    
+    $bannerBox.css("left", -(currentIdx * bannerWidth));
+    $bannerBox.css("transition", "0.5s ease");
+    checkEnd();
+}
+
+
+$(".main-prevBtn-slide").on("click", function () {
+    console.log(`슬라이드 이전 클릭`);
+    currentIdx--;
+    console.log(`currentIdx : ${currentIdx}`);
+
+    $bannerBox.css("left", -(currentIdx * bannerWidth));
+    $bannerBox.css("transition", "0.5s ease");
+    checkEnd();
+});
+
+checkEnd();
+
+//처음 이미지와 마지막 이미지는 화살표 감추기
+function checkEnd() {
+    if (currentIdx <= 0) {
+        $(".main-prevBtn-slide").css("display", "none");
+    } else {
+        $(".main-prevBtn-slide").css("display", "block");
     }
+
+    if (currentIdx >= slideCnt - 1) {
+        $(".main-nextBtn-slide").css("display", "none");
+    } else {
+        $(".main-nextBtn-slide").css("display", "block");
+    }
+}
+
