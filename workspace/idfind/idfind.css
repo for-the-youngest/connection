@@ -1,0 +1,208 @@
+* {
+  font-family: "Noto Sans KR", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  position: sticky;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0.5px 0.2px 0px 0px gray;
+  top: 0px;
+  border-bottom: 1px solid lightgrey;
+  background-color: white;
+}
+
+.intro-bar {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-nav {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.menu-bar {
+  margin-right: 30px;
+}
+
+.logo img {
+  max-height: 100%;
+  max-width: 100%;
+}
+
+.profile img {
+  max-height: 100%; /* 로고 이미지 높이 100%로 설정 */
+  max-width: 100%; /* 로고 이미지 최대 너비 100%로 설정 */
+}
+
+a::visited {
+  color: black;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+ul {
+  list-style: none;
+}
+
+.menu {
+  cursor: pointer;
+}
+
+.menu-community {
+  font-weight: 500;
+}
+
+.communityHiddenMenu {
+  display: none;
+  width: 200px;
+  position: absolute;
+  transform: translate(-60px, 80px);
+}
+
+.community-hiddenMenu-ul {
+  display: flex;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  border-radius: 8px;
+  border: 1px solid rgba(112, 115, 124, 0.22);
+  background-color: rgb(255, 255, 255);
+}
+
+.community-hiddenMenu-li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 168px;
+  /* font-size: 0.875rem; */
+  letter-spacing: 0px;
+  font-weight: 500;
+}
+
+* {
+  font-family: "Noto Sans KR", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 150px;
+  margin: auto;
+  padding: 0;
+  position: absolute;
+  bottom: 0;
+  border-top: 1px solid lightgrey;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.footer-logo {
+  line-height: 150px;
+  margin-left: 100px;
+}
+
+.footer-text {
+  line-height: 150px;
+  margin: auto;
+}
+
+.footer-text li {
+  list-style: none;
+}
+
+.text-top {
+  position: absolute;
+  top: -40px;
+}
+
+.text-bottom {
+  position: absolute;
+  top: 40px;
+}
+
+.footer-img {
+  line-height: 150px;
+  margin-right: 100px;
+}
+
+/* idfind.css 시작점 */
+
+.idfind-banner-container {
+  background-color: springgreen;
+  height: 50px;
+  margin-bottom: 50px;
+}
+
+.idfind-banner-list {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  margin-bottom: 50px;
+  font-size: 25px;
+}
+
+.idfind-checkemail-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+}
+
+.emailcheck {
+  margin-right: 50px;
+}
+
+.idfind-checkmail-checkconfirm {
+  margin-top: 50px;
+}
+
+div {
+  margin: 0;
+  padding: 0;
+}
+#next{
+  color: white;
+  margin-top: 10px;
+}
+
+.idfind-next-button {
+  margin-top: 100px;
+  width: 200px;
+  height: 33px;
+  background-color: blue;
+  text-align: center;
+
+}
+
+#emailnumber{
+  
+}
+
+.idfind-header-container{
+  max-width: 500px;
+  margin: auto;
+
+
+}
