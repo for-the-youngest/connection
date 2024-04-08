@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>프로필 수정</title>
+  <link rel="stylesheet" href="../info-edit/info-edit.css">
+</head>
+<!-- 페이지 이름 - 기능이름 - 태그역할 -->
+<body style="overflow: auto;">
+  <div class="infoEdit-ctn" id="infoEdit-mainWrap">
+    <div class="infoEdit-boundaryCtn infoEdit-boundaryCtnSetting" id="infoEdit-wrap" style="max-width:1200px;">
+
+      <h2>프로필 수정</h2>
+
+      <section class="infoEdit-adjustCtn">
+        <div class="infoEdit-body">
+          <div class="infoEdit-bodyCtn">
+            <div class="infoEdit-form">
+              <fieldset>
+                <div class="infoEdit-formInput">
+
+                  <div class="infoEdit-formWrap">
+                    <label>
+                      이름
+                    </label>
+                    <input type="text" name="username" placeholder="이름을 입력해주세요">
+                  </div>
+
+                  <div class="infoEdit-formMessage">
+                    <p class="infoEdit-formNoticeText">프로필에 표시되는 이름이에요</p>
+                  </div>
+
+                </div>
+
+                <div class="infoEdit-formInput">
+
+                  <div class="infoEdit-formWrap">
+                    <label>
+                      닉네임
+                    </label>
+                    <input type="text" name="usernickname" placeholder="닉네임을 입력해주세요">
+                  </div>
+
+                  <div class="infoEdit-formMessage">
+                    <p class="infoEdit-formNoticeText">프로필에 표시되는 닉네임이에요</p>
+                  </div>
+                  
+                </div>
+
+              </fieldset>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="infoEdit-adjustCtn">
+        <div class="infoEdit-body">
+          <div class="infoEdit-bodyCtn">
+            <div class="infoEdit-form">
+              <fieldset>
+                <div class="infoEdit-formInput" style="margin-bottom: 30px;">
+
+                  <div class="infoEdit-formWrap">
+                    <label>
+                      성별
+                    </label>
+                    <ul class="infoEdit-genderCtn">
+                      <li class="infoEdit-genderItem">
+                        <input type="radio" class="infoEdit-genderSelect" id="gender-male"
+                        value="gender-male">
+                        <label for="gender-male" class="infoEdit-gender">
+                          남자
+                        </label>
+                      </li>
+
+                      <li class="infoEdit-genderItem">
+                        <input type="radio" class="infoEdit-genderSelect" id="gender-female"
+                        value="gender-female">
+                        <label for="gender-female" class="infoEdit-gender">
+                          여자
+                        </label>
+                      </li>
+                    </ul>
+                  </div>
+
+
+                </div>
+              </fieldset>
+            </div>
+          </div>
+        </div>
+      </section>
+
+<!-- 생년월일 수정 -->
+
+      <section class="infoEdit-adjustCtn">
+        <div class="infoEdit-body">
+          <div class="infoEdit-bodyCtn">
+            <div class="infoEdit-form">
+              <fieldset>
+
+                <div class="infoEdit-formInput">
+
+                  <div class="infoEdit-birthWrap">
+                    <label>
+                      생년월일
+                    </label>
+                    <!-- 여기에 생년월일 버튼 -->
+                    <select class="infoEdit-birthYear">
+                      <option>1999년</option>
+                    </select>
+                    <select class="infoEdit-birthMonth">
+                      <option selected>4월</option>
+                    </select>
+                    <select class="infoEdit-birthDay">
+                      <option selected>13일</option>
+                    </select>
+                  </div>
+
+                </div>
+
+              </fieldset>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="infoEdit-btnLeft infoEdit-btnRight"> 
+        <button class="infoEdit-btnCancel">
+          취소하기
+        </button>
+        <button>
+          저장하기
+        </button class="infoEdit-btnSave">
+      </div>
+
+    </div>
+  </div>
+</body>
+</html>
