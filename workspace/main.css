@@ -148,39 +148,42 @@ footer {
   margin-right: 100px;
 }
 
-.main-ctn-ctn{
-  position: relative; /* 상대 위치 설정 */
-  width: 100%; /* 컨테이너 너비 설정 */
+/* 메인페이지 랭킹 css */
+.main-rank-ctn{
+  position: relative; 
+  width: 100%; 
   overflow: hidden; 
-  display: flex; /* 이미지들을 가로로 배치하기 위해 추가 */
+  display: flex;
 }
 
-.rank-ctn{
+.main-rank-div{
   position: relative;
   width: 100%;
   display: flex;
   justify-content: center; 
   align-items: center; 
   text-align: center; 
+  transition: opacity 0.5s ease;
 }
 
-.rank-show{
-  /* margin: auto; */
-  
-}
-
-.rank-img{
+.main-backgroundImg{
   display: block;
-  width: 1200px;
+  width: 1263px;
   height : 350px;
-  transition: opacity 0.5s ease; /* 페이드 인/아웃 효과 */
-  /* opacity: 0; */
+  transition: opacity 0.5s ease;
+}
+
+.main-title-h2{
+  display: block;
+  width: 1263px;
+  height : 350px;
+  transition: opacity 0.5s ease;
 }
 
 h2 {
   position: absolute;
   color: white;
-  top: 20px;
+  top: 0px;
   align-items: center;
   text-align: center;
   text-decoration: underline 1px;
@@ -193,8 +196,7 @@ table {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  /* opacity: 0; */
-  transition: opacity 0.5s ease; /* 페이드 인/아웃 효과 */
+  transition: opacity 0.5s ease;
 }
 
 /* 셀 스타일 설정 */
@@ -214,36 +216,34 @@ td:not(:last-child) {
   border-right: 1px solid white;
 }
 
-.prev, 
-.next {
+.main-prevBtn-slide, 
+.main-nextBtn-slide {
   position: absolute;    
   text-align: center;
   line-height: 50%;
   font-size: 70px;
+  font-weight: 100;
   top: 220px;
   cursor: pointer;
   color: white;
 }
 
-.prev:hover,
-.next:hover{
+.main-prevBtn-slide:hover,
+.main-nextBtn-slide:hover{
   color: skyblue;
 }
 
-.prev {
+.main-prevBtn-slide {
   left : 200px;
   padding-right: 5px;
 }
 
-.next {
+.main-nextBtn-slide {
   right: 200px;
   padding-left: 5px;
 }
 
-.rank-show{
-  opacity: 1;
-}
-
-.rank-img .active{
-  opacity: 1;
+.main-amblum{
+  width: 30px;
+  height: 30px;
 }
