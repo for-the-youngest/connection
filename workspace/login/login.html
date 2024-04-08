@@ -3,7 +3,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="./default.css" />
+    <link rel="stylesheet" href="login.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
     <link
@@ -11,20 +11,50 @@
       rel="stylesheet"
     />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script defer="" src="./default.js"></script>
-    <script defer src="./login.js"></script>
+
+    <script defer="" src="login.js"></script>
   </head>
-  
+
   <body>
     <!-- 헤더 들어갈 자리 -->
-    <div id="header-placeholder"></div>
+    <header>
+      <div class="intro-bar">
+        <div class="logo">
+          <a href="./default.html">
+            <img src="../login/img/Connection.png" alt="" />
+          </a>
+        </div>
+        <div class="header-nav">
+          <div class="menu-bar">
+            <ul class="menu">
+              <li class="menu-community">커뮤니티</li>
+            </ul>
+          </div>
+          <div class="communityHiddenMenu">
+            <ul class="community-hiddenMenu-ul">
+              <li class="community-hiddenMenu-li">
+                <a href="#" class="community-hiddenMenu-a">자유 게시판</a>
+              </li>
+              <li class="community-hiddenMenu-li">
+                <a href="#" class="community-hiddenMenu-a">리그 게시판</a>
+              </li>
+            </ul>
+          </div>
+          <div class="profile">
+            <a href="">
+              <img src="../login/img/profile-img.png" alt="" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
     <!-- <div class="__entire"> -->
-      <!-- section 태그 id명 추가..(필요시 수정) -->
-      <section id="auth-login">
-          <div id = "LoginApp" class="login-content" sytle ="">
-          <div class = "auth-login">
-          <div class = "auth-login__container">
-            <img src="Connection1.png" id="login-logo" />
+    <!-- section 태그 id명 추가..(필요시 수정) -->
+    <section id="auth-login">
+      <div id="LoginApp" class="login-content" sytle="">
+        <div class="auth-login">
+          <div class="auth-login__container">
+            <img src="../login/img/Connection.png" id="login-logo" />
             <h3 id="login-text">
               --------------------------로그인--------------------------
             </h3>
@@ -52,42 +82,68 @@
                       placeholder="비밀번호를 입력하세요"
                     />
                   </div>
-                  <br/>
+                  <br />
                   <!-- 수정한 부분! -->
                   <div class="auth-id-remember">
                     <label for="id-remember">
-                      <input type="checkbox" id ="id-remember">&nbsp;&nbsp;아이디 저장하기
+                      <input
+                        type="checkbox"
+                        id="id-remember"
+                      />&nbsp;&nbsp;아이디 저장하기
                     </label>
                   </div>
                   <br />
                   <button type="submit" class="auth-login__button--login">
                     로그인
                   </button>
-                  
+
                   <br />
                   <!-- 수정한 부분 -->
                   <div onclick="" class="auth-login__button--kakao">
                     카카오 로그인하기
                   </div>
-                  <br/>
-                  <div class = "auth-login__button--extra">
+                  <br />
+                  <div class="auth-login__button--extra">
                     <a href="">아이디/비밀번호 찾기</a>
                     <!-- 수정 -->
                     <a onclick="" href="">회원가입</a>
                   </div>
-                  
                 </div>
               </fieldset>
               <div class="auth-login__divider"></div>
-
-            
-             </form>
-            </div>
+            </form>
           </div>
         </div>
-      
+      </div>
     </section>
     <!-- footer 들어갈 자리 -->
-    <div id="footer-placeholder"></div>
+    <footer>
+      <div class="footer-container">
+        <div class="footer-logo">
+          <img src="../login/img/Connection.png" alt="" />
+        </div>
+        <div class="footer-text">
+          <ul>
+            <li class="text-top">
+              이용약관&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;위치기반
+              서비스
+              이용약관&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;개인정보처리방침&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;개인정보
+              보호센터
+            </li>
+            <li class="text-middle">
+              주식회사 커넥션 | 서울특별시 강남구 테헤란로 26길 12 제일비전타워
+              13층 | 고객센터 1234-1234
+            </li>
+            <li class="text-bottom">
+              Copyright ⓒ 2024 (주)커넥션 All Rights Reserved.Hosting By
+              (주)주막위
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-img">
+        <img src="../login/img/footer-img.jpg" alt="" />
+      </div>
+    </footer>
   </body>
 </html>
