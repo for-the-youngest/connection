@@ -1,18 +1,39 @@
-$(".menu").on("click", checkMenuOn);
-// $(".b-pN--b-number").on("click", checkPageNum);
-// $(".bpNbnumber1").on("click", checkPageNum1);
+$(".header-menu").on("click", checkMenuOn);
 
-
-
-let $communityHiddenMenu = $(".communityHiddenMenu");
-// let $bpNbnumber1 = $(".bpNbnumber1");
-// let #b-pN--b-number = $(".b-pN-b-number");
+let $headerCommunityHiddenMenu = $(".header-communityHiddenMenu");
 
 function checkMenuOn() {
   // 현재 display 속성을 가져와서 "none"인지 확인
-  if ($communityHiddenMenu.css("display") === "none") {
-    $communityHiddenMenu.css("display", "block");
+  if ($headerCommunityHiddenMenu.css("display") === "none") {
+    $headerCommunityHiddenMenu.css("display", "block");
   } else {
-    $communityHiddenMenu.css("display", "none");
+    $headerCommunityHiddenMenu.css("display", "none");
   }
 };
+
+$(".main-leave").on("click", leaveOn);
+
+let $mypageLeaveModal = $(".mypage-leaveModal");
+
+function leaveOn() {
+  // 현재 display 속성을 가져와서 "none"인지 확인
+  if ($mypageLeaveModal.css("display") === "none") {
+    $mypageLeaveModal.css("display", "block");
+    $(".main").css("opacity", 0.20)
+    $(".footer").css("opacity", 0.20)
+  } 
+};
+
+$(".modal-barButton").on("click", leaveOff);
+
+function leaveOff() {
+  // 현재 display 속성을 가져와서 "none"인지 확인
+  if ($mypageLeaveModal.css("display") === "block") {
+    $mypageLeaveModal.css("display", "none");
+    $(".main").css("opacity", 1)
+    $(".footer").css("opacity", 1)
+  } 
+};
+
+
+
