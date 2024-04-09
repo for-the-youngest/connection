@@ -1,3 +1,4 @@
+
 * {
   font-family: "Noto Sans KR", sans-serif;
   margin: 0;
@@ -222,9 +223,7 @@ ul{
     font-weight: 600;
   }
 
-  .fw-detail1{
-    /* display: flex; */
-
+  .main-freeWritingDetail1{
     height: 120px;
     margin-top: 80px;
     margin-left: 40px;
@@ -236,7 +235,7 @@ ul{
 
   }
 
-  .fw-detail{
+  .main-freeWritingDetail{
     height: 120px;
     margin-top: 20px;
     margin-left: 40px;
@@ -248,41 +247,40 @@ ul{
   }
 
 
-.fwd_box{
-    /* display: flex; */
+.main-freeWritingDetailBox{
     width: 430px;
     height: 100%;
 }
 
-.fwd_box a{
+.main-freeWritingDetailBox a{
     display: flex;
     flex-direction: column;
     height: 100%;
 }
 
-  .fwd-title{
+  .main-freeWritingDetailTitle{
     margin-top: 10px;
   }
 
-  .fwdt-text{
+  .main-freeWritingDetailTitleText{
     font-size: 20px;
     font-weight: 700;
   }
 
-  .fwd-type{
+  .main-freeWritingDetailType{
     margin-top: 12px;
     font-size: 13px;
     color: #5079E2;
     font-weight: 600;
   }
 
-  .fwd-detail-box{
+  .main-freeWritingDetailBoxBar{
     display: flex;
     justify-content: space-between;
     margin-top: 10px;
   }
 
-  .fwd-nickname{
+  .main-freeWritingDetailNickname{
     font-size: 14px;
     font-weight: 600;
   }
@@ -328,18 +326,26 @@ ul{
     line-height: 150px;
     margin-right: 100px;
   }
-
+  
+  .main-container{
+    margin: auto;
+  
+    max-width: 1200px;
+  }
 
   .mypage-leaveModal{
     display: none;
     position: fixed;
-    top: 450px;
-    left: 1000px;
+    top: 50%;
+    left: 50%;
+    transform:translate(-50%, -50%);
     background-color: #E9F6FF;
     border-radius: 30px;
     width: 500px;
     height: 350px;
     padding-top: 30px;
+    justify-content: center;
+    justify-items: center;
   }
 
   .modal-bar{
@@ -361,11 +367,11 @@ ul{
   }
 
   .modal-text{
-    color: rgba(55, 56, 60, 0.61);;
     margin-top: 70px;
     margin-left: 30px;
     margin-right: 30px;
     font-size: 20px;
+    color: rgba(55, 56, 60, 0.61);
     font-weight: 500;
   }
 
@@ -383,8 +389,8 @@ ul{
     outline: none;
     background-color: transparent;
     border: 1px solid rgba(112, 115, 124, 0.22);
-    color: rgb(23, 23, 25);
     border-radius: 10px;
+    color: rgb(23, 23, 25);
     font-size: 16px;
     font-weight: 400;
   }
@@ -405,5 +411,6 @@ ul{
   .modal-submitText{
     font-weight: 600;
   }
+
 
   
