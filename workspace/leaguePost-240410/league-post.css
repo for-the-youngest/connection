@@ -1,0 +1,296 @@
+main{
+  max-width: 1000px;
+  padding: 0;
+  margin: auto;
+}
+/* 게시글 상단 */
+/* 게시글 프로필 */
+.leaguePost-profileCtn{
+  border-bottom: 1px solid lightgrey;
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.leaguePost-profile{
+  line-height: 10px;
+}
+
+.leaguePost-profile img{
+  width: 70px;
+  height: 70px;
+}
+
+.leaguePost-userNicknameCtn{
+  position: absolute;
+  left: 80px;
+  height: 70px;
+  line-height: 10px
+}
+
+.leaguePost-userNickname{
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.leaguePost-date{
+  color: lightgrey;
+  position: absolute;
+  top: 25px;
+  font-size: 14px;
+}
+
+.leaguePost-menuBtn{
+  border: none;
+  background-color: white;
+}
+
+.leaguePost-menuBtn img{
+  width: 20px;
+  height: 35px;
+}
+
+/* 게시글 제목 */
+.leaguePost-titleCtn{
+  border-bottom: 1px solid lightgrey;
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.leaguePost-title{
+  font-size: 20px;
+  margin: 0 5px;
+  color: rgb(170, 170, 170);
+}
+
+.leaguePost-titleContnet{
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0 10px;
+  color: rgb(80, 80, 80);
+}
+
+/* 게시글 내용 */
+.leaguePost-top{
+  border-bottom: 2px solid lightgrey;
+}
+
+.leaguePost-routeCtn{
+  width: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10px 5px;
+}
+
+.leaguePost-routeCtn a{
+  text-decoration-line: none;
+}
+
+.leaguePost-route{
+  font-size: 14px;
+  font-weight: bold;
+}
+
+a:visited{
+  color: rgb(80, 80, 80);
+}
+
+.leaguePost-ctCtn{
+  width: 1000px;
+}
+
+.leaguePost-content{
+  font-size: 22px;
+}
+
+.leaguePost-inventoryCtn{
+  display: flex;
+  align-items: center;
+}
+
+.leaguePost-inventoryBtn img{
+  width: 50px;
+  height: 50px;
+}
+
+.leaguePost-inventoryBtn{
+  border: none;
+  background-color: white;
+}
+
+.leaguePost-likeBtn img{
+  width: 50px;
+  height: 20px;
+}
+
+.leaguePost-likeBtn{
+  border: none;
+  background-color: white;
+}
+
+.leaguePost-viewBtn img{
+  width: 50px;
+  height: 20px;
+}
+
+.leaguePost-viewBtn{
+  border: none;
+  background-color: white;
+}
+
+/* 게시글 중단 */
+.leaguePost-middle{
+  border-bottom: 2px solid lightgrey;
+}
+/* 게시글 댓글 */
+.leaguePost-comments{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.leaguePost-commentText{
+  border-radius: 5px;
+  font-size: 14px;
+  text-align: center;
+  line-height: 35px;
+  background-color: #E9F6FF;
+  width: 60px;
+  height: 35px;
+}
+
+.leaguePost-commentInput{
+  width: 850px;
+  height: 30px;
+  border-radius: 5px;
+  border: 1px solid lightgrey;
+}
+
+.leaguePost-commentSubmit{
+  background-color: #E9F6FF;
+  height: 35px;
+  width: 60px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.leaguePost-commentCtn{
+  display: flex;
+  align-items: center;
+  height: 100px;
+}
+
+.leaguePost-commentProfileImg{
+  font-size: 50px;
+}
+
+.leaguePost-commentUserNickname{
+  margin-left: 5px;
+}
+
+.leaguePost-commentUserNicknameText{
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+  color: rgb(80, 80, 80);
+}
+
+.leaguePost-commentdate{
+  font-size: 14px;
+  margin: 0;
+  color: lightgrey;
+}
+
+.leaguePost-commentMenuBtn{
+  border: none;
+  background-color: white;
+}
+
+.leaguePost-commentMenuBtn img{
+  width: 20px;
+  height: 35px;
+}
+
+.leaguePost-commentContentCtn{
+  width: 600px;
+  height: 80px;
+  background-color: #E9F6FF;
+  border-radius: 10px;
+  margin: 10px auto;
+}
+
+.leaguePost-commentContent{
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 80px;
+  margin: 0 0 0 10px;
+}
+
+/* 게시글 하단 */
+.leaguePost-freeWritingDetail{
+  display: flex;
+  height: 150px;
+  border-radius: 30px;
+  background-color: #E9F6FF;
+  margin: 30px 0;
+}
+
+.leaguePost-freeWritingDetailBox{
+  width: 1200px;
+  padding-right: 70px;
+  margin-left: 80px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.leaguePost-freeWritingDetailType{
+  font-size: 13px;
+  color: #5079E2;
+  margin-bottom: 25px;
+  font-weight: 600;
+}
+
+.leaguePost-freeWritingDetailTitle{
+  margin-bottom: 30px;
+}
+
+.leaguePost-freeWritingDetailText{
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.leaguePost-freeWritingDetailNickname{
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.leaguePost-freeWritingDetailCount{
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.leaguePost-freeWritingDetailName{
+  display: flex;
+  justify-content: space-between;
+}
+
+.leaguePost-pageNumber{
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 70px;
+}
+
+.leaguePost-pageNumberBox{
+  width: 500px;
+  height: 50px;
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: stretch;
+  background-color: #E9F6FF;
+  border-radius: 9999px;
+}
