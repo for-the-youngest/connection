@@ -27,8 +27,7 @@ div{
   padding: 0;
   border: 0;
   vertical-align: baseline;
-  /* display: block;
-  unicode-bidi: isolate; */
+  /* display: block; */
 }
 
 h2{
@@ -84,10 +83,6 @@ fieldset{
     min-inline-size: min-content;
 }
 
-/* .infoEdit-formInput{
-
-} */
-
 fieldset>div{
   margin-bottom: 30px;
 }
@@ -120,7 +115,7 @@ label{
   padding: 14px 15px;
   font-size: 16px;
   box-sizing: border-box;
-  -webkit-transition: all 0.3s ease-in-out;
+  /* -webkit-transition: all 0.3s ease-in-out; */
   outline: none;
 }
 
@@ -241,7 +236,7 @@ input[type="radio" i] {
 
 .infoEdit-genderSelect:checked+label{
   color: #1570ff;
-    border: 1px solid #1570ff;
+  border: 1px solid #1570ff;
 }
 
 .infoEdit-genderSelect+label{
@@ -320,6 +315,114 @@ button {
   cursor: pointer;
 }
 
-/* .infoEdit-btnSave{
-  display: inline-block;
+.infoEdit-birthWrapCtn{
+  display: flex;
+  flex-wrap: wrap;
+  border-radius: 12px;
+  margin: 5px;
+  padding: 5px;
+}
+
+.infoEdit-birthWrap select::-webkit-scrollbar-thumb{
+  border-radius: 3px;
+}
+
+.infoEdit-birthWrap select::-webkit-scrollbar-track{
+  border-radius: 6px;
+}
+
+select.infoEdit-birthYear{
+  width: 32%;
+  position: relative;
+  display: list-item;
+  border-radius: 12px;
+  padding: 10px;
+  cursor: pointer;
+  margin: 5px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  color: #4b5a64;
+  background-color: #ffffff;
+  border: 1px solid #d9e0e6
+    
+}
+
+select.infoEdit-birthMonth{
+  width: 32%;
+  position: relative;
+  display: list-item;
+  border-radius: 12px;
+  padding: 10px;
+  cursor: pointer;
+  margin: 5px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  color: #4b5a64;
+  background-color: #ffffff;
+  border: 1px solid #d9e0e6
+}
+
+select.infoEdit-birthDay{
+  width: 32%;
+  position: relative;
+  display: list-item;
+  border-radius: 12px;
+  padding: 10px;
+  cursor: pointer;
+  margin: 5px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  color: #4b5a64;
+  background-color: #ffffff;
+  border: 1px solid #d9e0e6
+}
+
+.infoEdit-btnCancel{
+  transition: .1s;
+}
+
+.infoEdit-btnCancel:hover{
+  filter: brightness(0.9);
+}
+
+.infoEdit-btnSave{
+  transition: .1s;
+}
+
+.infoEdit-btnSave:hover{
+  filter: brightness(0.9);
+}
+
+/* .infoEdit-errorMessage{
+  display: none;
+}
+
+.infoEdit-errorMessageName{
+  display: none;
+}
+
+.infoEdit-errorMessageNickName{
+  display: none;
+  
 } */
+
+/* #infoEdit-userName{
+  display: none;
+} */
+
+#infoEdit-errMsgName{
+  display: none;
+  color: #fa5963;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+#infoEdit-errorMsgNkName{
+  display: none;
+  color: #fa5963;
+  font-size: 12px;
+  font-weight: 500;
+}

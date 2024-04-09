@@ -104,13 +104,14 @@ ul{
     flex-direction: column;
     width: 100%;
   }
-
+/* ================================================================ */
 .notice{
   margin-top: 50px;
   display: flex;
   flex-direction: column;
   width: 100%;
   max-width: 1200px;
+  margin-left: 180px;  
 }
 
 .notice_title_bar{
@@ -159,12 +160,13 @@ ul{
 .nd-33{
   font-weight: 600;
 }
-
+/* ====================================================================== */
 .free-writing{
   width: 100%;
   max-width: 1200px;
   margin-top: 30px;
   margin-bottom: 60px;
+  margin-left: 180px;
 }
 
 .writing_type_choice{
@@ -212,7 +214,7 @@ ul{
 
 
 
-  footer {
+  /* footer {
     display: flex;
     justify-content: center;
     align-items: center; 
@@ -266,7 +268,7 @@ ul{
     position: fixed;
     bottom: 150px;
     right: 150px;
-  }
+  } */
 
 
 
