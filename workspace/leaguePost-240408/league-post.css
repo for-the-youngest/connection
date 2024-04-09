@@ -1,0 +1,66 @@
+main{
+  max-width: 1200px;
+  padding: 0;
+  margin: auto;
+}
+
+.leaguePost-top{
+  border: 1px solid red;
+}
+
+.leaguePost-profileCtn{
+  border-bottom: 1px solid lightgrey;
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.leaguePost-userNicknameCtn{
+  position: absolute;
+  left: 80px;
+}
+
+.leaguePost-userNicknameCtn{
+  border: 1px solid green;
+  height: 70px;
+  line-height: 10px
+}
+
+.leaguePost-userNickname{
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.leaguePost-date{
+  color: lightgrey;
+  position: absolute;
+  top: 25px;
+}
+
+.leaguePost-profile{
+  line-height: 10px;
+}
+
+.leaguePost-profile img{
+  width: 70px;
+  height: 70px;
+}
+
+.leaguePost-menuBtn{
+  border: none;
+  background-color: white;
+}
+
+.leaguePost-menuBtn img{
+  width: 20px;
+  height: 35px;
+}
+
+.leaguePost-titleCtn{
+  border: 1px solid green;
+}
+
+.leaguePost-contentCtn{
+  border: 1px solid yellow;
+}
