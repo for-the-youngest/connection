@@ -3,14 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>board-create</title>
+  <title>league-create</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
   <link href="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.css" rel="stylesheet">
   <link href="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.8/summernote.css" rel="stylesheet">
-  <link rel="stylesheet" href="./board-create.css">
-  <script defer src="./board-create.js"></script>
+  <link rel="stylesheet" href="./league-create.css">
+
+  <script defer src="./league-create.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   <script src="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.js"></script>
   <script src="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.8/summernote.js"></script>
@@ -35,7 +36,7 @@
               <a href="../board/board.html" class="header-communityHiddenMenuA">자유 게시판</a>
             </li>
             <li class="header-communityHiddenMenuli">
-              <a href="#" class="header-communityHiddenMenuA">리그 게시판</a>
+              <a href="../league/league.html" class="header-communityHiddenMenuA">리그 게시판</a>
             </li>
           </ul>
         </div>
@@ -49,40 +50,33 @@
   </header>
   <!-- main -->
   <main>
-    <div class="main-title">
-      <p class="main-titleText">자유 게시판</p>
+    <div class="leagueCreate-title">
+      <p class="leagueCreate-titleText">리그 참가 신청서</p>
     </div>
     
-    <div class="main-mainContainer">
-        <div class="main-writingTypeChoice">
-            <div class="main-writingTypeChoiceBox1">
-              <select class="main-writingTypeChoiceSelect" name="sports" id="">
-                  <option value="soccer">축구</option>
-                  <option value="futsal">풋살</option>
-                  <option value="basketball">농구</option>
-              </select>
-            </div>
-            <div class="main-writingTypeChoiceBox2">
-              <select class="main-writingTypeChoiceSelect" name="board" id="">
-                  <option value="">자유글</option>
-                  <option value="">대타 모집</option>
-              </select>
-            </div>
-          </div>
-     
-      <div class="main-boardTitle">
+    <div class="leagueCreate-mainContainer">
+      <div class="leagueCreate-choiceCtn">
+        <select class="leagueCreate-choice">
+            <option value="total">전체</option>
+            <option value="soccer">축구</option>
+            <option value="futsal">풋살</option>
+            <option value="basketball">농구</option>
+        </select>
+      </div>
+  
+      <div class="leagueCreate-boardTitle">
         <form>
           <label>
-            <input type="text" placeholder="제목을 입력하세요" name="title" class="main-btInput">
+            <input type="text" placeholder="제목을 입력하세요" name="title" class="leagueCreate-btInput">
           </label>
         </form>
       </div>
 
-      <div class="main-boardContent">
+      <div class="leagueCreate-boardContent">
         <div id="summernote"></div>
       </div>
 
-      <div class="main-btnCtn">
+      <div class="leagueCreate-btnCtn">
         <button id="cancelBtn">취소</button>
         <button id="submitBtn">등록</button>
       </div>
