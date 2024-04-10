@@ -5,8 +5,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>leaguePost</title>
     <link rel="stylesheet" href="./league-post.css">
+    <script defer="" src="./league-post.js"></script>
 </head>
 <body>
+    <!-- 헤더 -->
+    <div class="__entire">
+      <header>
+        <div class="header-introBar">
+          <div class="header-logo">
+            <a href="#">
+              <img src="../img/Connection.png" alt="">
+            </a>
+          </div>
+          <div class="header-nav">
+            <div class="header-menuBar">
+              <ul class="header-menu">
+                <li class="header-menuCommunity">커뮤니티</li>
+              </ul>
+            </div>
+            <div class="header-communityHiddenMenu">
+              <ul class="header-communityHiddenMenuUl">
+                <li class="header-communityHiddenMenuli">
+                  <a href="#" class="header-communityHiddenMenuA">자유 게시판</a>
+                </li>
+                <li class="header-communityHiddenMenuli">
+                  <a href="#" class="header-communityHiddenMenuA">리그 게시판</a>
+                </li>
+              </ul>
+            </div>
+            <div class="header-profile">
+              <a href="">
+                <img src="../img/profile-img.png" alt="">
+              </a>
+            </div>
+          </div>
+        </div>
+      </header>
+    </div>
+
     <main>
         <!-- 게시글 닉네임, 제목, 내용 -->
         <div class="leaguePost-top">
@@ -23,18 +59,23 @@
                 </div>
 
                 <!-- 게시글 메뉴 -->
-                <div class="leaguePost-menuBtnCtn">
-                    <button class="leaguePost-menuBtn">
-                        <img src="../img/boardMenuImg.png" alt="">
-                    </button>
+                <div class="leaguePost-menuBar">
+                  <button id="leaguePost-showListButton">
+                    <img class="leaguePost-menuBarImg" src="../img/boardMenuImg.png" alt="">
+                  </button>
+                  <!-- 히든 메뉴 -->
+                  <ul id="leaguePost-list">
+                    <li><a href="#">수정하기</a></li>
+                    <li><a href="#">삭제하기</a></li>
+                  </ul>
                 </div>
             </div>
-
-            <!-- 게시글 제목 -->
-            <div class="leaguePost-titleCtn">
+              
+              <!-- 게시글 제목 -->
+              <div class="leaguePost-titleCtn">
                 <p class="leaguePost-title">제목 : </p>
                 <p class="leaguePost-titleContnet">풋살 리그 참가 신청서 제출합니다.</p>
-            </div>
+              </div>
 
             <div class="leaguePost-contentCtn">
                 <!-- 게시글 경로 -->
@@ -55,23 +96,23 @@
                 <div class="leaguePost-inventoryCtn">
                     <!-- 게시글 목록 -->
                     <div class="leaguePost-inventory">
-                        <button class="leaguePost-inventoryBtn">
+                        <a href="#" class="leaguePost-inventoryBtn">
                             <img src="../img/leaguePost-inventory.png" alt="">
-                        </button>
+                        </a>
                     </div>
 
                     <!-- 게시글 좋아요 -->
                     <div class="leaguePost-like">
                         <button class="leaguePost-likeBtn">
-                            <img src="../img/leaguePost-like.png" alt="">
+                            <svg id="like" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z"/></svg>
                         </button>
+                        <span class="leaguePost-likeText">좋아요</span>
                     </div>
 
                     <!-- 게시글 조회수 -->
                     <div class="leaguePost-view">
-                        <button class="leaguePost-viewBtn">
                             <img src="../img/leaguePost-view.png" alt="">
-                        </button>
+                        <span class="leaguePost-viewText">조회수</span>
                     </div>
                 </div>
             </div>
@@ -101,10 +142,15 @@
                 </div>
 
                 <!-- 메뉴 -->
-                <div class="leaguePost-commentMenuBtnCtn">
-                    <button class="leaguePost-commentMenuBtn">
-                        <img src="../img/boardMenuImg.png" alt="">
-                    </button>
+                <div class="leaguePost-commentMenu">
+                  <button id="leaguePost-commentButton">
+                    <img class="leaguePost-commentmenuBarImg" src="../img/boardMenuImg.png" alt="">
+                  </button>
+                  <!-- 히든 메뉴 -->
+                  <ul id="leaguePost-commentHidden">
+                    <li><a href="#">수정하기</a></li>
+                    <li><a href="#">삭제하기</a></li>
+                  </ul>
                 </div>
 
             </div>
@@ -127,10 +173,15 @@
                 </div>
 
                 <!-- 메뉴 -->
-                <div class="leaguePost-commentMenuBtnCtn">
-                    <button class="leaguePost-commentMenuBtn">
-                        <img src="../img/boardMenuImg.png" alt="">
-                    </button>
+                <div class="leaguePost-commentMenu">
+                  <button id="leaguePost-commentButton2">
+                    <img class="leaguePost-commentmenuBarImg" src="../img/boardMenuImg.png" alt="">
+                  </button>
+                  <!-- 히든 메뉴 -->
+                  <ul id="leaguePost-commentHidden2">
+                    <li><a href="#">수정하기</a></li>
+                    <li><a href="#">삭제하기</a></li>
+                  </ul>
                 </div>
 
             </div>
@@ -153,10 +204,15 @@
                 </div>
 
                 <!-- 메뉴 -->
-                <div class="leaguePost-commentMenuBtnCtn">
-                    <button class="leaguePost-commentMenuBtn">
-                        <img src="../img/boardMenuImg.png" alt="">
-                    </button>
+                <div class="leaguePost-commentMenu">
+                  <button id="leaguePost-commentButton3">
+                    <img class="leaguePost-commentmenuBarImg" src="../img/boardMenuImg.png" alt="">
+                  </button>
+                  <!-- 히든 메뉴 -->
+                  <ul id="leaguePost-commentHidden3">
+                    <li><a href="#">수정하기</a></li>
+                    <li><a href="#">삭제하기</a></li>
+                  </ul>
                 </div>
 
             </div>
@@ -236,8 +292,32 @@
                 </a>
                 </div>
             </div>
-
         </div>
     </main>
+
+    <!-- 푸터 -->
+    <footer>
+      <div class="footer-container">
+        <div class="footer-logo">
+          <img src="../img/Connection.png" alt="">
+        </div>
+        <div class="footer-text">
+          <ul>
+            <li class="footer-textTop">
+              이용약관&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;위치기반 서비스 이용약관&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;개인정보처리방침&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;개인정보 보호센터
+            </li>
+            <li class="footer-textMiddle">
+              주식회사 커넥션  |  서울특별시 강남구 테헤란로 26길 12 제일비전타워 13층  |  고객센터 1234-1234
+            </li>
+            <li class="footer-textBottom">
+              Copyright ⓒ 2024 (주)커넥션 All Rights Reserved.Hosting By (주)주막위
+            </li>
+          </ul>
+        </div>
+        <div class="footer-img">
+          <img src="../img/footer-img.jpg" alt="">
+        </div>
+      </div>
+    </footer>
 </body>
 </html>
