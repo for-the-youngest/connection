@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>leaguePost</title>
-    <link rel="stylesheet" href="./league-post.css">
+    <title>notice1</title>
+    <link rel="stylesheet" href="./notice1.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script defer="" src="./league-post.js"></script>
+    <script defer="" src="./notice1.js"></script>
 </head>
 <body>
     <!-- 헤더 -->
@@ -17,8 +17,8 @@
       <header>
         <div class="header-introBar">
           <div class="header-logo">
-            <a href="../main/main.html">
-              <img src="../img/Connection.png" alt="">
+            <a href="../../main/main.html">
+              <img src="../../img/Connection.png" alt="">
             </a>
           </div>
           <div class="header-nav">
@@ -30,16 +30,16 @@
             <div class="header-communityHiddenMenu">
               <ul class="header-communityHiddenMenuUl">
                 <li class="header-communityHiddenMenuli">
-                  <a href="../board/board.html" class="header-communityHiddenMenuA">자유 게시판</a>
+                  <a href="../../board/board.html" class="header-communityHiddenMenuA">자유 게시판</a>
                 </li>
                 <li class="header-communityHiddenMenuli">
-                  <a href="../league/league.html" class="header-communityHiddenMenuA">리그 게시판</a>
+                  <a href="../../league/league.html" class="header-communityHiddenMenuA">리그 게시판</a>
                 </li>
               </ul>
             </div>
             <div class="header-profile">
-              <a href="../mypage/mypage.html">
-                <img src="../img/profile-img.png" alt="">
+              <a href="../../mypage/mypage.html">
+                <img src="../../img/profile-img.png" alt="">
               </a>
             </div>
           </div>
@@ -53,19 +53,19 @@
             <div class="leaguePost-profileCtn">
                 <!-- 유저 프로필 이미지 -->
                 <div class="leaguePost-profile">
-                    <p class="leaguePost-commentProfileImg">🌎</p>
+                    <p class="leaguePost-commentProfileImg">📄</p>
                 </div>
                 
                 <!-- 유저 닉네임 -->
                 <div class="leaguePost-userNicknameCtn">
-                    <p class="leaguePost-userNickname">다이나믹두드</p>
+                    <p class="leaguePost-userNickname">공지사항</p>
                     <p class="leaguePost-date">1일전</p>
                 </div>
 
                 <!-- 게시글 메뉴 -->
                 <div class="leaguePost-menuBar">
                   <button id="leaguePost-showListButton">
-                    <img class="leaguePost-menuBarImg" src="../img/boardMenuImg.png" alt="">
+                    <img class="leaguePost-menuBarImg" src="../../img/boardMenuImg.png" alt="">
                   </button>
                   <!-- 히든 메뉴 -->
                   <ul id="leaguePost-list">
@@ -78,30 +78,40 @@
               <!-- 게시글 제목 -->
               <div class="leaguePost-titleCtn">
                 <p class="leaguePost-title">제목 : </p>
-                <p class="leaguePost-titleContnet">풋살 리그 참가 신청서 제출합니다.</p>
+                <p class="leaguePost-titleContnet">리그 참가 신청서 양식</p>
               </div>
 
             <div class="leaguePost-contentCtn">
                 <!-- 게시글 경로 -->
-                <div class="leaguePost-routeCtn">
+                <!-- <div class="leaguePost-routeCtn">
                     <a href="#" class="leaguePost-route">카테고리</a>
                     <p class="leaguePost-route">&gt</p>
                     <a href="#" class="leaguePost-route">리그 게시판</a>
                     <p class="leaguePost-route">&gt</p>
                     <a href="#" class="leaguePost-route">풋살</a>
-                </div>
+                </div> -->
                 
                 <!-- 게시글 내용 -->
                 <div class="leaguePost-ctCtn">
-                    <p class="leaguePost-content">팀명 : For The Youngest</p>
-                    <p class="leaguePost-content">인원 : 7명</p>
+                    <p class="leaguePost-content1">리그 참가 신청서 양식입니다</p>
+                    <br>
+                    <p class="leaguePost-content2">참가 종목 : </p>
+                    <p class="leaguePost-content2">팀명 : </p>
+                    <p class="leaguePost-content2">팀 대표 : </p>
+                    <p class="leaguePost-content2">리그 참가 인원 이름 : </p>
+                    <p class="leaguePost-content2">팀 플레이 지역 :   </p>
+                    <br>
+                    <br>
+                    <p class="leaguePost-content1">작성하신 인원 이외의 선수 출전 시 다음 리그 참가 불가</p>
                 </div>
-                
+                <br>
+                <br>
+                <br>
                 <div class="leaguePost-inventoryCtn">
                     <!-- 게시글 목록 -->
                     <div class="leaguePost-inventory">
                         <a href="#" class="leaguePost-inventoryBtn">
-                            <img src="../img/leaguePost-inventory.png" alt="">
+                            <img src="../../img/leaguePost-inventory.png" alt="">
                         </a>
                     </div>
 
@@ -115,7 +125,7 @@
 
                     <!-- 게시글 조회수 -->
                     <div class="leaguePost-view">
-                        <img src="../img/leaguePost-view.png" alt="">
+                        <img src="../../img/leaguePost-view.png" alt="">
                         <span class="leaguePost-viewText">조회수</span>
                     </div>
                 </div>
@@ -148,7 +158,7 @@
                 <!-- 메뉴 -->
                 <div class="leaguePost-commentMenu">
                   <button id="leaguePost-commentButton">
-                    <img class="leaguePost-commentmenuBarImg" src="../img/boardMenuImg.png" alt="">
+                    <img class="leaguePost-commentmenuBarImg" src="../../img/boardMenuImg.png" alt="">
                   </button>
                   <!-- 히든 메뉴 -->
                   <ul id="leaguePost-commentHidden">
@@ -179,7 +189,7 @@
                 <!-- 메뉴 -->
                 <div class="leaguePost-commentMenu">
                   <button id="leaguePost-commentButton2">
-                    <img class="leaguePost-commentmenuBarImg" src="../img/boardMenuImg.png" alt="">
+                    <img class="leaguePost-commentmenuBarImg" src="../../img/boardMenuImg.png" alt="">
                   </button>
                   <!-- 히든 메뉴 -->
                   <ul id="leaguePost-commentHidden2">
@@ -210,7 +220,7 @@
                 <!-- 메뉴 -->
                 <div class="leaguePost-commentMenu">
                   <button id="leaguePost-commentButton3">
-                    <img class="leaguePost-commentmenuBarImg" src="../img/boardMenuImg.png" alt="">
+                    <img class="leaguePost-commentmenuBarImg" src="../../img/boardMenuImg.png" alt="">
                   </button>
                   <!-- 히든 메뉴 -->
                   <ul id="leaguePost-commentHidden3">
@@ -230,7 +240,7 @@
         <div class="leaguePost-bottom">
             <div class="leaguePost-freeWritingDetail">
                 <div class="leaguePost-freeWritingDetailBox">
-                <a href="../league-post/league-post.html">
+                <a href="#">
                   <div class="leaguePost-freeWritingDetailType">
                     <span>자유글 / 축구</span>
                   </div>
@@ -253,7 +263,7 @@
 
             <div class="leaguePost-freeWritingDetail">
                 <div class="leaguePost-freeWritingDetailBox">
-                <a href="../league-post/league-post.html">
+                <a href="">
                   <div class="leaguePost-freeWritingDetailType">
                     <span>자유글 / 축구</span>
                   </div>
@@ -276,7 +286,7 @@
             
             <div class="leaguePost-freeWritingDetail">
                 <div class="leaguePost-freeWritingDetailBox">
-                <a href="../league-post/league-post.html">
+                <a href="#">
                   <div class="leaguePost-freeWritingDetailType">
                     <span>자유글 / 축구</span>
                   </div>
@@ -303,7 +313,7 @@
     <footer>
       <div class="footer-container">
         <div class="footer-logo">
-          <img src="../img/Connection.png" alt="">
+          <img src="../../img/Connection.png" alt="">
         </div>
         <div class="footer-text">
           <ul>
@@ -319,7 +329,7 @@
           </ul>
         </div>
         <div class="footer-img">
-          <img src="../img/footer-img.jpg" alt="">
+          <img src="../../img/footer-img.jpg" alt="">
         </div>
       </div>
     </footer>
