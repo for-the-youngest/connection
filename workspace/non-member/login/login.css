@@ -7,17 +7,17 @@
 header {
   position: fixed;
   width: 100%;
-  height: 80px;
+  height: 80px; 
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: 0.5px 0.2px 0px 0px gray;
-  top: 0;
+  box-shadow : 0.5px 0.2px 0px 0px gray;
+  top: 0px;
   border-bottom: 1px solid lightgrey;
   background-color: white;
 }
 
-.intro-bar {
+.header-introBar{
   width: 100%;
   max-width: 1200px;
   display: flex;
@@ -25,71 +25,82 @@ header {
   align-items: center;
 }
 
-.header-nav {
+.header-nav{
   display: flex;
   align-items: center;
   position: relative;
 }
 
-.menu-bar {
+button{
+  border: 0px;
+  background-color: white;
+}
+
+.header-menuBar{
   margin-right: 30px;
 }
 
-.logo img {
-  max-height: 100%;
-  max-width: 100%;
+.header-logo img {
+  max-height: 100%; 
+  max-width: 100%; 
 }
 
-.profile img {
+
+.header-profile img{
   max-height: 100%; /* 로고 이미지 높이 100%로 설정 */
   max-width: 100%; /* 로고 이미지 최대 너비 100%로 설정 */
 }
 
-a::visited {
+a::visited{
   color: black;
 }
 
-a {
+a{
   text-decoration: none;
   color: black;
 }
 
-ul {
+ul{
   list-style: none;
 }
 
-.menu {
+.header-menu{
   cursor: pointer;
 }
 
-.menu-community {
+.header-menuCommunity{
   font-weight: 500;
 }
 
-.communityHiddenMenu {
+.header-communityHiddenMenu{
   display: none;
   width: 200px;
   position: absolute;
   transform: translate(-60px, 80px);
 }
 
-.community-hiddenMenu-ul {
+.header-communityHiddenMenuUl{
   display: flex;
   padding-top: 8px;
   padding-bottom: 8px;
   border-radius: 8px;
-  border: 1px solid rgba(112, 115, 124, 0.22);
-  background-color: rgb(255, 255, 255);
+  /* border: 1px solid rgba(112, 115, 124, 0.22); */
+  background-color: #E9F6FF;
 }
 
-.community-hiddenMenu-li {
+.header-communityHiddenMenuli{
   display: flex;
   align-items: center;
   justify-content: center;
   width: 168px;
   /* font-size: 0.875rem; */
   letter-spacing: 0px;
-  font-weight: 500;
+  
+  font-weight: 800;
+}
+
+.header-communityHiddenMenuA{
+  color: #a5a5a5;
 }
 
 * {
@@ -103,12 +114,14 @@ footer {
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 150px;
+  height: 180px;
   padding: 0;
   border-top: 1px solid lightgrey;
+  margin-bottom: 80px;
 }
 
 .footer-container {
+  margin-top: 80px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -128,17 +141,10 @@ footer {
 .footer-text li {
   list-style: none;
   margin-bottom: 20px;
+  font-size: 14px;
+  font-weight: 600;
+  color: rgba(55, 56, 60, .61);
 }
-
-/* .text-top {
-  position: absolute;
-  top: -40px;
-}
-
-.text-bottom {
-  position: absolute;
-  top: 40px;
-} */
 
 .footer-img {
   line-height: 150px;
@@ -166,12 +172,15 @@ div {
 fieldset {
   border: none;
 }
+
 .auth-login {
-  margin-top: 100px;
+  margin-top: 200px;
   margin-bottom: 100px;
+  height: 765px;
 }
 
 .auth-login__form {
+  margin-top: 70px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -195,31 +204,31 @@ button {
 }
 
 .auth-login__title {
-  /* text-align: center; */
+  color: rgba(55, 56, 60, 0.61);
+  margin-bottom: 8px;
 }
 
 [type="text"],
 [type="password"] {
-  border: 1px solid #e6ecf1;
   background-color: #f8fafb;
   width: 100%;
   height: 48px;
-  border-radius: 8px;
   padding: 0px 12px;
-  font-size: 16px;
   box-sizing: border-box;
+
+  border: 1px solid rgba(112, 115, 124, 0.22);
+  
+  border-radius: 10px;
+  color: rgb(23, 23, 25);
+  font-size: 16px;
+  font-weight: 400;
 }
 
 #login-logo {
-  width: 500px;
-  height: 71.8px;
   margin: auto;
   display: block;
 }
 
-#login-text {
-  text-align: center;
-}
 
 /* 아이디 저장하기 수정! */
 /* [type="checkbox"] + label {
@@ -233,9 +242,13 @@ button {
   width: 400px;
 }
 
+.idRember-label{
+  color: rgba(55, 56, 60, 0.61);
+}
+
 .auth-login__button--login {
-  color: #fff;
-  background-color: #1570ff;
+  color: #181600;
+  background-color: #E9F6FF;
   height: 56px;
   padding: 0px 20px;
   display: flex;
@@ -243,7 +256,7 @@ button {
   align-items: center;
   border-radius: 12px;
   font-size: 16px;
-  font-weight: 500;
+  font-weight: 700;
   /* 수정 */
   width: 400px;
 }
@@ -269,4 +282,8 @@ button {
   padding: 15px 0px;
   line-height: 22px;
   margin: auto;
+}
+
+.auth-login__button--extra a{
+  color: rgba(55, 56, 60, 0.61);
 }
