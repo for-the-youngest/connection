@@ -51,3 +51,37 @@ function checkEnd() {
     }
 }
 
+//fetch를 사용하여 헤더와 푸터를 가져오고 삽입하는 함수
+function fetchAndInsert() {
+    // 헤더를 가져옴
+    fetch('header.html')
+    .then(response => response.text())
+    .then(data => {
+        document.getElementById('header').innerHTML = data;
+    })
+    
+
+    // 푸터를 가져옴
+    fetch('footer.html')
+    .then(response => response.text())
+    .then(data => {
+        document.getElementById('footer').innerHTML = data;
+    })
+    
+}
+
+// 페이지 로드 시 fetchAndInsert 함수 실행
+window.onload = fetchAndInsert;
+
+$(".header-menu").on("click", checkMenuOn);
+
+let $headerCommunityHiddenMenu = $(".header-communityHiddenMenu");
+
+function checkMenuOn() {
+  // 현재 display 속성을 가져와서 "none"인지 확인
+    if ($headerCommunityHiddenMenu.css("display") === "none") {
+    $headerCommunityHiddenMenu.css("display", "block");
+    } else {
+    $headerCommunityHiddenMenu.css("display", "none");
+    }
+};

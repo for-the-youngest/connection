@@ -52,9 +52,9 @@ button{
   max-width: 100%; /* 로고 이미지 최대 너비 100%로 설정 */
 }
 
-/*a:visited{
+a:visited{
   color: black;
-}*/
+}
 
 a{
   text-decoration: none;
@@ -232,16 +232,8 @@ main{
   font-weight: bold;
 }
 
-.leaguePost-commentSubmit{
-  cursor: pointer;
-}
-
-/*a:visited{
+a:visited{
   color: rgb(80, 80, 80);
-}*/
-
-.leaguePost-commentmenuBarImg{
-  cursor: pointer;
 }
 
 .leaguePost-ctCtn{
@@ -270,7 +262,6 @@ main{
 }
 
 /* 좋아요 */
-
 .leaguePost-like{
   display: flex;
   position: relative;
@@ -286,8 +277,6 @@ main{
   background-color: white;
   width: 20px;
   height: 20px;
-  margin-right: 10px;
-  margin-top: 3px;
 }
 
 #like.active{
@@ -304,7 +293,6 @@ main{
 .leaguePost-view img{
   width: 20px;
   height: 20px;
-  margin-right: 10px;
 }
 
 .leaguePost-viewText{

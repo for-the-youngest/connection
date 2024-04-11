@@ -1,3 +1,4 @@
+
 * {
   font-family: "Noto Sans KR", sans-serif;
   margin: 0;
@@ -212,7 +213,7 @@ main{
 }
 
 .leaguePost-contentCtn{
-  height: 200px;
+  height: 850px;
 }
 
 .leaguePost-routeCtn{
@@ -249,9 +250,20 @@ main{
   margin-top: 30px;
 }
 
-.leaguePost-content{
+.leaguePost-content1{
+  font-weight: 600;
+  font-size: 24px;
+  color: #F58D87;
+}
+
+.leaguePost-content2{
+  
+  font-weight: 500;
   font-size: 22px;
 }
+
+
+
 
 .leaguePost-inventoryCtn{
   display: flex;
