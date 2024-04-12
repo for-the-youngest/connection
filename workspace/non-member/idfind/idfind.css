@@ -5,18 +5,19 @@
 }
 
 header {
-  position: sticky;
-  height: 80px;
+  position: fixed;
+  width: 100%;
+  height: 80px; 
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: 0.5px 0.2px 0px 0px gray;
+  box-shadow : 0.5px 0.2px 0px 0px gray;
   top: 0px;
   border-bottom: 1px solid lightgrey;
   background-color: white;
 }
 
-.intro-bar {
+.header-introBar{
   width: 100%;
   max-width: 1200px;
   display: flex;
@@ -24,71 +25,82 @@ header {
   align-items: center;
 }
 
-.header-nav {
+.header-nav{
   display: flex;
   align-items: center;
   position: relative;
 }
 
-.menu-bar {
+button{
+  border: 0px;
+  background-color: white;
+}
+
+.header-menuBar{
   margin-right: 30px;
 }
 
-.logo img {
-  max-height: 100%;
-  max-width: 100%;
+.header-logo img {
+  max-height: 100%; 
+  max-width: 100%; 
 }
 
-.profile img {
+
+.header-profile img{
   max-height: 100%; /* 로고 이미지 높이 100%로 설정 */
   max-width: 100%; /* 로고 이미지 최대 너비 100%로 설정 */
 }
 
-a::visited {
+a::visited{
   color: black;
 }
 
-a {
+a{
   text-decoration: none;
   color: black;
 }
 
-ul {
+ul{
   list-style: none;
 }
 
-.menu {
+.header-menu{
   cursor: pointer;
 }
 
-.menu-community {
+.header-menuCommunity{
   font-weight: 500;
 }
 
-.communityHiddenMenu {
+.header-communityHiddenMenu{
   display: none;
   width: 200px;
   position: absolute;
   transform: translate(-60px, 80px);
 }
 
-.community-hiddenMenu-ul {
+.header-communityHiddenMenuUl{
   display: flex;
   padding-top: 8px;
   padding-bottom: 8px;
   border-radius: 8px;
-  border: 1px solid rgba(112, 115, 124, 0.22);
-  background-color: rgb(255, 255, 255);
+  /* border: 1px solid rgba(112, 115, 124, 0.22); */
+  background-color: #E9F6FF;
 }
 
-.community-hiddenMenu-li {
+.header-communityHiddenMenuli{
   display: flex;
   align-items: center;
   justify-content: center;
   width: 168px;
   /* font-size: 0.875rem; */
   letter-spacing: 0px;
-  font-weight: 500;
+  
+  font-weight: 800;
+}
+
+.header-communityHiddenMenuA{
+  color: #a5a5a5;
 }
 
 * {
@@ -98,19 +110,19 @@ ul {
 }
 
 footer {
+  margin-top: 110px;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 150px;
-  margin: auto;
+  height: 180px;
   padding: 0;
-  position: absolute;
-  bottom: 0;
   border-top: 1px solid lightgrey;
+  margin-bottom: 80px;
 }
 
 .footer-container {
+  margin-top: 80px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -124,22 +136,15 @@ footer {
 }
 
 .footer-text {
-  line-height: 150px;
   margin: auto;
 }
 
 .footer-text li {
   list-style: none;
-}
-
-.text-top {
-  position: absolute;
-  top: -40px;
-}
-
-.text-bottom {
-  position: absolute;
-  top: 40px;
+  margin-bottom: 20px;
+  font-size: 14px;
+  font-weight: 600;
+  color: rgba(55, 56, 60, .61);
 }
 
 .footer-img {
@@ -150,7 +155,8 @@ footer {
 /* idfind.css 시작점 */
 
 .idfind-banner-container {
-  background-color: springgreen;
+  margin-top: 80px;
+  background-color: #e9f6ff;
   height: 50px;
   margin-bottom: 50px;
 }
@@ -167,10 +173,9 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  
 }
 
-.emailcheck {
+.idfind-emailcheck {
   margin-right: 50px;
 }
 
@@ -182,27 +187,32 @@ div {
   margin: 0;
   padding: 0;
 }
-#next{
+#idfind-next {
   color: white;
   margin-top: 10px;
+  width: 20px;
 }
 
 .idfind-next-button {
-  margin-top: 100px;
+  margin-top: 30px;
   width: 200px;
   height: 33px;
-  background-color: blue;
+  background-color: skyblue;
   text-align: center;
-
 }
 
-#emailnumber{
-  
+#idfind-emailnumber1 {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  height: 30px;
 }
 
-.idfind-header-container{
+.idfind-header-container {
   max-width: 500px;
   margin: auto;
+}
 
-
+#idfind-emailnumber1{
+  margin-top: 50px;
+  font-weight: bold;
 }

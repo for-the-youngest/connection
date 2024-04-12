@@ -16,31 +16,31 @@
   <body>
     <div class="__entire">
       <header>
-        <div class="intro-bar">
-          <div class="logo">
-            <a href="./default.html">
-              <img src="../img/Connection.png" alt="" />
+        <div class="header-introBar">
+          <div class="header-logo">
+            <a href="../main/main.html">
+              <img src="../img copy/Connection.png" alt="">
             </a>
           </div>
           <div class="header-nav">
-            <div class="menu-bar">
-              <ul class="menu">
-                <li class="menu-community">커뮤니티</li>
+            <div class="header-menuBar">
+              <ul class="header-menu">
+                <li class="header-menuCommunity">커뮤니티</li>
               </ul>
             </div>
-            <div class="communityHiddenMenu">
-              <ul class="community-hiddenMenu-ul">
-                <li class="community-hiddenMenu-li">
-                  <a href="#" class="community-hiddenMenu-a">자유 게시판</a>
+            <div class="header-communityHiddenMenu">
+              <ul class="header-communityHiddenMenuUl">
+                <li class="header-communityHiddenMenuli">
+                  <a href="#" class="header-communityHiddenMenuA">자유 게시판</a>
                 </li>
-                <li class="community-hiddenMenu-li">
-                  <a href="#" class="community-hiddenMenu-a">리그 게시판</a>
+                <li class="header-communityHiddenMenuli">
+                  <a href="#" class="header-communityHiddenMenuA">리그 게시판</a>
                 </li>
               </ul>
             </div>
-            <div class="profile">
-              <a href="">
-                <img src="../img/profile-img.png" alt="" />
+            <div class="header-profile">
+              <a href="#">
+                <img src="../img copy/profile-img.png" alt="">
               </a>
             </div>
           </div>
@@ -48,15 +48,15 @@
       </header>
       <div class="join-logo-container">
         <!--회원 가입 페이지 로고-->
-        <img src="../img/Connection.png" />
+        <img src="../img copy/Connection.png" />
       </div>
 
-      <form method="post" action="#" class="auth-register--body">
+      <form method="post" action="#" class="join-auth-register--body">
         <!--회원가입 필요 정보 폼 양식-->
         <fieldset>
-          <div class="auth-register--input">
+          <div class="join-auth-register--input">
             <!--이름 입력 label + div-->
-            <label class="auth-register--inputtitle">이름</label>
+            <label class="join-auth-register--inputtitle">이름</label>
 
             <input
               type="text"
@@ -66,9 +66,9 @@
             />
           </div>
 
-          <div class="auth-register--input">
+          <div class="join-auth-register--input">
             <!--아이디 이메일 입력 label + div-->
-            <label class="auth-register--inputtitle">아이디(이메일)</label>
+            <label class="join-auth-register--inputtitle">아이디(이메일)</label>
 
             <input
               type="text"
@@ -78,9 +78,9 @@
             />
           </div>
 
-          <div class="auth-register--input">
+          <div class="join-auth-register--input">
             <!--비밀번호 입력 label + div-->
-            <label class="auth-register--inputtitle">비밀번호</label>
+            <label class="join-auth-register--inputtitle">비밀번호</label>
 
             <input
               type="password"
@@ -90,9 +90,9 @@
             />
           </div>
 
-          <div class="auth-register--input">
+          <div class="join-auth-register--input">
             <!--비밀번호(확인) 입력 label + div-->
-            <label class="auth-register--inputtitle">비밀번호(확인)</label>
+            <label class="join-auth-register--inputtitle">비밀번호(확인)</label>
             <input
               type="password"
               name="userpassword2"
@@ -101,9 +101,9 @@
             />
           </div>
 
-          <div class="auth-register--input">
+          <div class="join-auth-register--input">
             <!--닉네임 입력 label + div-->
-            <label class="auth-register--inputtitle">닉네임</label>
+            <label class="join-auth-register--inputtitle">닉네임</label>
             <input
               type="text"
               name="usernickname"
@@ -112,23 +112,27 @@
             />
           </div>
 
-          <div class="auth-register--input">
+          <div class="join-auth-register--input">
             <!--성별 입력 label + div-->
-            <label class="auth-register--inputtitle">성별</label>
-            <select name="sex" type="number" class="sexchoice">
+            <label class="join-auth-register--inputtitle">성별</label>
+            <select name="sex" type="number" class="sexchoice" id="join-sex">
               <option value="0">성별을 선택하세요</option>
               <option value="1">남자</option>
               <option value="2">여자</option>
             </select>
           </div>
 
-          <div class="auth-register--input">
-            <label class="auth-register--inputtitle" id="id-years"
+          <div class="join-auth-register--input">
+            <label class="join-auth-register--inputtitle" id="id-years"
               >생년월일</label
             >
             <div class="join-allyears-contaniner">
               <!--생년월일 입력 label + div-->
-              <select name="birthday-year" id="id-birthday_year" type="text">
+              <select
+                name="birthday-year"
+                id="join-id-birthday_year"
+                type="text"
+              >
                 <option value="1954">1954년</option>
                 <option value="1955">1955년</option>
                 <option value="1956">1956년</option>
@@ -186,7 +190,11 @@
                 <option value="2008">2008년</option>
               </select>
 
-              <select name="birthday-month" id="id-birthday_month" type="text">
+              <select
+                name="birthday-month"
+                id="join-id-birthday_month"
+                type="text"
+              >
                 <!--생년월일 달 입력 label + div-->
                 <option value="1" selected="selected">1월</option>
                 <option value="2">2월</option>
@@ -202,7 +210,7 @@
                 <option value="12">12월</option>
               </select>
 
-              <select name="birthday-day" id="id-birthday_day" type="text">
+              <select name="birthday-day" id="join-id-birthday_day" type="text">
                 <!--생년월일 일 입력 label + div-->
                 <option value="1" selected="selected">1일</option>
                 <option value="2">2일</option>
@@ -243,7 +251,7 @@
             <!--전체 동의 ~ 이벤트 프로모션 까지.-->
             <div class="join-agree-container">
               <label for="agree">
-                <input type="checkbox" id="id_a" name="all" /> 전체 동의
+                <input type="checkbox" id="join-id_a" name="all" /> 전체 동의
               </label>
             </div>
 
@@ -251,28 +259,28 @@
 
             <div class="join-all-agree">
               <label for="guideline">
-                <input type="checkbox" id="id_b" name="checkBox" /> 이용 약관
-                동의(필수)
+                <input type="checkbox" id="join-id_b" name="checkBox" /> 이용
+                약관 동의(필수)
               </label>
             </div>
 
             <div class="join-all-agree">
               <label for="ageline">
-                <input type="checkbox" id="id_c" name="checkBox" /> 만 14세
+                <input type="checkbox" id="join-id_c" name="checkBox" /> 만 14세
                 이상입니다(필수)
               </label>
             </div>
 
             <div class="join-all-agree">
               <label for="eventsns">
-                <input type="checkbox" id="id_d" name="checkBox" />
+                <input type="checkbox" id="join-id_d" name="checkBox" />
                 이벤트,프로모션 등 sns 맞춤 정보 받기(선택)
               </label>
             </div>
 
             <div class="join-all-agree">
               <label for="eventemail">
-                <input type="checkbox" id="id_e" name="checkBox" />
+                <input type="checkbox" id="join-id_e" name="checkBox" />
                 이벤트.프로모션 등 이메일 맞춤 정보 받기(선택)
               </label>
             </div>
@@ -286,28 +294,23 @@
       <footer>
         <div class="footer-container">
           <div class="footer-logo">
-            <img src="../img/Connection.png" alt="" />
+            <img src="../img copy/Connection.png" alt="">
           </div>
           <div class="footer-text">
             <ul>
-              <li class="text-top">
-                이용약관&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;위치기반
-                서비스
-                이용약관&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;개인정보처리방침&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;개인정보
-                보호센터
+              <li class="footer-textTop">
+                이용약관&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;위치기반 서비스 이용약관&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;개인정보처리방침&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;개인정보 보호센터
               </li>
-              <li class="text-middle">
-                주식회사 커넥션 | 서울특별시 강남구 테헤란로 26길 12
-                제일비전타워 13층 | 고객센터 1234-1234
+              <li class="footer-textMiddle">
+                주식회사 커넥션  |  서울특별시 강남구 테헤란로 26길 12 제일비전타워 13층  |  고객센터 1234-1234
               </li>
-              <li class="text-bottom">
-                Copyright ⓒ 2024 (주)커넥션 All Rights Reserved.Hosting By
-                (주)주막위
+              <li class="footer-textBottom">
+                Copyright ⓒ 2024 (주)커넥션 All Rights Reserved.Hosting By (주)주막위
               </li>
             </ul>
           </div>
           <div class="footer-img">
-            <img src="../img/footer-img.jpg" alt="" />
+            <img src="../img copy/footer-img.jpg" alt="">
           </div>
         </div>
       </footer>
