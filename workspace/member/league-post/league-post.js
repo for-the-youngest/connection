@@ -1,38 +1,7 @@
-// 좋아요 버튼 구현
-var btn = document.getElementById("like")
-
-  btn.addEventListener('click',function(){
-            btn.classList.toggle('active')
-    })
 
 // 게시글 메뉴 버튼 눌렀을때 목록 나오게하기
 document.getElementById('leaguePost-showListButton').addEventListener('click', function() {
   var list = document.getElementById('leaguePost-list');
-  if (list.style.display === 'none') {
-      list.style.display = 'block';
-  } else {
-      list.style.display = 'none';
-  }
-});
-// 댓글 메뉴 버튼 눌렀을때 목록 나오게하기
-document.getElementById('leaguePost-commentButton').addEventListener('click', function() {
-  var list = document.getElementById('leaguePost-commentHidden');
-  if (list.style.display === 'none') {
-      list.style.display = 'block';
-  } else {
-      list.style.display = 'none';
-  }
-});
-document.getElementById('leaguePost-commentButton2').addEventListener('click', function() {
-  var list = document.getElementById('leaguePost-commentHidden2');
-  if (list.style.display === 'none') {
-      list.style.display = 'block';
-  } else {
-      list.style.display = 'none';
-  }
-});
-document.getElementById('leaguePost-commentButton3').addEventListener('click', function() {
-  var list = document.getElementById('leaguePost-commentHidden3');
   if (list.style.display === 'none') {
       list.style.display = 'block';
   } else {
