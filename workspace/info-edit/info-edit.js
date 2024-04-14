@@ -111,30 +111,15 @@ function validateNickName() {
   return true;
 }
 
-// 띄어쓰기 2칸 입력필드
+// 저장하기 버튼 시 알림 호출
 
-// 이름
-const inputNameField = document.getElementById("infoEdit-userName");
+// 버튼 클래스를 가진 요소들을 선택합니다.
+const buttons = document.querySelectorAll(".infoEdit-btnSave");
 
-inputNameField.addEventListener("keydown", function (event) {
-  // 입력 필드의 값
-  let value = this.value;
-
-  // 띄어쓰기를 2칸으로 추가
-  if (event.key !== "Backspace" && value.length === 0) {
-    this.value = "  "; // 띄어쓰기 2칸
-  }
-});
-
-// 닉네임
-const inputNickNameField = document.getElementById("infoEdit-userNickName");
-
-inputNickNameField.addEventListener("keydown", function (event) {
-  // 입력 필드의 값
-  let value = this.value;
-
-  // 띄어쓰기를 2칸으로 추가
-  if (event.key !== "Backspace" && value.length === 0) {
-    this.value = "  "; // 띄어쓰기 2칸
-  }
+// 각 버튼에 대해 이벤트 핸들러를 추가합니다.
+buttons.forEach((button) => {
+  button.addEventListener("click", function () {
+    // 버튼 클릭 시 단순 알림 호출
+    alert("수정이 완료되었습니다!");
+  });
 });

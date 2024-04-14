@@ -13,10 +13,12 @@
     <link rel="stylesheet" href="../info-edit/info-edit.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script defer src="../info-edit/info-edit.js"></script>
+    <script defer src="../fetch/fetch.js"></script>
   </head>
   <!-- 페이지 이름 - 기능이름 - 태그역할 -->
   <body style="overflow: auto">
     <div class="infoEdit-ctn" id="infoEdit-mainWrap">
+      <header id="header"></header>
       <div
         class="infoEdit-boundaryCtn infoEdit-boundaryCtnSetting"
         id="infoEdit-wrap"
@@ -159,10 +161,11 @@
             <button class="infoEdit-btnCancel">취소하기</button>
           </a>
           <a href="">
-            <button class="infoEdit-btnSave">저장하기</button>
+            <button type="submit" class="infoEdit-btnSave">저장하기</button>
           </a>
         </div>
       </div>
+      <footer id="footer"></footer>
     </div>
   </body>
 </html>

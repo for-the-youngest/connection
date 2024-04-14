@@ -49,23 +49,3 @@ function checkEnd() {
     $(".main-nextBtn-slide").css("display", "block");
   }
 }
-
-//fetch를 사용하여 헤더와 푸터를 가져오고 삽입하는 함수
-function fetchAndInsert() {
-  // 헤더를 가져옴
-  fetch("../header/header.html")
-    .then((response) => response.text())
-    .then((data) => {
-      document.getElementById("header").innerHTML = data;
-    });
-
-  // 푸터를 가져옴
-  fetch("../footer/footer.html")
-    .then((response) => response.text())
-    .then((data) => {
-      document.getElementById("footer").innerHTML = data;
-    });
-}
-
-// 페이지 로드 시 fetchAndInsert 함수 실행
-window.onload = fetchAndInsert;
