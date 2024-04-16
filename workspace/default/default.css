@@ -68,6 +68,11 @@ ul{
   cursor: pointer;
 }
 
+.header-menuApi{
+  margin-right: 30px;
+  font-weight: 500;
+}
+
 .header-menuCommunity{
   font-weight: 500;
 }
