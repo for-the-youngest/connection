@@ -4,7 +4,7 @@ let $bannerBox = $(".main-rank-div");
 let $bannerImgs = $(".main-backgroundImg");
 
 //슬라이드 이미지 너비
-let bannerWidth = 1263;
+let bannerWidth = 2328;
 //슬라이드 이미지 인덱스 번호
 let currentIdx = 0;
 //총 슬라이드 이미지 수

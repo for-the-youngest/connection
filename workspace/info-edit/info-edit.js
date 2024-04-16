@@ -112,14 +112,10 @@ function validateNickName() {
 }
 
 // 저장하기 버튼 시 알림 호출
-
-// 버튼 클래스를 가진 요소들을 선택합니다.
 const buttons = document.querySelectorAll(".infoEdit-btnSave");
 
-// 각 버튼에 대해 이벤트 핸들러를 추가합니다.
 buttons.forEach((button) => {
   button.addEventListener("click", function () {
-    // 버튼 클릭 시 단순 알림 호출
     alert("수정이 완료되었습니다!");
   });
 });

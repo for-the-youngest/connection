@@ -22,6 +22,9 @@
           </a>
         </div>
         <div class="header-nav">
+          <a href="../find-place/find-place.html" class="header-menuApi"
+            >장소 찾기</a
+          >
           <div class="header-menuBar">
             <ul class="header-menu">
               <li class="header-menuCommunity">커뮤니티</li>
@@ -53,5 +56,19 @@
         </div>
       </div>
     </header>
+    <script>
+      $(".header-menu").on("click", checkMenuOn);
+
+      let $headerCommunityHiddenMenu = $(".header-communityHiddenMenu");
+
+      function checkMenuOn() {
+        // 현재 display 속성을 가져와서 "none"인지 확인
+        if ($headerCommunityHiddenMenu.css("display") === "none") {
+          $headerCommunityHiddenMenu.css("display", "block");
+        } else {
+          $headerCommunityHiddenMenu.css("display", "none");
+        }
+      }
+    </script>
   </body>
 </html>
