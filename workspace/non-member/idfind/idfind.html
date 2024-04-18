@@ -1,0 +1,77 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="idfind.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script defer="" src="./idfind.js"></script>
+    <script defer src="../fetch/fetch.js"></script>
+  </head>
+  <body>
+    <div class="__entire">
+      <div id="header"></div>
+
+      <div class="idfind-banner-container">
+        <ul class="idfind-banner-list">
+          <li class="idfind-banner-firstlist">
+            <a href="#" id="idinquiry">
+              <span class="idfind-banner-idfind">아이디 찾기</span>
+            </a>
+          </li>
+          <li class="idfind-banner-secondlist">
+            <a href="../passwordfind/passwordfind.html" id="pwinquiry">
+              <span class="idfind-banner-pwfind">비밀번호 찾기</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="idfind-header-container">
+        <h2>
+          <p>아이디 찾기</p>
+          <hr />
+        </h2>
+      </div>
+
+      <div class="idfind-checkemail-container">
+        <div class="idfind-checkmail-checkconfirm">
+          <dl>
+            <dt><label for="idfind-name">이름</label></dt>
+            <dd><input type="text" id="idfind-namecheck" /></dd>
+
+            <dt><label for="idfind-email">이메일</label></dt>
+            <dd>
+              <input type="text" id="idfind-emailcheck" />
+            </dd>
+            <a href="#" id="idfind-emailnumber">
+              <p id="idfind-emailnumber1">인증번호 받기</p>
+            </a>
+
+            <dt><label for="idfind-authentication">인증번호 입력 </label></dt>
+            <dd>
+              <input
+                type="text"
+                required="required"
+                id="authentication"
+                placeholder="인증번호를 입력해주세요"
+              />
+            </dd>
+          </dl>
+        </div>
+      </div>
+
+      <div class="idfind-next-button">
+        <a href="#" id="idfind-next"><span>다음</span></a>
+      </div>
+
+      <div id="footer"></div>
+    </div>
+  </body>
+</html>

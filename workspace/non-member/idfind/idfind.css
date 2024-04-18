@@ -1,0 +1,95 @@
+* {
+  font-family: "Noto Sans KR", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  border: 0px;
+  background-color: white;
+}
+
+a::visited {
+  color: black;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+ul {
+  list-style: none;
+}
+
+/* idfind.css 시작점 */
+
+.idfind-banner-container {
+  margin-top: 80px;
+  background-color: #e9f6ff;
+  height: 50px;
+  margin-bottom: 50px;
+}
+
+.idfind-banner-list {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  margin-bottom: 50px;
+  font-size: 25px;
+}
+
+.idfind-checkemail-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.idfind-emailcheck {
+  margin-right: 50px;
+}
+
+.idfind-checkmail-checkconfirm {
+  margin-top: 50px;
+}
+
+div {
+  margin: 0;
+  padding: 0;
+}
+#idfind-next {
+  color: white;
+  margin-top: 10px;
+  width: 20px;
+}
+
+.idfind-next-button {
+  /* margin-top: 30px;
+  margin-bottom: 30px;
+  width: 200px;
+  height: 33px; */
+  background-color: skyblue;
+  text-align: center;
+  align-items: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  width: 200px;
+  justify-content: center;
+  /* 여기 수정 */
+}
+
+#idfind-emailnumber1 {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  height: 30px;
+}
+
+.idfind-header-container {
+  max-width: 500px;
+  margin: auto;
+}
+
+#idfind-emailnumber1 {
+  margin-top: 50px;
+  font-weight: bold;
+}
