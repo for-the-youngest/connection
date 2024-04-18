@@ -11,9 +11,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./find-place.css" />
-    <script defer src="./find-place.js"></script>
     <script defer src="../fetch/fetch.js"></script>
-    <script defer src="../board/board.js"></script>
     <style>
       .map_wrap,
       .map_wrap * {
@@ -171,46 +169,7 @@
   </head>
   <body>
     <div class="findPlace-ctn">
-      <header>
-        <div class="header-introBar">
-          <div class="header-logo">
-            <a href="../main/main.html">
-              <img src="../img/Connection.png" alt="" />
-            </a>
-          </div>
-          <div class="header-nav">
-            <a href="../find-place/find-place.html" class="header-menuApi">장소 찾기</a>
-            <div class="header-menuBar">
-              <ul class="header-menu">
-                <li class="header-menuCommunity">커뮤니티</li>
-              </ul>
-            </div>
-            <div class="header-communityHiddenMenu">
-              <ul class="header-communityHiddenMenuUl">
-                <li class="header-communityHiddenMenuli">
-                  <a
-                    href="../board/board.html"
-                    class="header-communityHiddenMenuA"
-                    >자유 게시판</a
-                  >
-                </li>
-                <li class="header-communityHiddenMenuli">
-                  <a
-                    href="../league/league.html"
-                    class="header-communityHiddenMenuA"
-                    >리그 게시판</a
-                  >
-                </li>
-              </ul>
-            </div>
-            <div class="header-profile">
-              <a href="../mypage/mypage.html">
-                <img src="../img/profile-img.png" alt="" />
-              </a>
-            </div>
-          </div>
-        </div>
-      </header>
+      <div id="header"></div>
 
       <section class="findPlace-mapCtn">
         <h2>장소찾기</h2>
@@ -240,38 +199,75 @@
         </div>
       </section>
 
-      <footer>
-        <div class="footer-container">
-          <div class="footer-logo">
-            <img src="../img/Connection.png" alt="">
-          </div>
-          <div class="footer-text">
-            <ul>
-              <li class="footer-textTop">
-                이용약관&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;위치기반 서비스 이용약관&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;개인정보처리방침&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;개인정보 보호센터
-              </li>
-              <li class="footer-textMiddle">
-                주식회사 커넥션  |  서울특별시 강남구 테헤란로 26길 12 제일비전타워 13층  |  고객센터 1234-1234
-              </li>
-              <li class="footer-textBottom">
-                Copyright ⓒ 2024 (주)커넥션 All Rights Reserved.Hosting By (주)주막위
-              </li>
-            </ul>
-          </div>
-          <div class="footer-img">
-            <img src="../img/footer-img.jpg" alt="">
-          </div>
-        </div>
-      </footer>
+      <div id="footer"></div>
     </div>
   </body>
+  <!-- <script
+    type="text/javascript"
+    src="//dapi.kakao.com/v2/maps/sdk.js?appkey=5b5b70eddba8caeec3fd8efe9b7432e6&libraries=services"
+  ></script> -->
 
   <script
     type="text/javascript"
     src="//dapi.kakao.com/v2/maps/sdk.js?appkey=5b5b70eddba8caeec3fd8efe9b7432e6&libraries=services"
   ></script>
 
-  
+  <!-- <script>
+    // 마커를 클릭하면 장소명을 표출할 인포윈도우 입니다
+    var infowindow = new kakao.maps.InfoWindow({ zIndex: 1 });
+
+    var mapContainer = document.getElementById("map"), // 지도를 표시할 div
+      mapOption = {
+        center: new kakao.maps.LatLng(37.566826, 126.9786567), // 지도의 중심좌표
+        level: 3, // 지도의 확대 레벨
+      };
+
+    // 지도를 생성합니다
+    var map = new kakao.maps.Map(mapContainer, mapOption);
+
+    // 장소 검색 객체를 생성합니다
+    var ps = new kakao.maps.services.Places();
+
+    // 키워드로 장소를 검색합니다
+    ps.keywordSearch("역삼역 맛집", placesSearchCB);
+
+    // 키워드 검색 완료 시 호출되는 콜백함수 입니다
+    function placesSearchCB(data, status, pagination) {
+      if (status === kakao.maps.services.Status.OK) {
+        // 검색된 장소 위치를 기준으로 지도 범위를 재설정하기위해
+        // LatLngBounds 객체에 좌표를 추가합니다
+        var bounds = new kakao.maps.LatLngBounds();
+
+        for (var i = 0; i < data.length; i++) {
+          displayMarker(data[i]);
+          bounds.extend(new kakao.maps.LatLng(data[i].y, data[i].x));
+        }
+
+        // 검색된 장소 위치를 기준으로 지도 범위를 재설정합니다
+        map.setBounds(bounds);
+      }
+    }
+
+    // 지도에 마커를 표시하는 함수입니다
+    function displayMarker(place) {
+      // 마커를 생성하고 지도에 표시합니다
+      var marker = new kakao.maps.Marker({
+        map: map,
+        position: new kakao.maps.LatLng(place.y, place.x),
+      });
+
+      // 마커에 클릭이벤트를 등록합니다
+      kakao.maps.event.addListener(marker, "click", function () {
+        // 마커를 클릭하면 장소명이 인포윈도우에 표출됩니다
+        infowindow.setContent(
+          '<div style="padding:5px;font-size:12px;">' +
+            place.place_name +
+            "</div>"
+        );
+        infowindow.open(map, marker);
+      });
+    }
+  </script> -->
 
   <script>
     // 마커를 담을 배열입니다
@@ -493,21 +489,6 @@
       while (el.hasChildNodes()) {
         el.removeChild(el.lastChild);
       }
-
-
-    // 헤더
-    $(".header-menu").on("click", checkMenuOn);
-
-    let $headerCommunityHiddenMenu = $(".header-communityHiddenMenu");
-
-    function checkMenuOn() {
-    // 현재 display 속성을 가져와서 "none"인지 확인
-    if ($headerCommunityHiddenMenu.css("display") === "none") {
-      $headerCommunityHiddenMenu.css("display", "block");
-    } else {
-      $headerCommunityHiddenMenu.css("display", "none");
-    }
-    };  
     }
   </script>
 </html>

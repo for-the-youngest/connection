@@ -1,136 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>board-create</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
-  <link href="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.css" rel="stylesheet">
-  <link href="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.8/summernote.css" rel="stylesheet">
-  <link rel="stylesheet" href="./board-create.css">
-  <script defer src="./board-create.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-  <script src="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.js"></script>
-  <script src="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.8/summernote.js"></script>
-</head>
-<body>
-  <header>
-    <div class="header-introBar">
-      <div class="header-logo">
-        <a href="../main/main.html">
-          <img src="../img/Connection.png" alt="" />
-        </a>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>board-create</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.css"
+      rel="stylesheet"
+    />
+    <link
+      href="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.8/summernote.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./board-create.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.8/summernote.js"></script>
+    <script defer src="../fetch/fetch.js"></script>
+  </head>
+  <body>
+    <div id="header1"></div>
+    <!-- main -->
+    <main>
+      <div class="main-title">
+        <p class="main-titleText">자유 게시판</p>
       </div>
-      <div class="header-nav">
-        <a href="../find-place/find-place.html" class="header-menuApi">장소 찾기</a>
-        <div class="header-menuBar">
-          <ul class="header-menu">
-            <li class="header-menuCommunity">커뮤니티</li>
-          </ul>
+
+      <div class="main-mainContainer">
+        <div class="main-writingTypeChoice">
+          <div class="main-writingTypeChoiceBox1">
+            <select class="main-writingTypeChoiceSelect" name="sports" id="">
+              <option value="soccer">축구</option>
+              <option value="futsal">풋살</option>
+              <option value="basketball">농구</option>
+            </select>
+          </div>
+          <div class="main-writingTypeChoiceBox2">
+            <select class="main-writingTypeChoiceSelect" name="board" id="">
+              <option value="">자유글</option>
+              <option value="">대타 모집</option>
+            </select>
+          </div>
         </div>
-        <div class="header-communityHiddenMenu">
-          <ul class="header-communityHiddenMenuUl">
-            <li class="header-communityHiddenMenuli">
-              <a
-                href="../board/board.html"
-                class="header-communityHiddenMenuA"
-                >자유 게시판</a
-              >
-            </li>
-            <li class="header-communityHiddenMenuli">
-              <a
-                href="../league/league.html"
-                class="header-communityHiddenMenuA"
-                >리그 게시판</a
-              >
-            </li>
-          </ul>
+
+        <div class="main-boardTitle">
+          <form>
+            <label>
+              <input
+                type="text"
+                placeholder="제목을 입력하세요"
+                name="title"
+                class="main-btInput"
+              />
+            </label>
+          </form>
         </div>
-        <div class="header-profile">
-          <a href="../mypage/mypage.html">
-            <img src="../img/profile-img.png" alt="" />
+
+        <div class="main-boardContent">
+          <div id="summernote"></div>
+        </div>
+
+        <div class="main-btnCtn">
+          <a href="../board/board.html">
+            <button id="cancelBtn">취소</button>
+          </a>
+          <a href="../board/board.html">
+            <button id="submitBtn">등록</button>
           </a>
         </div>
       </div>
-    </div>
-  </header>
-  <!-- main -->
-  <main>
-    <div class="main-title">
-      <p class="main-titleText">자유 게시판</p>
-    </div>
-    
-    <div class="main-mainContainer">
-        <div class="main-writingTypeChoice">
-            <div class="main-writingTypeChoiceBox1">
-              <select class="main-writingTypeChoiceSelect" name="sports" id="">
-                  <option value="soccer">축구</option>
-                  <option value="futsal">풋살</option>
-                  <option value="basketball">농구</option>
-              </select>
-            </div>
-            <div class="main-writingTypeChoiceBox2">
-              <select class="main-writingTypeChoiceSelect" name="board" id="">
-                  <option value="">자유글</option>
-                  <option value="">대타 모집</option>
-              </select>
-            </div>
-          </div>
-     
-      <div class="main-boardTitle">
-        <form>
-          <label>
-            <input type="text" placeholder="제목을 입력하세요" name="title" class="main-btInput">
-          </label>
-        </form>
-      </div>
+    </main>
 
-      <div class="main-boardContent">
-        <div id="summernote"></div>
-      </div>
-
-      <div class="main-btnCtn">
-        <a href="../board/board.html">
-          <button id="cancelBtn">취소</button>
-        </a>
-        <button id="submitBtn">등록</button>
-      </div>
-    </div>
-  </main>
-
-  <footer class="footer">
-    <div class="footer-container">
-      <div class="footer-logo">
-        <img src="../img/Connection.png" alt="">
-      </div>
-      <div class="footer-text">
-        <ul>
-          <li class="footer-textTop">
-            이용약관&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;위치기반 서비스 이용약관&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;개인정보처리방침&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;개인정보 보호센터
-          </li>
-          <li class="footer-textMiddle">
-            주식회사 커넥션  |  서울특별시 강남구 테헤란로 26길 12 제일비전타워 13층  |  고객센터 1234-1234
-          </li>
-          <li class="footer-textBottom">
-            Copyright ⓒ 2024 (주)커넥션 All Rights Reserved.Hosting By (주)주막위
-          </li>
-        </ul>
-      </div>
-      <div class="footer-img">
-        <img src="../img/footer-img.jpg" alt="">
-      </div>
-    </div>
-  </footer>
-  <!-- 메인화면 페이지 로드 함수 -->
-  <script>
-    $(document).ready(function () {
-      $('#summernote').summernote({
-      placeholder: '내용을 작성하세요',
-      height: 400
+    <div id="footer"></div>
+    <!-- 메인화면 페이지 로드 함수 -->
+    <script>
+      $(document).ready(function () {
+        $("#summernote").summernote({
+          placeholder: "내용을 작성하세요",
+          height: 400,
+        });
       });
-    });
-  </script>
-</body>
+    </script>
+  </body>
 </html>

@@ -4,51 +4,9 @@
   padding: 0;
 }
 
-header {
-  position: fixed;
-  width: 100%;
-  height: 80px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  box-shadow: 0.5px 0.2px 0px 0px gray;
-  top: 0px;
-  border-bottom: 1px solid lightgrey;
-  background-color: white;
-  z-index: 2;
-}
-
-.header-introBar {
-  width: 100%;
-  max-width: 1200px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.header-nav {
-  display: flex;
-  align-items: center;
-  position: relative;
-}
-
 button {
   border: 0px;
   background-color: white;
-}
-
-.header-menuBar {
-  margin-right: 30px;
-}
-
-.header-logo img {
-  max-height: 100%;
-  max-width: 100%;
-}
-
-.header-profile img {
-  max-height: 100%; /* 로고 이미지 높이 100%로 설정 */
-  max-width: 100%; /* 로고 이미지 최대 너비 100%로 설정 */
 }
 
 a::visited {
@@ -58,55 +16,6 @@ a::visited {
 a {
   text-decoration: none;
   color: black;
-}
-
-ul {
-  list-style: none;
-}
-
-.header-menu {
-  cursor: pointer;
-}
-
-.header-menuApi{
-  margin-right: 30px;
-  font-weight: 500;
-  margin-bottom: 10px;
-}
-
-.header-menuCommunity {
-  font-weight: 500;
-}
-
-.header-communityHiddenMenu {
-  display: none;
-  width: 200px;
-  position: absolute;
-  transform: translate(20px, 80px);
-}
-
-.header-communityHiddenMenuUl {
-  display: flex;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  border-radius: 8px;
-  /* border: 1px solid rgba(112, 115, 124, 0.22); */
-  background-color: #e9f6ff;
-}
-
-.header-communityHiddenMenuli {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 168px;
-  /* font-size: 0.875rem; */
-  letter-spacing: 0px;
-
-  font-weight: 800;
-}
-
-.header-communityHiddenMenuA {
-  color: #a5a5a5;
 }
 
 /* 게시글 작성 메인 */
@@ -120,12 +29,12 @@ main {
   padding-bottom: 150px;
 }
 
-.leagueCreate-title{
+.leagueCreate-title {
   width: 400px;
   height: 100px;
 }
 
-.leagueCreate-titleText{
+.leagueCreate-titleText {
   font-size: 30px;
   color: #a5a5a5;
   font-weight: 500;
@@ -133,36 +42,36 @@ main {
   line-height: 100px;
 }
 
-.leagueCreate-choiceCtn{
+.leagueCreate-choiceCtn {
   padding-right: 10px;
   margin-right: 20px;
   padding-left: 10px;
   width: 100px;
   border-radius: 10px;
-  background-color: #E9F6FF;
+  background-color: #e9f6ff;
   position: relative;
   left: 150px;
 }
 
-.leagueCreate-choice{
+.leagueCreate-choice {
   color: #a5a5a5;
   font-weight: 800;
   /* padding-left: 10px;
   padding-right: 40px; */
   width: 100%;
   border: none;
-  background-color: #E9F6FF;
+  background-color: #e9f6ff;
   border-radius: 10px;
   /* appearance: none; */
 }
 
-.leagueCreate-mainContainer{
+.leagueCreate-mainContainer {
   width: 90%;
   max-width: 1200px;
-  margin-top:20px;
+  margin-top: 20px;
 }
 
-.leagueCreate-boardTitle{
+.leagueCreate-boardTitle {
   display: flex;
   flex-direction: row;
   padding: 5px;
@@ -171,35 +80,35 @@ main {
   justify-content: center;
 }
 
-.leagueCreate-btInput{
+.leagueCreate-btInput {
   margin: auto;
   padding: 10px;
-  width:900px;
+  width: 900px;
   outline: none;
   border-width: 0 0 2px;
   border-color: lightgrey;
 }
 
-.leagueCreate-btInput::placeholder{
+.leagueCreate-btInput::placeholder {
   color: lightgrey;
 }
 
-.leagueCreate-boardContent{
+.leagueCreate-boardContent {
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding:20px;
-  justify-content:center;
+  padding: 20px;
+  justify-content: center;
 }
 
-.leagueCreate-btnCtn{
+.leagueCreate-btnCtn {
   display: flex;
   flex-direction: row;
   justify-content: center;
 }
 
 button {
-  background-color:#E9F6FF;
+  background-color: #e9f6ff;
   border: none;
   color: black;
   padding: 15px 32px;
@@ -212,23 +121,24 @@ button {
   border-radius: 8px;
 }
 
-button:hover {
-  background-color:#E9F6FF;
-}
+/* button:hover {
+  background-color: #e9f6ff;
+} */
 
 #cancelBtn {
   color: #a5a5a5;
   font-weight: 800;
-  background-color: blanchedalmond; 
+  background-color: blanchedalmond;
 }
 
-#submitBtn{
+#submitBtn {
+  background-color: #e9f6ff;
   color: #a5a5a5;
   font-weight: 800;
 }
 
 #cancelBtn:hover {
-  background-color: blanchedalmond; 
+  background-color: blanchedalmond;
 }
 
 /* 에디터 스타일 */
@@ -244,46 +154,4 @@ button:hover {
 button {
   margin-left: 10px;
   margin-right: 10px;
-}
-
-footer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 180px;
-  padding: 0;
-  border-top: 1px solid lightgrey;
-  margin-bottom: 80px;
-}
-
-.footer-container {
-  margin-top: 80px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  max-width: 1200px;
-}
-
-.footer-logo {
-  line-height: 150px;
-  margin-left: 100px;
-}
-
-.footer-text {
-  margin: auto;
-}
-
-.footer-text li {
-  list-style: none;
-  margin-bottom: 20px;
-  font-size: 14px;
-  font-weight: 600;
-  color: rgba(55, 56, 60, .61);
-}
-
-.footer-img {
-  line-height: 150px;
-  margin-right: 100px;
 }

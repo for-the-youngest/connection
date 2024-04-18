@@ -1,55 +1,12 @@
-
 * {
   font-family: "Noto Sans KR", sans-serif;
   margin: 0;
   padding: 0;
 }
 
-header {
-  position: fixed;
-  width: 100%;
-  height: 80px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  box-shadow: 0.5px 0.2px 0px 0px gray;
-  top: 0px;
-  border-bottom: 1px solid lightgrey;
-  background-color: white;
-  z-index: 2;
-}
-
-.header-introBar {
-  width: 100%;
-  max-width: 1200px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.header-nav {
-  display: flex;
-  align-items: center;
-  position: relative;
-}
-
 button {
   border: 0px;
   background-color: white;
-}
-
-.header-menuBar {
-  margin-right: 30px;
-}
-
-.header-logo img {
-  max-height: 100%;
-  max-width: 100%;
-}
-
-.header-profile img {
-  max-height: 100%; /* 로고 이미지 높이 100%로 설정 */
-  max-width: 100%; /* 로고 이미지 최대 너비 100%로 설정 */
 }
 
 a::visited {
@@ -65,51 +22,7 @@ ul {
   list-style: none;
 }
 
-.header-menu {
-  cursor: pointer;
-}
-
-.header-menuApi{
-  margin-right: 30px;
-  font-weight: 500;
-}
-
-.header-menuCommunity {
-  font-weight: 500;
-}
-
-.header-communityHiddenMenu {
-  display: none;
-  width: 200px;
-  position: absolute;
-  transform: translate(-60px, 80px);
-}
-
-.header-communityHiddenMenuUl {
-  display: flex;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  border-radius: 8px;
-  /* border: 1px solid rgba(112, 115, 124, 0.22); */
-  background-color: #e9f6ff;
-}
-
-.header-communityHiddenMenuli {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 168px;
-  /* font-size: 0.875rem; */
-  letter-spacing: 0px;
-
-  font-weight: 800;
-}
-
-.header-communityHiddenMenuA {
-  color: #a5a5a5;
-}
-
-main{
+main {
   max-width: 1000px;
   padding: 0;
   margin: auto;
@@ -117,33 +30,33 @@ main{
 }
 /* 게시글 상단 */
 /* 게시글 프로필 */
-.leaguePost-profileCtn{
+.leaguePost-profileCtn {
   display: flex;
   position: relative;
   height: 80px;
 }
 
-.leaguePost-profile{
+.leaguePost-profile {
   line-height: 10px;
 }
 
-.leaguePost-commentProfileImg{
+.leaguePost-commentProfileImg {
   margin: 20px 0;
 }
 
-.leaguePost-userNicknameCtn{
+.leaguePost-userNicknameCtn {
   position: absolute;
   left: 80px;
   height: 70px;
-  line-height: 10px
+  line-height: 10px;
 }
 
-.leaguePost-userNickname{
+.leaguePost-userNickname {
   font-size: 18px;
   font-weight: bold;
 }
 
-.leaguePost-date{
+.leaguePost-date {
   color: lightgrey;
   position: absolute;
   top: 25px;
@@ -151,62 +64,62 @@ main{
 }
 
 /* 게시글 상단 메뉴 버튼 */
-.leaguePost-profileCtn{
+.leaguePost-profileCtn {
   display: flex;
   justify-content: space-between;
 }
 
-#leaguePost-showListButton{
+#leaguePost-showListButton {
   background-color: white;
   border: none;
   padding-left: 100px;
   cursor: pointer;
 }
 
-.leaguePost-menuBar{
+.leaguePost-menuBar {
   max-width: 120px;
   max-height: 80px;
 }
 
-.leaguePost-menuBarImg{
+.leaguePost-menuBarImg {
   width: 26px;
   height: 42px;
 }
 
-#leaguePost-list{
+#leaguePost-list {
   display: none;
   list-style: none;
   padding-left: 20px;
-  background-color: #E9F6FF;
+  background-color: #e9f6ff;
   border-radius: 9999px;
   cursor: pointer;
   font-weight: 800;
 }
 
-#leaguePost-list li{
+#leaguePost-list li {
   padding-left: 8px;
 }
 
-#leaguePost-list a{
+#leaguePost-list a {
   text-decoration-line: none;
   color: #a5a5a5;
 }
 
 /* 게시글 제목 */
-.leaguePost-titleCtn{
+.leaguePost-titleCtn {
   border-bottom: 1px solid lightgrey;
   display: flex;
   align-items: center;
   height: 80px;
 }
 
-.leaguePost-title{
+.leaguePost-title {
   font-size: 20px;
   margin: 0 5px;
   color: rgb(170, 170, 170);
 }
 
-.leaguePost-titleContnet{
+.leaguePost-titleContnet {
   font-size: 20px;
   font-weight: bold;
   margin: 0 10px;
@@ -214,15 +127,15 @@ main{
 }
 
 /* 게시글 내용 */
-.leaguePost-top{
+.leaguePost-top {
   border-bottom: 2px solid lightgrey;
 }
 
-.leaguePost-contentCtn{
-  height: 850px;
+.leaguePost-contentCtn {
+  height: 950px;
 }
 
-.leaguePost-routeCtn{
+.leaguePost-routeCtn {
   width: 200px;
   display: flex;
   align-items: center;
@@ -230,16 +143,16 @@ main{
   margin: 10px 5px;
 }
 
-.leaguePost-routeCtn a{
+.leaguePost-routeCtn a {
   text-decoration-line: none;
 }
 
-.leaguePost-route{
+.leaguePost-route {
   font-size: 14px;
   font-weight: bold;
 }
 
-.leaguePost-commentSubmit{
+.leaguePost-commentSubmit {
   cursor: pointer;
 }
 
@@ -247,59 +160,55 @@ main{
   color: rgb(80, 80, 80);
 }*/
 
-.leaguePost-commentmenuBarImg{
+.leaguePost-commentmenuBarImg {
   cursor: pointer;
 }
 
-.leaguePost-ctCtn{
+.leaguePost-ctCtn {
   width: 1000px;
   margin-top: 30px;
 }
 
-.leaguePost-content1{
+.leaguePost-content1 {
   font-weight: 600;
   font-size: 24px;
-  color: #F58D87;
+  color: #f58d87;
 }
 
-.leaguePost-content2{
-  
+.leaguePost-content2 {
   font-weight: 500;
   font-size: 22px;
 }
 
-
-
-
-.leaguePost-inventoryCtn{
+.leaguePost-inventoryCtn {
   display: flex;
   align-items: center;
   margin-top: 30px;
 }
 
-.leaguePost-inventoryBtn img{
+.leaguePost-inventoryBtn img {
   width: 50px;
   height: 50px;
 }
 
-.leaguePost-inventoryBtn{
+.leaguePost-inventoryBtn {
   border: none;
   background-color: white;
 }
 
 /* 좋아요 */
 
-.leaguePost-like{
+.leaguePost-like {
   display: flex;
   position: relative;
   left: 10px;
 }
 
-.leaguePost-likeText{
+.leaguePost-likeText {
   line-height: 26px;
 }
 
-.leaguePost-likeBtn{
+.leaguePost-likeBtn {
   border: none;
   background-color: white;
   width: 20px;
@@ -308,60 +217,60 @@ main{
   margin-top: 3px;
 }
 
-#like.active{
+#like.active {
   fill: red;
 }
 
 /* 조회수 */
-.leaguePost-view{
+.leaguePost-view {
   display: flex;
   position: relative;
   left: 30px;
 }
 
-.leaguePost-view img{
+.leaguePost-view img {
   width: 20px;
   height: 20px;
   margin-right: 10px;
 }
 
-.leaguePost-viewText{
+.leaguePost-viewText {
   line-height: 20px;
   position: relative;
   left: 2px;
 }
 
 /* 게시글 중단 */
-.leaguePost-middle{
+.leaguePost-middle {
   border-bottom: 2px solid lightgrey;
 }
 /* 게시글 댓글 */
-.leaguePost-comments{
+.leaguePost-comments {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-top: 50px;
 }
 
-.leaguePost-commentText{
+.leaguePost-commentText {
   border-radius: 5px;
   font-size: 14px;
   text-align: center;
   line-height: 35px;
-  background-color: #E9F6FF;
+  background-color: #e9f6ff;
   width: 60px;
   height: 35px;
 }
 
-.leaguePost-commentInput{
+.leaguePost-commentInput {
   width: 850px;
   height: 30px;
   border-radius: 5px;
   border: 1px solid lightgrey;
 }
 
-.leaguePost-commentSubmit{
-  background-color: #E9F6FF;
+.leaguePost-commentSubmit {
+  background-color: #e9f6ff;
   height: 35px;
   width: 60px;
   border: none;
@@ -369,52 +278,52 @@ main{
   font-weight: bold;
 }
 
-.leaguePost-commentCtn{
+.leaguePost-commentCtn {
   display: flex;
   align-items: center;
   height: 100px;
 }
 
-.leaguePost-commentProfileImg{
+.leaguePost-commentProfileImg {
   font-size: 50px;
 }
 
-.leaguePost-commentUserNickname{
+.leaguePost-commentUserNickname {
   margin-left: 5px;
 }
 
-.leaguePost-commentUserNicknameText{
+.leaguePost-commentUserNicknameText {
   font-size: 16px;
   font-weight: bold;
   margin: 0;
   color: rgb(80, 80, 80);
 }
 
-.leaguePost-commentdate{
+.leaguePost-commentdate {
   font-size: 14px;
   margin: 0;
   color: lightgrey;
 }
 
-.leaguePost-commentMenuBtn{
+.leaguePost-commentMenuBtn {
   border: none;
   background-color: white;
 }
 
-.leaguePost-commentMenuBtn img{
+.leaguePost-commentMenuBtn img {
   width: 20px;
   height: 35px;
 }
 
-.leaguePost-commentContentCtn{
+.leaguePost-commentContentCtn {
   width: 600px;
   height: 80px;
-  background-color: #E9F6FF;
+  background-color: #e9f6ff;
   border-radius: 10px;
   margin: 10px auto;
 }
 
-.leaguePost-commentContent{
+.leaguePost-commentContent {
   font-size: 16px;
   font-weight: bold;
   line-height: 80px;
@@ -422,25 +331,29 @@ main{
 }
 
 /* 댓글 메뉴 */
-.leaguePost-commentMenu{
+.leaguePost-commentMenu {
   display: flex;
 }
 
-#leaguePost-commentButton, #leaguePost-commentButton2, #leaguePost-commentButton3{
+#leaguePost-commentButton,
+#leaguePost-commentButton2,
+#leaguePost-commentButton3 {
   background-color: white;
   border: none;
 }
 
-.leaguePost-commentmenuBarImg{
+.leaguePost-commentmenuBarImg {
   width: 20px;
   height: 30px;
 }
 
-#leaguePost-commentHidden, #leaguePost-commentHidden2, #leaguePost-commentHidden3{
+#leaguePost-commentHidden,
+#leaguePost-commentHidden2,
+#leaguePost-commentHidden3 {
   display: none;
   list-style: none;
   padding-left: 20px;
-  background-color: #E9F6FF;
+  background-color: #e9f6ff;
   border-radius: 9999px;
   cursor: pointer;
   font-weight: 800;
@@ -448,22 +361,24 @@ main{
   height: 50px;
 }
 
-#leaguePost-commentHidden a, #leaguePost-commentHidden2 a, #leaguePost-commentHidden3 a{
+#leaguePost-commentHidden a,
+#leaguePost-commentHidden2 a,
+#leaguePost-commentHidden3 a {
   text-decoration-line: none;
   color: #a5a5a5;
   font-size: 14px;
 }
 
 /* 게시글 하단 */
-.leaguePost-freeWritingDetail{
+.leaguePost-freeWritingDetail {
   display: flex;
   height: 150px;
   border-radius: 30px;
-  background-color: #E9F6FF;
+  background-color: #e9f6ff;
   margin: 30px 0;
 }
 
-.leaguePost-freeWritingDetailBox{
+.leaguePost-freeWritingDetailBox {
   width: 1200px;
   padding-right: 70px;
   margin-left: 80px;
@@ -471,96 +386,53 @@ main{
   padding-bottom: 10px;
 }
 
-.leaguePost-freeWritingDetailType{
+.leaguePost-freeWritingDetailType {
   font-size: 13px;
-  color: #5079E2;
+  color: #5079e2;
   margin-bottom: 25px;
   font-weight: 600;
 }
 
-.leaguePost-freeWritingDetailTitle{
+.leaguePost-freeWritingDetailTitle {
   margin-bottom: 30px;
 }
 
-.leaguePost-freeWritingDetailText{
+.leaguePost-freeWritingDetailText {
   font-size: 20px;
   font-weight: 700;
 }
 
-.leaguePost-freeWritingDetailNickname{
+.leaguePost-freeWritingDetailNickname {
   font-size: 14px;
   font-weight: 600;
 }
 
-.leaguePost-freeWritingDetailCount{
+.leaguePost-freeWritingDetailCount {
   font-size: 14px;
   font-weight: 600;
 }
 
-.leaguePost-freeWritingDetailName{
+.leaguePost-freeWritingDetailName {
   display: flex;
   justify-content: space-between;
 }
 
-.leaguePost-pageNumber{
+.leaguePost-pageNumber {
   text-align: center;
   margin-top: 50px;
   margin-bottom: 70px;
 }
 
-.leaguePost-pageNumberBox{
+.leaguePost-pageNumberBox {
   width: 500px;
   height: 50px;
   display: inline-flex;
   justify-content: space-between;
   align-items: stretch;
-  background-color: #E9F6FF;
+  background-color: #e9f6ff;
   border-radius: 9999px;
 }
 
-.leaguePost-freeWritingDetailBox a{
+.leaguePost-freeWritingDetailBox a {
   text-decoration-line: none;
-}
-
-/* 푸터 */
-footer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 180px;
-  padding: 0;
-  border-top: 1px solid lightgrey;
-  margin-bottom: 80px;
-}
-
-.footer-container {
-  margin-top: 80px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  max-width: 1200px;
-}
-
-.footer-logo {
-  line-height: 150px;
-  margin-left: 100px;
-}
-
-.footer-text {
-  margin: auto;
-}
-
-.footer-text li {
-  list-style: none;
-  margin-bottom: 20px;
-  font-size: 14px;
-  font-weight: 600;
-  color: rgba(55, 56, 60, .61);
-}
-
-.footer-img {
-  line-height: 150px;
-  margin-right: 100px;
 }

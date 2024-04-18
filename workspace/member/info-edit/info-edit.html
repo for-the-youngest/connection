@@ -10,53 +10,15 @@
       href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./info-edit.css" />
+    <link rel="stylesheet" href="../info-edit/info-edit.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script defer src="./info-edit.js"></script>
+    <script defer src="../info-edit/info-edit.js"></script>
+    <script defer src="../fetch/fetch.js"></script>
   </head>
   <!-- 페이지 이름 - 기능이름 - 태그역할 -->
   <body style="overflow: auto">
-    <header>
-      <div class="header-introBar">
-        <div class="header-logo">
-          <a href="../main/main.html">
-            <img src="../img/Connection.png" alt="" />
-          </a>
-        </div>
-        <div class="header-nav">
-          <a href="../find-place/find-place.html" class="header-menuApi">장소 찾기</a>
-          <div class="header-menuBar">
-            <ul class="header-menu">
-              <li class="header-menuCommunity">커뮤니티</li>
-            </ul>
-          </div>
-          <div class="header-communityHiddenMenu">
-            <ul class="header-communityHiddenMenuUl">
-              <li class="header-communityHiddenMenuli">
-                <a
-                  href="../board/board.html"
-                  class="header-communityHiddenMenuA"
-                  >자유 게시판</a
-                >
-              </li>
-              <li class="header-communityHiddenMenuli">
-                <a
-                  href="../league/league.html"
-                  class="header-communityHiddenMenuA"
-                  >리그 게시판</a
-                >
-              </li>
-            </ul>
-          </div>
-          <div class="header-profile">
-            <a href="../mypage/mypage.html">
-              <img src="../img/profile-img.png" alt="" />
-            </a>
-          </div>
-        </div>
-      </div>
-    </header>
     <div class="infoEdit-ctn" id="infoEdit-mainWrap">
+      <div id="header"></div>
       <div
         class="infoEdit-boundaryCtn infoEdit-boundaryCtnSetting"
         id="infoEdit-wrap"
@@ -195,37 +157,15 @@
         </section>
 
         <div class="infoEdit-btnCtn">
-          <a href="../mypage/mypage.html">
+          <a href="">
             <button class="infoEdit-btnCancel">취소하기</button>
           </a>
-          <a href="../mypage/mypage.html">
-            <button class="infoEdit-btnSave">저장하기</button>
+          <a href="">
+            <button type="submit" class="infoEdit-btnSave">저장하기</button>
           </a>
         </div>
       </div>
+      <div id="footer"></div>
     </div>
-    <footer>
-      <div class="footer-container">
-        <div class="footer-logo">
-          <img src="../img/Connection.png" alt="">
-        </div>
-        <div class="footer-text">
-          <ul>
-            <li class="footer-textTop">
-              이용약관&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;위치기반 서비스 이용약관&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;개인정보처리방침&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;개인정보 보호센터
-            </li>
-            <li class="footer-textMiddle">
-              주식회사 커넥션  |  서울특별시 강남구 테헤란로 26길 12 제일비전타워 13층  |  고객센터 1234-1234
-            </li>
-            <li class="footer-textBottom">
-              Copyright ⓒ 2024 (주)커넥션 All Rights Reserved.Hosting By (주)주막위
-            </li>
-          </ul>
-        </div>
-        <div class="footer-img">
-          <img src="../img/footer-img.jpg" alt="">
-        </div>
-      </div>
-    </footer>
   </body>
 </html>
