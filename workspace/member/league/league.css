@@ -5,6 +5,7 @@
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 header {
   position: fixed;
   width: 100%;
@@ -35,11 +36,14 @@ header {
 
 =======
 >>>>>>> mBw
+=======
+>>>>>>> cjw
 button {
   border: 0px;
   background-color: white;
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 .header-menuBar {
   margin-right: 30px;
@@ -57,6 +61,8 @@ button {
 
 =======
 >>>>>>> mBw
+=======
+>>>>>>> cjw
 a::visited {
   color: black;
 }
@@ -70,6 +76,7 @@ ul {
   list-style: none;
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 .header-menu {
   cursor: pointer;
@@ -101,8 +108,13 @@ ul {
 }
 
 .header-communityHiddenMenuli {
+=======
+main {
+>>>>>>> cjw
   display: flex;
+  justify-content: center;
   align-items: center;
+<<<<<<< HEAD
   justify-content: center;
   width: 168px;
   /* font-size: 0.875rem; */
@@ -125,15 +137,21 @@ main {
   justify-content: center;
   align-items: center;
 >>>>>>> mBw
+=======
+>>>>>>> cjw
   flex-direction: column;
   width: 100%;
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 .main-notice{
 =======
 .main-notice {
 >>>>>>> mBw
+=======
+.main-notice {
+>>>>>>> cjw
   margin-top: 140px;
   display: flex;
   flex-direction: column;
@@ -142,10 +160,14 @@ main {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 .main-noticeTitleBar{
 =======
 .main-noticeTitleBar {
 >>>>>>> mBw
+=======
+.main-noticeTitleBar {
+>>>>>>> cjw
   height: 80px;
   display: flex;
   justify-content: space-between;
@@ -153,27 +175,32 @@ main {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 .main-downscroll{
+=======
+.main-downscroll {
+>>>>>>> cjw
   width: 100px;
 }
 
-.main-downscrollButton{
+.main-downscrollButton {
   cursor: pointer;
 }
 
-.main-downscrollButtonBox{
+.main-downscrollButtonBox {
   padding-left: 35px;
 }
 
-.main-downscrollType{
-  background-color: #E9F6FF;
+.main-downscrollType {
+  background-color: #e9f6ff;
   border-radius: 9999px;
 }
 
-.main-sortOrder{
+.main-sortOrder {
   display: none;
 }
 
+<<<<<<< HEAD
 .main-sortOrder li{
 =======
 .main-downscroll {
@@ -199,6 +226,9 @@ main {
 
 .main-sortOrder li {
 >>>>>>> mBw
+=======
+.main-sortOrder li {
+>>>>>>> cjw
   display: flex;
   justify-content: center;
   cursor: pointer;
@@ -207,23 +237,32 @@ main {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 .main-noticeDetail{
 =======
 .main-noticeDetail {
 >>>>>>> mBw
+=======
+.main-noticeDetail {
+>>>>>>> cjw
   display: flex;
   align-items: center;
   height: 50px;
   margin-bottom: 20px;
 <<<<<<< HEAD
+<<<<<<< HEAD
   background-color: #E9F6FF;
+=======
+  background-color: #e9f6ff;
+>>>>>>> cjw
   border-radius: 9999px;
 }
 
-.main-noticeDetailBox1{
+.main-noticeDetailBox1 {
   border-radius: 9999px;
+<<<<<<< HEAD
   background-color: #D9D9D9;
 =======
   background-color: #e9f6ff;
@@ -234,6 +273,9 @@ main {
   border-radius: 9999px;
   background-color: #d9d9d9;
 >>>>>>> mBw
+=======
+  background-color: #d9d9d9;
+>>>>>>> cjw
   display: flex;
   align-items: center;
   width: 100px;
@@ -242,14 +284,19 @@ main {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 .main-noticeDetailBox1Text{
 =======
 .main-noticeDetailBox1Text {
 >>>>>>> mBw
+=======
+.main-noticeDetailBox1Text {
+>>>>>>> cjw
   margin-left: 35px;
   font-weight: 500;
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 .main-noticeDetailBox2{
   margin-left: 50px;
@@ -263,19 +310,31 @@ main {
 
 .main-noticeDetailBox2Text {
 >>>>>>> mBw
+=======
+.main-noticeDetailBox2 {
+  margin-left: 50px;
+}
+
+.main-noticeDetailBox2Text {
+>>>>>>> cjw
   color: #a5a5a5;
   font-weight: 800;
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 .main-noticeDetailBox3{
+=======
+.main-noticeDetailBox3 {
+>>>>>>> cjw
   margin-left: 50px;
 }
 
-.main-noticeDetailBox3Text{
+.main-noticeDetailBox3Text {
   font-weight: 600;
 }
 
+<<<<<<< HEAD
 .main-freeWriting{
 =======
 .main-noticeDetailBox3 {
@@ -288,6 +347,9 @@ main {
 
 .main-freeWriting {
 >>>>>>> mBw
+=======
+.main-freeWriting {
+>>>>>>> cjw
   width: 100%;
   max-width: 1200px;
   margin-top: 30px;
@@ -295,31 +357,43 @@ main {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 .main-writingTypeChoice{
 =======
 .main-writingTypeChoice {
 >>>>>>> mBw
+=======
+.main-writingTypeChoice {
+>>>>>>> cjw
   display: flex;
   margin-bottom: 40px;
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 .main-writingTypeChoiceBox1{
 =======
 .main-writingTypeChoiceBox1 {
 >>>>>>> mBw
+=======
+.main-writingTypeChoiceBox1 {
+>>>>>>> cjw
   padding-right: 10px;
   margin-right: 20px;
   padding-left: 10px;
   width: 100px;
   border-radius: 10px;
 <<<<<<< HEAD
+<<<<<<< HEAD
   background-color: #E9F6FF;
+=======
+  background-color: #e9f6ff;
+>>>>>>> cjw
 }
 
-
-.main-writingTypeChoiceBox2{
+.main-writingTypeChoiceBox2 {
   border-radius: 10px;
+<<<<<<< HEAD
   background-color: #E9F6FF;
 =======
   background-color: #e9f6ff;
@@ -329,6 +403,9 @@ main {
   border-radius: 10px;
   background-color: #e9f6ff;
 >>>>>>> mBw
+=======
+  background-color: #e9f6ff;
+>>>>>>> cjw
   padding-left: 10px;
   padding-right: 10px;
   width: 100px;
@@ -337,10 +414,14 @@ main {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 .main-writingTypeChoiceSelect{
 =======
 .main-writingTypeChoiceSelect {
 >>>>>>> mBw
+=======
+.main-writingTypeChoiceSelect {
+>>>>>>> cjw
   color: #a5a5a5;
   font-weight: 800;
   /* padding-left: 10px;
@@ -348,23 +429,32 @@ main {
   width: 100%;
   border: none;
 <<<<<<< HEAD
+<<<<<<< HEAD
   background-color: #E9F6FF;
 =======
   background-color: #e9f6ff;
 >>>>>>> mBw
+=======
+  background-color: #e9f6ff;
+>>>>>>> cjw
   border-radius: 10px;
   /* appearance: none; */
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 .main-freeWritingDetail{
+=======
+.main-freeWritingDetail {
+>>>>>>> cjw
   display: flex;
   height: 150px;
   border-radius: 9999px;
-  background-color: #E9F6FF;
+  background-color: #e9f6ff;
   margin-bottom: 20px;
 }
 
+<<<<<<< HEAD
 .main-freeWritingDetailBox{
 =======
 .main-freeWritingDetail {
@@ -377,6 +467,9 @@ main {
 
 .main-freeWritingDetailBox {
 >>>>>>> mBw
+=======
+.main-freeWritingDetailBox {
+>>>>>>> cjw
   width: 1200px;
   padding-right: 70px;
   margin-left: 80px;
@@ -384,6 +477,7 @@ main {
   padding-bottom: 10px;
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 .main-freeWritingDetailType{
   font-size: 13px;
@@ -393,10 +487,16 @@ main {
   font-size: 13px;
   color: #5079e2;
 >>>>>>> mBw
+=======
+.main-freeWritingDetailType {
+  font-size: 13px;
+  color: #5079e2;
+>>>>>>> cjw
   margin-bottom: 25px;
   font-weight: 600;
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 .main-freeWritingDetailTitle{
   margin-bottom: 30px;
@@ -410,57 +510,85 @@ main {
 
 .main-freeWritingDetailText {
 >>>>>>> mBw
+=======
+.main-freeWritingDetailTitle {
+  margin-bottom: 30px;
+}
+
+.main-freeWritingDetailText {
+>>>>>>> cjw
   font-size: 20px;
   font-weight: 700;
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 .main-freeWritingDetailNickname{
 =======
 .main-freeWritingDetailNickname {
 >>>>>>> mBw
+=======
+.main-freeWritingDetailNickname {
+>>>>>>> cjw
   font-size: 14px;
   font-weight: 600;
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 .main-freeWritingDetailCount{
 =======
 .main-freeWritingDetailCount {
 >>>>>>> mBw
+=======
+.main-freeWritingDetailCount {
+>>>>>>> cjw
   font-size: 14px;
   font-weight: 600;
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 .main-freeWritingDetailName{
 =======
 .main-freeWritingDetailName {
 >>>>>>> mBw
+=======
+.main-freeWritingDetailName {
+>>>>>>> cjw
   display: flex;
   justify-content: space-between;
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 .main-pageNumber{
 =======
 .main-pageNumber {
 >>>>>>> mBw
+=======
+.main-pageNumber {
+>>>>>>> cjw
   text-align: center;
   margin-top: 50px;
   margin-bottom: 70px;
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 .main-pageNumberBox{
 =======
 .main-pageNumberBox {
 >>>>>>> mBw
+=======
+.main-pageNumberBox {
+>>>>>>> cjw
   width: 500px;
   height: 50px;
   display: inline-flex;
   justify-content: space-between;
   align-items: stretch;
+<<<<<<< HEAD
 <<<<<<< HEAD
   background-color: #E9F6FF;
   border-radius: 9999px;
@@ -474,11 +602,19 @@ main {
 
 .main-pageNumberNum1 {
 >>>>>>> mBw
+=======
+  background-color: #e9f6ff;
+  border-radius: 9999px;
+}
+
+.main-pageNumberNum1 {
+>>>>>>> cjw
   cursor: pointer;
   display: flex;
   align-items: center;
   font-size: 20px;
   font-weight: 600;
+<<<<<<< HEAD
 <<<<<<< HEAD
   color: #5079E2;
 }
@@ -490,6 +626,12 @@ main {
 
 .main-pageNumberNum {
 >>>>>>> mBw
+=======
+  color: #5079e2;
+}
+
+.main-pageNumberNum {
+>>>>>>> cjw
   display: flex;
   align-items: center;
   font-size: 20px;
@@ -498,10 +640,14 @@ main {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 .main-pageNumberLeft{
 =======
 .main-pageNumberLeft {
 >>>>>>> mBw
+=======
+.main-pageNumberLeft {
+>>>>>>> cjw
   margin-left: 40px;
   display: flex;
   align-items: center;
@@ -511,10 +657,14 @@ main {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 .main-pageNumberRight{
 =======
 .main-pageNumberRight {
 >>>>>>> mBw
+=======
+.main-pageNumberRight {
+>>>>>>> cjw
   margin-right: 40px;
   display: flex;
   align-items: center;
@@ -523,6 +673,7 @@ main {
   color: #a5a5a5;
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 footer {
   display: flex;
@@ -533,16 +684,19 @@ footer {
   padding: 0;
   border-top: 1px solid lightgrey;
   margin-bottom: 80px;
+=======
+.to_Writing {
+  position: fixed;
+  bottom: 200px;
+  right: 180px;
+>>>>>>> cjw
 }
 
-.footer-container {
-  margin-top: 80px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  max-width: 1200px;
+.to_Writing img {
+  width: 45px;
+  height: 45px;
 }
+<<<<<<< HEAD
 
 .footer-logo {
   line-height: 150px;
@@ -594,3 +748,5 @@ footer {
   height: 45px;
 }
 >>>>>>> mBw
+=======
+>>>>>>> cjw

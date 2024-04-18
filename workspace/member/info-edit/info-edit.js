@@ -112,6 +112,7 @@ function validateNickName() {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 $(".header-menu").on("click", checkMenuOn);
 
@@ -129,9 +130,17 @@ function checkMenuOn() {
 // 저장하기 버튼 시 알림 호출
 const buttons = document.querySelectorAll(".infoEdit-btnSave");
 
+=======
+// 저장하기 버튼 시 알림 호출
+const buttons = document.querySelectorAll(".infoEdit-btnSave");
+
+>>>>>>> cjw
 buttons.forEach((button) => {
   button.addEventListener("click", function () {
     alert("수정이 완료되었습니다!");
   });
 });
+<<<<<<< HEAD
 >>>>>>> mBw
+=======
+>>>>>>> cjw

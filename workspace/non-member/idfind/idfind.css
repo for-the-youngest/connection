@@ -5,6 +5,7 @@
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 header {
   position: fixed;
   width: 100%;
@@ -35,11 +36,14 @@ header {
 
 =======
 >>>>>>> mBw
+=======
+>>>>>>> cjw
 button {
   border: 0px;
   background-color: white;
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 .header-menuBar {
   margin-right: 30px;
@@ -57,6 +61,8 @@ button {
 
 =======
 >>>>>>> mBw
+=======
+>>>>>>> cjw
 a::visited {
   color: black;
 }
@@ -70,6 +76,7 @@ ul {
   list-style: none;
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 .header-menu {
   cursor: pointer;
@@ -166,6 +173,8 @@ footer {
 
 =======
 >>>>>>> mBw
+=======
+>>>>>>> cjw
 /* idfind.css 시작점 */
 
 .idfind-banner-container {
@@ -209,6 +218,7 @@ div {
 
 .idfind-next-button {
 <<<<<<< HEAD
+<<<<<<< HEAD
   margin-top: 30px;
   width: 200px;
   height: 33px;
@@ -228,6 +238,16 @@ div {
   justify-content: center;
   /* 여기 수정 */
 >>>>>>> mBw
+=======
+  margin: auto;
+  margin-top: 50px;
+  margin-bottom: 100px;
+  background-color: skyblue;
+  text-align: center;
+  align-items: center;
+  width: 200px;
+  justify-content: center;
+>>>>>>> cjw
 }
 
 #idfind-emailnumber1 {
@@ -242,6 +262,7 @@ div {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 #idfind-emailnumber1{
   margin-top: 50px;
   font-weight: bold;
@@ -252,3 +273,9 @@ div {
   font-weight: bold;
 }
 >>>>>>> mBw
+=======
+#idfind-emailnumber1 {
+  margin-top: 50px;
+  font-weight: bold;
+}
+>>>>>>> cjw

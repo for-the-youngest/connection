@@ -5,6 +5,7 @@
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 header {
   position: fixed;
   width: 100%;
@@ -35,11 +36,14 @@ header {
 
 =======
 >>>>>>> mBw
+=======
+>>>>>>> cjw
 button {
   border: 0px;
   background-color: white;
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 .header-menuBar {
   margin-right: 30px;
@@ -57,6 +61,8 @@ button {
 
 =======
 >>>>>>> mBw
+=======
+>>>>>>> cjw
 a::visited {
   color: black;
 }
@@ -70,6 +76,7 @@ ul {
   list-style: none;
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 .header-menu {
   cursor: pointer;
@@ -119,6 +126,9 @@ main{
 =======
 main {
 >>>>>>> mBw
+=======
+main {
+>>>>>>> cjw
   max-width: 1000px;
   padding: 0;
   margin: auto;
@@ -127,31 +137,40 @@ main {
 /* 게시글 상단 */
 /* 게시글 프로필 */
 <<<<<<< HEAD
+<<<<<<< HEAD
 .leaguePost-profileCtn{
 =======
 .leaguePost-profileCtn {
 >>>>>>> mBw
+=======
+.leaguePost-profileCtn {
+>>>>>>> cjw
   display: flex;
   position: relative;
   height: 80px;
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 .leaguePost-profile{
+=======
+.leaguePost-profile {
+>>>>>>> cjw
   line-height: 10px;
 }
 
-.leaguePost-commentProfileImg{
+.leaguePost-commentProfileImg {
   margin: 20px 0;
 }
 
-.leaguePost-userNicknameCtn{
+.leaguePost-userNicknameCtn {
   position: absolute;
   left: 80px;
   height: 70px;
-  line-height: 10px
+  line-height: 10px;
 }
 
+<<<<<<< HEAD
 .leaguePost-userNickname{
 =======
 .leaguePost-profile {
@@ -171,15 +190,22 @@ main {
 
 .leaguePost-userNickname {
 >>>>>>> mBw
+=======
+.leaguePost-userNickname {
+>>>>>>> cjw
   font-size: 18px;
   font-weight: bold;
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 .leaguePost-date{
 =======
 .leaguePost-date {
 >>>>>>> mBw
+=======
+.leaguePost-date {
+>>>>>>> cjw
   color: lightgrey;
   position: absolute;
   top: 25px;
@@ -188,19 +214,27 @@ main {
 
 /* 게시글 상단 메뉴 버튼 */
 <<<<<<< HEAD
+<<<<<<< HEAD
 .leaguePost-profileCtn{
 =======
 .leaguePost-profileCtn {
 >>>>>>> mBw
+=======
+.leaguePost-profileCtn {
+>>>>>>> cjw
   display: flex;
   justify-content: space-between;
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 #leaguePost-showListButton{
 =======
 #leaguePost-showListButton {
 >>>>>>> mBw
+=======
+#leaguePost-showListButton {
+>>>>>>> cjw
   background-color: white;
   border: none;
   padding-left: 100px;
@@ -208,23 +242,32 @@ main {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 .leaguePost-menuBar{
 =======
 .leaguePost-menuBar {
 >>>>>>> mBw
+=======
+.leaguePost-menuBar {
+>>>>>>> cjw
   max-width: 120px;
   max-height: 80px;
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 .leaguePost-menuBarImg{
 =======
 .leaguePost-menuBarImg {
 >>>>>>> mBw
+=======
+.leaguePost-menuBarImg {
+>>>>>>> cjw
   width: 26px;
   height: 42px;
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 #leaguePost-list{
   display: none;
@@ -238,11 +281,19 @@ main {
   padding-left: 20px;
   background-color: #e9f6ff;
 >>>>>>> mBw
+=======
+#leaguePost-list {
+  display: none;
+  list-style: none;
+  padding-left: 20px;
+  background-color: #e9f6ff;
+>>>>>>> cjw
   border-radius: 9999px;
   cursor: pointer;
   font-weight: 800;
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 #leaguePost-list li{
   padding-left: 8px;
@@ -256,16 +307,27 @@ main {
 
 #leaguePost-list a {
 >>>>>>> mBw
+=======
+#leaguePost-list li {
+  padding-left: 8px;
+}
+
+#leaguePost-list a {
+>>>>>>> cjw
   text-decoration-line: none;
   color: #a5a5a5;
 }
 
 /* 게시글 제목 */
 <<<<<<< HEAD
+<<<<<<< HEAD
 .leaguePost-titleCtn{
 =======
 .leaguePost-titleCtn {
 >>>>>>> mBw
+=======
+.leaguePost-titleCtn {
+>>>>>>> cjw
   border-bottom: 1px solid lightgrey;
   display: flex;
   align-items: center;
@@ -273,20 +335,28 @@ main {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 .leaguePost-title{
 =======
 .leaguePost-title {
 >>>>>>> mBw
+=======
+.leaguePost-title {
+>>>>>>> cjw
   font-size: 20px;
   margin: 0 5px;
   color: rgb(170, 170, 170);
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 .leaguePost-titleContnet{
 =======
 .leaguePost-titleContnet {
 >>>>>>> mBw
+=======
+.leaguePost-titleContnet {
+>>>>>>> cjw
   font-size: 20px;
   font-weight: bold;
   margin: 0 10px;
@@ -295,14 +365,19 @@ main {
 
 /* 게시글 내용 */
 <<<<<<< HEAD
+<<<<<<< HEAD
 .leaguePost-top{
+=======
+.leaguePost-top {
+>>>>>>> cjw
   border-bottom: 2px solid lightgrey;
 }
 
-.leaguePost-contentCtn{
+.leaguePost-contentCtn {
   height: 200px;
 }
 
+<<<<<<< HEAD
 .leaguePost-routeCtn{
 =======
 .leaguePost-top {
@@ -315,6 +390,9 @@ main {
 
 .leaguePost-routeCtn {
 >>>>>>> mBw
+=======
+.leaguePost-routeCtn {
+>>>>>>> cjw
   width: 200px;
   display: flex;
   align-items: center;
@@ -322,6 +400,7 @@ main {
   margin: 10px 5px;
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 .leaguePost-routeCtn a{
   text-decoration-line: none;
@@ -335,15 +414,26 @@ main {
 
 .leaguePost-route {
 >>>>>>> mBw
+=======
+.leaguePost-routeCtn a {
+  text-decoration-line: none;
+}
+
+.leaguePost-route {
+>>>>>>> cjw
   font-size: 14px;
   font-weight: bold;
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 .leaguePost-commentSubmit{
 =======
 .leaguePost-commentSubmit {
 >>>>>>> mBw
+=======
+.leaguePost-commentSubmit {
+>>>>>>> cjw
   cursor: pointer;
 }
 
@@ -351,6 +441,7 @@ main {
   color: rgb(80, 80, 80);
 }*/
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 .leaguePost-commentmenuBarImg{
   cursor: pointer;
@@ -364,10 +455,18 @@ main {
 
 .leaguePost-ctCtn {
 >>>>>>> mBw
+=======
+.leaguePost-commentmenuBarImg {
+  cursor: pointer;
+}
+
+.leaguePost-ctCtn {
+>>>>>>> cjw
   width: 1000px;
   margin-top: 30px;
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 .leaguePost-content{
   font-size: 22px;
@@ -381,25 +480,40 @@ main {
 
 .leaguePost-inventoryCtn {
 >>>>>>> mBw
+=======
+.leaguePost-content {
+  font-size: 22px;
+}
+
+.leaguePost-inventoryCtn {
+>>>>>>> cjw
   display: flex;
   align-items: center;
   margin-top: 30px;
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 .leaguePost-inventoryBtn img{
 =======
 .leaguePost-inventoryBtn img {
 >>>>>>> mBw
+=======
+.leaguePost-inventoryBtn img {
+>>>>>>> cjw
   width: 50px;
   height: 50px;
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 .leaguePost-inventoryBtn{
 =======
 .leaguePost-inventoryBtn {
 >>>>>>> mBw
+=======
+.leaguePost-inventoryBtn {
+>>>>>>> cjw
   border: none;
   background-color: white;
 }
@@ -407,15 +521,20 @@ main {
 /* 좋아요 */
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 .leaguePost-like{
 =======
 .leaguePost-like {
 >>>>>>> mBw
+=======
+.leaguePost-like {
+>>>>>>> cjw
   display: flex;
   position: relative;
   left: 10px;
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 .leaguePost-likeText{
   line-height: 26px;
@@ -429,6 +548,13 @@ main {
 
 .leaguePost-likeBtn {
 >>>>>>> mBw
+=======
+.leaguePost-likeText {
+  line-height: 26px;
+}
+
+.leaguePost-likeBtn {
+>>>>>>> cjw
   border: none;
   background-color: white;
   width: 20px;
@@ -438,45 +564,62 @@ main {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 #like.active{
 =======
 #like.active {
 >>>>>>> mBw
+=======
+#like.active {
+>>>>>>> cjw
   fill: red;
 }
 
 /* 조회수 */
 <<<<<<< HEAD
+<<<<<<< HEAD
 .leaguePost-view{
 =======
 .leaguePost-view {
 >>>>>>> mBw
+=======
+.leaguePost-view {
+>>>>>>> cjw
   display: flex;
   position: relative;
   left: 30px;
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 .leaguePost-view img{
 =======
 .leaguePost-view img {
 >>>>>>> mBw
+=======
+.leaguePost-view img {
+>>>>>>> cjw
   width: 20px;
   height: 20px;
   margin-right: 10px;
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 .leaguePost-viewText{
 =======
 .leaguePost-viewText {
 >>>>>>> mBw
+=======
+.leaguePost-viewText {
+>>>>>>> cjw
   line-height: 20px;
   position: relative;
   left: 2px;
 }
 
 /* 게시글 중단 */
+<<<<<<< HEAD
 <<<<<<< HEAD
 .leaguePost-middle{
   border-bottom: 2px solid lightgrey;
@@ -490,6 +633,13 @@ main {
 /* 게시글 댓글 */
 .leaguePost-comments {
 >>>>>>> mBw
+=======
+.leaguePost-middle {
+  border-bottom: 2px solid lightgrey;
+}
+/* 게시글 댓글 */
+.leaguePost-comments {
+>>>>>>> cjw
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -497,28 +647,40 @@ main {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 .leaguePost-commentText{
 =======
 .leaguePost-commentText {
 >>>>>>> mBw
+=======
+.leaguePost-commentText {
+>>>>>>> cjw
   border-radius: 5px;
   font-size: 14px;
   text-align: center;
   line-height: 35px;
 <<<<<<< HEAD
+<<<<<<< HEAD
   background-color: #E9F6FF;
 =======
   background-color: #e9f6ff;
 >>>>>>> mBw
+=======
+  background-color: #e9f6ff;
+>>>>>>> cjw
   width: 60px;
   height: 35px;
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 .leaguePost-commentInput{
 =======
 .leaguePost-commentInput {
 >>>>>>> mBw
+=======
+.leaguePost-commentInput {
+>>>>>>> cjw
   width: 850px;
   height: 30px;
   border-radius: 5px;
@@ -526,12 +688,17 @@ main {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 .leaguePost-commentSubmit{
   background-color: #E9F6FF;
 =======
 .leaguePost-commentSubmit {
   background-color: #e9f6ff;
 >>>>>>> mBw
+=======
+.leaguePost-commentSubmit {
+  background-color: #e9f6ff;
+>>>>>>> cjw
   height: 35px;
   width: 60px;
   border: none;
@@ -540,24 +707,33 @@ main {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 .leaguePost-commentCtn{
 =======
 .leaguePost-commentCtn {
 >>>>>>> mBw
+=======
+.leaguePost-commentCtn {
+>>>>>>> cjw
   display: flex;
   align-items: center;
   height: 100px;
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 .leaguePost-commentProfileImg{
+=======
+.leaguePost-commentProfileImg {
+>>>>>>> cjw
   font-size: 50px;
 }
 
-.leaguePost-commentUserNickname{
+.leaguePost-commentUserNickname {
   margin-left: 5px;
 }
 
+<<<<<<< HEAD
 .leaguePost-commentUserNicknameText{
 =======
 .leaguePost-commentProfileImg {
@@ -570,6 +746,9 @@ main {
 
 .leaguePost-commentUserNicknameText {
 >>>>>>> mBw
+=======
+.leaguePost-commentUserNicknameText {
+>>>>>>> cjw
   font-size: 16px;
   font-weight: bold;
   margin: 0;
@@ -577,33 +756,46 @@ main {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 .leaguePost-commentdate{
 =======
 .leaguePost-commentdate {
 >>>>>>> mBw
+=======
+.leaguePost-commentdate {
+>>>>>>> cjw
   font-size: 14px;
   margin: 0;
   color: lightgrey;
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 .leaguePost-commentMenuBtn{
 =======
 .leaguePost-commentMenuBtn {
 >>>>>>> mBw
+=======
+.leaguePost-commentMenuBtn {
+>>>>>>> cjw
   border: none;
   background-color: white;
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 .leaguePost-commentMenuBtn img{
 =======
 .leaguePost-commentMenuBtn img {
 >>>>>>> mBw
+=======
+.leaguePost-commentMenuBtn img {
+>>>>>>> cjw
   width: 20px;
   height: 35px;
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 .leaguePost-commentContentCtn{
   width: 600px;
@@ -615,15 +807,25 @@ main {
   height: 80px;
   background-color: #e9f6ff;
 >>>>>>> mBw
+=======
+.leaguePost-commentContentCtn {
+  width: 600px;
+  height: 80px;
+  background-color: #e9f6ff;
+>>>>>>> cjw
   border-radius: 10px;
   margin: 10px auto;
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 .leaguePost-commentContent{
 =======
 .leaguePost-commentContent {
 >>>>>>> mBw
+=======
+.leaguePost-commentContent {
+>>>>>>> cjw
   font-size: 16px;
   font-weight: bold;
   line-height: 80px;
@@ -631,6 +833,7 @@ main {
 }
 
 /* 댓글 메뉴 */
+<<<<<<< HEAD
 <<<<<<< HEAD
 .leaguePost-commentMenu{
   display: flex;
@@ -646,19 +849,33 @@ main {
 #leaguePost-commentButton2,
 #leaguePost-commentButton3 {
 >>>>>>> mBw
+=======
+.leaguePost-commentMenu {
+  display: flex;
+}
+
+#leaguePost-commentButton,
+#leaguePost-commentButton2,
+#leaguePost-commentButton3 {
+>>>>>>> cjw
   background-color: white;
   border: none;
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 .leaguePost-commentmenuBarImg{
 =======
 .leaguePost-commentmenuBarImg {
 >>>>>>> mBw
+=======
+.leaguePost-commentmenuBarImg {
+>>>>>>> cjw
   width: 20px;
   height: 30px;
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 #leaguePost-commentHidden, #leaguePost-commentHidden2, #leaguePost-commentHidden3{
   display: none;
@@ -674,6 +891,15 @@ main {
   padding-left: 20px;
   background-color: #e9f6ff;
 >>>>>>> mBw
+=======
+#leaguePost-commentHidden,
+#leaguePost-commentHidden2,
+#leaguePost-commentHidden3 {
+  display: none;
+  list-style: none;
+  padding-left: 20px;
+  background-color: #e9f6ff;
+>>>>>>> cjw
   border-radius: 9999px;
   cursor: pointer;
   font-weight: 800;
@@ -682,12 +908,18 @@ main {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 #leaguePost-commentHidden a, #leaguePost-commentHidden2 a, #leaguePost-commentHidden3 a{
 =======
 #leaguePost-commentHidden a,
 #leaguePost-commentHidden2 a,
 #leaguePost-commentHidden3 a {
 >>>>>>> mBw
+=======
+#leaguePost-commentHidden a,
+#leaguePost-commentHidden2 a,
+#leaguePost-commentHidden3 a {
+>>>>>>> cjw
   text-decoration-line: none;
   color: #a5a5a5;
   font-size: 14px;
@@ -695,14 +927,19 @@ main {
 
 /* 게시글 하단 */
 <<<<<<< HEAD
+<<<<<<< HEAD
 .leaguePost-freeWritingDetail{
+=======
+.leaguePost-freeWritingDetail {
+>>>>>>> cjw
   display: flex;
   height: 150px;
   border-radius: 30px;
-  background-color: #E9F6FF;
+  background-color: #e9f6ff;
   margin: 30px 0;
 }
 
+<<<<<<< HEAD
 .leaguePost-freeWritingDetailBox{
 =======
 .leaguePost-freeWritingDetail {
@@ -715,6 +952,9 @@ main {
 
 .leaguePost-freeWritingDetailBox {
 >>>>>>> mBw
+=======
+.leaguePost-freeWritingDetailBox {
+>>>>>>> cjw
   width: 1200px;
   padding-right: 70px;
   margin-left: 80px;
@@ -722,6 +962,7 @@ main {
   padding-bottom: 10px;
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 .leaguePost-freeWritingDetailType{
   font-size: 13px;
@@ -731,10 +972,16 @@ main {
   font-size: 13px;
   color: #5079e2;
 >>>>>>> mBw
+=======
+.leaguePost-freeWritingDetailType {
+  font-size: 13px;
+  color: #5079e2;
+>>>>>>> cjw
   margin-bottom: 25px;
   font-weight: 600;
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 .leaguePost-freeWritingDetailTitle{
   margin-bottom: 30px;
@@ -748,65 +995,97 @@ main {
 
 .leaguePost-freeWritingDetailText {
 >>>>>>> mBw
+=======
+.leaguePost-freeWritingDetailTitle {
+  margin-bottom: 30px;
+}
+
+.leaguePost-freeWritingDetailText {
+>>>>>>> cjw
   font-size: 20px;
   font-weight: 700;
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 .leaguePost-freeWritingDetailNickname{
 =======
 .leaguePost-freeWritingDetailNickname {
 >>>>>>> mBw
+=======
+.leaguePost-freeWritingDetailNickname {
+>>>>>>> cjw
   font-size: 14px;
   font-weight: 600;
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 .leaguePost-freeWritingDetailCount{
 =======
 .leaguePost-freeWritingDetailCount {
 >>>>>>> mBw
+=======
+.leaguePost-freeWritingDetailCount {
+>>>>>>> cjw
   font-size: 14px;
   font-weight: 600;
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 .leaguePost-freeWritingDetailName{
 =======
 .leaguePost-freeWritingDetailName {
 >>>>>>> mBw
+=======
+.leaguePost-freeWritingDetailName {
+>>>>>>> cjw
   display: flex;
   justify-content: space-between;
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 .leaguePost-pageNumber{
 =======
 .leaguePost-pageNumber {
 >>>>>>> mBw
+=======
+.leaguePost-pageNumber {
+>>>>>>> cjw
   text-align: center;
   margin-top: 50px;
   margin-bottom: 70px;
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 .leaguePost-pageNumberBox{
 =======
 .leaguePost-pageNumberBox {
 >>>>>>> mBw
+=======
+.leaguePost-pageNumberBox {
+>>>>>>> cjw
   width: 500px;
   height: 50px;
   display: inline-flex;
   justify-content: space-between;
   align-items: stretch;
 <<<<<<< HEAD
+<<<<<<< HEAD
   background-color: #E9F6FF;
+=======
+  background-color: #e9f6ff;
+>>>>>>> cjw
   border-radius: 9999px;
 }
 
-.leaguePost-freeWritingDetailBox a{
+.leaguePost-freeWritingDetailBox a {
   text-decoration-line: none;
 }
+<<<<<<< HEAD
 
 /* 푸터 */
 footer {
@@ -859,3 +1138,5 @@ footer {
   text-decoration-line: none;
 }
 >>>>>>> mBw
+=======
+>>>>>>> cjw
