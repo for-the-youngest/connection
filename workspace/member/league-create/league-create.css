@@ -5,6 +5,7 @@
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 header {
   position: fixed;
   width: 100%;
@@ -35,11 +36,14 @@ header {
 
 =======
 >>>>>>> mBw
+=======
+>>>>>>> cjw
 button {
   border: 0px;
   background-color: white;
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 .header-menuBar {
   margin-right: 30px;
@@ -57,6 +61,8 @@ button {
 
 =======
 >>>>>>> mBw
+=======
+>>>>>>> cjw
 a::visited {
   color: black;
 }
@@ -66,6 +72,7 @@ a {
   color: black;
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 ul {
   list-style: none;
@@ -118,6 +125,8 @@ ul {
 
 =======
 >>>>>>> mBw
+=======
+>>>>>>> cjw
 /* 게시글 작성 메인 */
 main {
   margin-top: 120px;
@@ -130,19 +139,27 @@ main {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 .leagueCreate-title{
 =======
 .leagueCreate-title {
 >>>>>>> mBw
+=======
+.leagueCreate-title {
+>>>>>>> cjw
   width: 400px;
   height: 100px;
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 .leagueCreate-titleText{
 =======
 .leagueCreate-titleText {
 >>>>>>> mBw
+=======
+.leagueCreate-titleText {
+>>>>>>> cjw
   font-size: 30px;
   color: #a5a5a5;
   font-weight: 500;
@@ -151,29 +168,41 @@ main {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 .leagueCreate-choiceCtn{
 =======
 .leagueCreate-choiceCtn {
 >>>>>>> mBw
+=======
+.leagueCreate-choiceCtn {
+>>>>>>> cjw
   padding-right: 10px;
   margin-right: 20px;
   padding-left: 10px;
   width: 100px;
   border-radius: 10px;
 <<<<<<< HEAD
+<<<<<<< HEAD
   background-color: #E9F6FF;
 =======
   background-color: #e9f6ff;
 >>>>>>> mBw
+=======
+  background-color: #e9f6ff;
+>>>>>>> cjw
   position: relative;
   left: 150px;
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 .leagueCreate-choice{
 =======
 .leagueCreate-choice {
 >>>>>>> mBw
+=======
+.leagueCreate-choice {
+>>>>>>> cjw
   color: #a5a5a5;
   font-weight: 800;
   /* padding-left: 10px;
@@ -181,21 +210,30 @@ main {
   width: 100%;
   border: none;
 <<<<<<< HEAD
+<<<<<<< HEAD
   background-color: #E9F6FF;
 =======
   background-color: #e9f6ff;
 >>>>>>> mBw
+=======
+  background-color: #e9f6ff;
+>>>>>>> cjw
   border-radius: 10px;
   /* appearance: none; */
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 .leagueCreate-mainContainer{
+=======
+.leagueCreate-mainContainer {
+>>>>>>> cjw
   width: 90%;
   max-width: 1200px;
-  margin-top:20px;
+  margin-top: 20px;
 }
 
+<<<<<<< HEAD
 .leagueCreate-boardTitle{
 =======
 .leagueCreate-mainContainer {
@@ -206,6 +244,9 @@ main {
 
 .leagueCreate-boardTitle {
 >>>>>>> mBw
+=======
+.leagueCreate-boardTitle {
+>>>>>>> cjw
   display: flex;
   flex-direction: row;
   padding: 5px;
@@ -214,6 +255,7 @@ main {
   justify-content: center;
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 .leagueCreate-btInput{
   margin: auto;
@@ -225,24 +267,35 @@ main {
   padding: 10px;
   width: 900px;
 >>>>>>> mBw
+=======
+.leagueCreate-btInput {
+  margin: auto;
+  padding: 10px;
+  width: 900px;
+>>>>>>> cjw
   outline: none;
   border-width: 0 0 2px;
   border-color: lightgrey;
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 .leagueCreate-btInput::placeholder{
+=======
+.leagueCreate-btInput::placeholder {
+>>>>>>> cjw
   color: lightgrey;
 }
 
-.leagueCreate-boardContent{
+.leagueCreate-boardContent {
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding:20px;
-  justify-content:center;
+  padding: 20px;
+  justify-content: center;
 }
 
+<<<<<<< HEAD
 .leagueCreate-btnCtn{
 =======
 .leagueCreate-btInput::placeholder {
@@ -259,6 +312,9 @@ main {
 
 .leagueCreate-btnCtn {
 >>>>>>> mBw
+=======
+.leagueCreate-btnCtn {
+>>>>>>> cjw
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -266,10 +322,14 @@ main {
 
 button {
 <<<<<<< HEAD
+<<<<<<< HEAD
   background-color:#E9F6FF;
 =======
   background-color: #e9f6ff;
 >>>>>>> mBw
+=======
+  background-color: #e9f6ff;
+>>>>>>> cjw
   border: none;
   color: black;
   padding: 15px 32px;
@@ -282,6 +342,7 @@ button {
   border-radius: 8px;
 }
 
+<<<<<<< HEAD
 button:hover {
 <<<<<<< HEAD
   background-color:#E9F6FF;
@@ -289,10 +350,16 @@ button:hover {
   background-color: #e9f6ff;
 >>>>>>> mBw
 }
+=======
+/* button:hover {
+  background-color: #e9f6ff;
+} */
+>>>>>>> cjw
 
 #cancelBtn {
   color: #a5a5a5;
   font-weight: 800;
+<<<<<<< HEAD
 <<<<<<< HEAD
   background-color: blanchedalmond; 
 }
@@ -304,16 +371,27 @@ button:hover {
 
 #submitBtn {
 >>>>>>> mBw
+=======
+  background-color: blanchedalmond;
+}
+
+#submitBtn {
+  background-color: #e9f6ff;
+>>>>>>> cjw
   color: #a5a5a5;
   font-weight: 800;
 }
 
 #cancelBtn:hover {
 <<<<<<< HEAD
+<<<<<<< HEAD
   background-color: blanchedalmond; 
 =======
   background-color: blanchedalmond;
 >>>>>>> mBw
+=======
+  background-color: blanchedalmond;
+>>>>>>> cjw
 }
 
 /* 에디터 스타일 */
@@ -330,6 +408,7 @@ button {
   margin-left: 10px;
   margin-right: 10px;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 footer {
@@ -375,3 +454,5 @@ footer {
 }
 =======
 >>>>>>> mBw
+=======
+>>>>>>> cjw

@@ -15,9 +15,13 @@ main {
   margin: auto;
   margin-top: 80px;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   margin-bottom: 30px;
 >>>>>>> mBw
+=======
+  margin-bottom: 30px;
+>>>>>>> cjw
 }
 
 .main-rank-ctn {
@@ -40,6 +44,7 @@ main {
 .main-backgroundImg {
   display: block;
 <<<<<<< HEAD
+<<<<<<< HEAD
   width: 1263px;
   height: 350px;
   transition: opacity 0.5s ease;
@@ -51,6 +56,9 @@ main {
 =======
   width: 2328px;
 >>>>>>> mBw
+=======
+  width: 2328px;
+>>>>>>> cjw
   height: 350px;
   transition: opacity 0.5s ease;
 }
@@ -107,19 +115,27 @@ td:not(:last-child) {
 
 .main-prevBtn-slide {
 <<<<<<< HEAD
+<<<<<<< HEAD
   left: 200px;
 =======
   left: 400px;
 >>>>>>> mBw
+=======
+  left: 400px;
+>>>>>>> cjw
   padding-right: 5px;
 }
 
 .main-nextBtn-slide {
 <<<<<<< HEAD
+<<<<<<< HEAD
   right: 200px;
 =======
   right: 400px;
 >>>>>>> mBw
+=======
+  right: 400px;
+>>>>>>> cjw
   padding-left: 5px;
 }
 
@@ -128,6 +144,7 @@ td:not(:last-child) {
   height: 30px;
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 /* 헤더, 푸터 css */
 
@@ -279,6 +296,8 @@ footer {
 
 =======
 >>>>>>> mBw
+=======
+>>>>>>> cjw
 /* 공지사항 css */
 
 .notice {
@@ -338,9 +357,13 @@ footer {
   font-weight: 600;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> mBw
+=======
+
+>>>>>>> cjw
 /* 인기게시글 css */
 
 .free-writing {

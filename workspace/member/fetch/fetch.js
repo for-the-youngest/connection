@@ -24,6 +24,26 @@ function fetchAndInsert() {
       });
     });
 
+<<<<<<< HEAD
+=======
+    fetch("../header1/header1.html")
+    .then((response) => response.text())
+    .then((data) => {
+      document.getElementById("header1").innerHTML = data;
+
+      // 헤더가 로드된 후에 이벤트 리스너 추가
+      $(".header-menu").on("click", function () {
+        let $headerCommunityHiddenMenu = $(".header-communityHiddenMenu");
+        // 현재 display 속성을 가져와서 "none"인지 확인
+        if ($headerCommunityHiddenMenu.css("display") === "none") {
+          $headerCommunityHiddenMenu.css("display", "block");
+        } else {
+          $headerCommunityHiddenMenu.css("display", "none");
+        }
+      });
+    });
+
+>>>>>>> cjw
   // 푸터를 가져옴
   fetch("../footer/footer.html")
     .then((response) => response.text())

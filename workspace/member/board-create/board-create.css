@@ -1,5 +1,6 @@
 * {
 <<<<<<< HEAD
+<<<<<<< HEAD
     font-family: "Noto Sans KR", sans-serif;
     margin: 0;
     padding: 0;
@@ -166,79 +167,18 @@
     background-color: #E9F6FF;
     border-radius: 10px;
   }
+=======
+  font-family: "Noto Sans KR", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+>>>>>>> cjw
 
-  
-  .main-mainContainer{
-    width: 90%;
-    max-width: 1200px;
-    margin-top:20px;
-  }
-  
-  .main-boardTitle{
-    display: flex;
-    flex-direction: row;
-    padding: 5px;
-    align-items: center;
-    margin-bottom: 5px;
-    justify-content: center;
-  }
-  
-  .main-btInput{
-    margin: auto;
-    padding: 10px;
-    width:900px;
-    outline: none;
-    border-width: 0 0 2px;
-    border-color: lightgrey;
-  }
-  
-  .main-btInput::placeholder{
-    color: lightgrey;
-  }
-  
-  .main-boardContent{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding:20px;
-    justify-content:center;
-  }
-  
-  .main-btnCtn{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-  }
-  
-  button {
-    background-color:#E9F6FF;
-    border: none;
-    color: black;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
-    border-radius: 8px;
-  }
-  
-  button:hover {
-    background-color:#E9F6FF;
-  }
-  
-  #cancelBtn {
-    color: #a5a5a5;
-    font-weight: 800;
-    background-color: blanchedalmond; 
-  }
-  
-    #submitBtn{
-        color: #a5a5a5;
-        font-weight: 800;
-    }
+a::visited {
+  color: black;
+}
 
+<<<<<<< HEAD
     #cancelBtn:hover {
         background-color: blanchedalmond; 
     }
@@ -309,6 +249,8 @@ a::visited {
   color: black;
 }
 
+=======
+>>>>>>> cjw
 a {
   text-decoration: none;
   color: black;
@@ -430,9 +372,15 @@ button {
   border-radius: 8px;
 }
 
+<<<<<<< HEAD
 button:hover {
   background-color: #e9f6ff;
 }
+=======
+/* button:hover {
+  background-color: #e9f6ff;
+} */
+>>>>>>> cjw
 
 #cancelBtn {
   color: #a5a5a5;
@@ -442,6 +390,10 @@ button:hover {
 
 #submitBtn {
   color: #a5a5a5;
+<<<<<<< HEAD
+=======
+  background-color: #e9f6ff;
+>>>>>>> cjw
   font-weight: 800;
 }
 
@@ -463,4 +415,7 @@ button {
   margin-left: 10px;
   margin-right: 10px;
 }
+<<<<<<< HEAD
 >>>>>>> mBw
+=======
+>>>>>>> cjw
