@@ -111,6 +111,7 @@ function validateNickName() {
   return true;
 }
 
+<<<<<<< HEAD
 
 $(".header-menu").on("click", checkMenuOn);
 
@@ -124,3 +125,13 @@ function checkMenuOn() {
     $headerCommunityHiddenMenu.css("display", "none");
   }
 };
+=======
+// 저장하기 버튼 시 알림 호출
+const buttons = document.querySelectorAll(".infoEdit-btnSave");
+
+buttons.forEach((button) => {
+  button.addEventListener("click", function () {
+    alert("수정이 완료되었습니다!");
+  });
+});
+>>>>>>> mBw

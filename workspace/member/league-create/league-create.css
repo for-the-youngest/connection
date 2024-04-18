@@ -4,6 +4,7 @@
   padding: 0;
 }
 
+<<<<<<< HEAD
 header {
   position: fixed;
   width: 100%;
@@ -32,11 +33,14 @@ header {
   position: relative;
 }
 
+=======
+>>>>>>> mBw
 button {
   border: 0px;
   background-color: white;
 }
 
+<<<<<<< HEAD
 .header-menuBar {
   margin-right: 30px;
 }
@@ -51,6 +55,8 @@ button {
   max-width: 100%; /* 로고 이미지 최대 너비 100%로 설정 */
 }
 
+=======
+>>>>>>> mBw
 a::visited {
   color: black;
 }
@@ -60,6 +66,7 @@ a {
   color: black;
 }
 
+<<<<<<< HEAD
 ul {
   list-style: none;
 }
@@ -109,6 +116,8 @@ ul {
   color: #a5a5a5;
 }
 
+=======
+>>>>>>> mBw
 /* 게시글 작성 메인 */
 main {
   margin-top: 120px;
@@ -120,12 +129,20 @@ main {
   padding-bottom: 150px;
 }
 
+<<<<<<< HEAD
 .leagueCreate-title{
+=======
+.leagueCreate-title {
+>>>>>>> mBw
   width: 400px;
   height: 100px;
 }
 
+<<<<<<< HEAD
 .leagueCreate-titleText{
+=======
+.leagueCreate-titleText {
+>>>>>>> mBw
   font-size: 30px;
   color: #a5a5a5;
   font-weight: 500;
@@ -133,29 +150,46 @@ main {
   line-height: 100px;
 }
 
+<<<<<<< HEAD
 .leagueCreate-choiceCtn{
+=======
+.leagueCreate-choiceCtn {
+>>>>>>> mBw
   padding-right: 10px;
   margin-right: 20px;
   padding-left: 10px;
   width: 100px;
   border-radius: 10px;
+<<<<<<< HEAD
   background-color: #E9F6FF;
+=======
+  background-color: #e9f6ff;
+>>>>>>> mBw
   position: relative;
   left: 150px;
 }
 
+<<<<<<< HEAD
 .leagueCreate-choice{
+=======
+.leagueCreate-choice {
+>>>>>>> mBw
   color: #a5a5a5;
   font-weight: 800;
   /* padding-left: 10px;
   padding-right: 40px; */
   width: 100%;
   border: none;
+<<<<<<< HEAD
   background-color: #E9F6FF;
+=======
+  background-color: #e9f6ff;
+>>>>>>> mBw
   border-radius: 10px;
   /* appearance: none; */
 }
 
+<<<<<<< HEAD
 .leagueCreate-mainContainer{
   width: 90%;
   max-width: 1200px;
@@ -163,6 +197,15 @@ main {
 }
 
 .leagueCreate-boardTitle{
+=======
+.leagueCreate-mainContainer {
+  width: 90%;
+  max-width: 1200px;
+  margin-top: 20px;
+}
+
+.leagueCreate-boardTitle {
+>>>>>>> mBw
   display: flex;
   flex-direction: row;
   padding: 5px;
@@ -171,15 +214,23 @@ main {
   justify-content: center;
 }
 
+<<<<<<< HEAD
 .leagueCreate-btInput{
   margin: auto;
   padding: 10px;
   width:900px;
+=======
+.leagueCreate-btInput {
+  margin: auto;
+  padding: 10px;
+  width: 900px;
+>>>>>>> mBw
   outline: none;
   border-width: 0 0 2px;
   border-color: lightgrey;
 }
 
+<<<<<<< HEAD
 .leagueCreate-btInput::placeholder{
   color: lightgrey;
 }
@@ -193,13 +244,32 @@ main {
 }
 
 .leagueCreate-btnCtn{
+=======
+.leagueCreate-btInput::placeholder {
+  color: lightgrey;
+}
+
+.leagueCreate-boardContent {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 20px;
+  justify-content: center;
+}
+
+.leagueCreate-btnCtn {
+>>>>>>> mBw
   display: flex;
   flex-direction: row;
   justify-content: center;
 }
 
 button {
+<<<<<<< HEAD
   background-color:#E9F6FF;
+=======
+  background-color: #e9f6ff;
+>>>>>>> mBw
   border: none;
   color: black;
   padding: 15px 32px;
@@ -213,22 +283,37 @@ button {
 }
 
 button:hover {
+<<<<<<< HEAD
   background-color:#E9F6FF;
+=======
+  background-color: #e9f6ff;
+>>>>>>> mBw
 }
 
 #cancelBtn {
   color: #a5a5a5;
   font-weight: 800;
+<<<<<<< HEAD
   background-color: blanchedalmond; 
 }
 
 #submitBtn{
+=======
+  background-color: blanchedalmond;
+}
+
+#submitBtn {
+>>>>>>> mBw
   color: #a5a5a5;
   font-weight: 800;
 }
 
 #cancelBtn:hover {
+<<<<<<< HEAD
   background-color: blanchedalmond; 
+=======
+  background-color: blanchedalmond;
+>>>>>>> mBw
 }
 
 /* 에디터 스타일 */
@@ -245,6 +330,7 @@ button {
   margin-left: 10px;
   margin-right: 10px;
 }
+<<<<<<< HEAD
 
 footer {
   display: flex;
@@ -287,3 +373,5 @@ footer {
   line-height: 150px;
   margin-right: 100px;
 }
+=======
+>>>>>>> mBw

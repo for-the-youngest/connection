@@ -7,6 +7,7 @@
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 header {
   position: fixed;
@@ -113,6 +114,8 @@ ul {
 }
 
 >>>>>>> 5e73998a8d1caefe2ce9712db29e5cd8eb6e1f84
+=======
+>>>>>>> mBw
 :root {
   --fc-daygrid-event-dot-width: 8px;
 }
@@ -136,6 +139,7 @@ div {
   vertical-align: baseline;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   /* display: block;
   unicode-bidi: isolate; */
 =======
@@ -143,6 +147,8 @@ div {
 >>>>>>> 5e73998a8d1caefe2ce9712db29e5cd8eb6e1f84
 =======
 >>>>>>> f64e76eefd98e66caffa27cbfbf0f482be68435f
+=======
+>>>>>>> mBw
 }
 
 h2 {
@@ -152,6 +158,7 @@ h2 {
   background-color: white;
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 .infoEdit-boundaryCtn{
 <<<<<<< HEAD
@@ -163,10 +170,16 @@ h2 {
   padding-top: 140px;
   padding-bottom: 140px;
 >>>>>>> 5e73998a8d1caefe2ce9712db29e5cd8eb6e1f84
+=======
+.infoEdit-boundaryCtn {
+  padding-top: 140px;
+  padding-bottom: 140px;
+>>>>>>> mBw
 }
 
 .infoEdit-boundaryCtn {
   margin: 0 auto;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   background-color: #f8fafb;
@@ -176,6 +189,8 @@ h2 {
   /* background-color 주의 */
 =======
 >>>>>>> f64e76eefd98e66caffa27cbfbf0f482be68435f
+=======
+>>>>>>> mBw
 }
 
 section {
@@ -185,18 +200,25 @@ section {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> mBw
 section {
   display: block;
   unicode-bidi: isolate;
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 5e73998a8d1caefe2ce9712db29e5cd8eb6e1f84
 section{
 =======
 section {
 >>>>>>> f64e76eefd98e66caffa27cbfbf0f482be68435f
+=======
+section {
+>>>>>>> mBw
   margin: 0;
   border: 0;
   vertical-align: baseline;
@@ -222,6 +244,7 @@ fieldset {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* .infoEdit-formInput{
 
 } */
@@ -232,6 +255,9 @@ fieldset>div{
 =======
 fieldset > div {
 >>>>>>> f64e76eefd98e66caffa27cbfbf0f482be68435f
+=======
+fieldset > div {
+>>>>>>> mBw
   margin-bottom: 30px;
 }
 
@@ -252,6 +278,7 @@ label {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 label{
   cursor: default;
@@ -260,12 +287,17 @@ label{
 >>>>>>> 5e73998a8d1caefe2ce9712db29e5cd8eb6e1f84
 [type="text"]{
 =======
+=======
+>>>>>>> mBw
 label {
   cursor: default;
 }
 
 [type="text"] {
+<<<<<<< HEAD
 >>>>>>> f64e76eefd98e66caffa27cbfbf0f482be68435f
+=======
+>>>>>>> mBw
   border: 1px solid #d9e0e6;
   background-color: #f8fafb;
   width: 100%;
@@ -284,6 +316,7 @@ input[type="text" i] {
 
 input {
   text-rendering: auto;
+<<<<<<< HEAD
 <<<<<<< HEAD
     color: fieldtext;
     letter-spacing: normal;
@@ -304,6 +337,8 @@ input {
     padding-inline: 2px;
 >>>>>>> 5e73998a8d1caefe2ce9712db29e5cd8eb6e1f84
 =======
+=======
+>>>>>>> mBw
   color: fieldtext;
   letter-spacing: normal;
   word-spacing: normal;
@@ -319,7 +354,10 @@ input {
   margin: 0em;
   padding-block: 1px;
   padding-inline: 2px;
+<<<<<<< HEAD
 >>>>>>> f64e76eefd98e66caffa27cbfbf0f482be68435f
+=======
+>>>>>>> mBw
 }
 
 .infoEdit-formMessage {
@@ -346,6 +384,7 @@ p {
 p {
   display: block;
 <<<<<<< HEAD
+<<<<<<< HEAD
     margin-block-start: 1em;
     margin-block-end: 1em;
     margin-inline-start: 0px;
@@ -354,12 +393,17 @@ p {
 <<<<<<< HEAD
 =======
 =======
+=======
+>>>>>>> mBw
   margin-block-start: 1em;
   margin-block-end: 1em;
   margin-inline-start: 0px;
   margin-inline-end: 0px;
   unicode-bidi: isolate;
+<<<<<<< HEAD
 >>>>>>> f64e76eefd98e66caffa27cbfbf0f482be68435f
+=======
+>>>>>>> mBw
 }
 
 .infoEdit-genderCtn {
@@ -593,6 +637,7 @@ select.infoEdit-birthDay {
   font-size: 12px;
   font-weight: 500;
 }
+<<<<<<< HEAD
 
 footer {
   display: flex;
@@ -640,3 +685,5 @@ footer {
 =======
 }
 >>>>>>> f64e76eefd98e66caffa27cbfbf0f482be68435f
+=======
+>>>>>>> mBw
