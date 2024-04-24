@@ -1,0 +1,184 @@
+*{
+  font-family: "Noto Sans KR", sans-serif;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* 공지사항 */
+a {
+  text-decoration-line: none;
+}
+
+a:visited {
+  color: rgb(64, 64, 64);
+}
+
+.main-noticeTitleBar {
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  line-height: 80px;
+  margin-bottom: 20px;
+}
+
+.main-noticeTitleBar a{
+  margin: 0;
+}
+
+.main-noticeDetail {
+  display: flex;
+  height: 50px;
+  margin-bottom: 20px;
+  background-color: #e9f6ff;
+  border-radius: 9999px;
+}
+
+.main-noticeDetailBox1 {
+  border-radius: 9999px;
+  background-color: #d9d9d9;
+  width: 100px;
+  height: 30px;
+  margin-left: 15px;
+}
+
+.main-noticeDetailBox1Text {
+  margin-left: 35px;
+  font-weight: 500;
+}
+
+.main-noticeDetailBox2 {
+  position: relative;
+  left: 20px;
+}
+
+.main-noticeDetailBox2Text {
+  color: #a5a5a5;
+  font-weight: 800;
+}
+
+.main-noticeDetailBox3 {
+  width: 1000px;
+  margin-left: 50px;
+}
+
+.main-noticeDetailBox3Text {
+  font-weight: 600;
+}
+
+/* 게시글 필터 */
+.main-freeWriting {
+  margin-top: 30px;
+}
+
+.main-writingTypeChoice {
+  display: flex;
+  margin-bottom: 15px;
+}
+
+.main-writingTypeChoiceBox1 {
+  position: relative;
+  left: 700px;
+  padding-right: 10px;
+  padding-left: 10px;
+  width: 100px;
+  border-radius: 10px;
+  background-color: #e9f6ff;
+}
+
+.main-writingTypeChoiceBox2 {
+  position: relative;
+  left: 235px;
+  border-radius: 10px;
+  background-color: #e9f6ff;
+  padding-left: 10px;
+  padding-right: 10px;
+  width: 100px;
+}
+
+.main-writingTypeChoiceSelect {
+  color: #a5a5a5;
+  font-weight: 800;
+  width: 100%;
+  border: none;
+  background-color: #e9f6ff;
+  border-radius: 10px;
+}
+
+/* 게시글 */
+.main-freeWritingDetail{
+  height: 150px;
+  border-radius: 9999px;
+  background-color: #e9f6ff;
+  margin-bottom: 20px;
+}
+
+.main-freeWritingDetailType{
+  font-size: 13px;
+  color: #5079e2;
+  margin-bottom: 25px;
+  font-weight: 600;
+  position: relative;
+  left: 80px;
+  top: 10px;
+}
+
+.main-freeWritingDetailTitle{
+  position: relative;
+  left: 80px;
+  top: 10px;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.main-freeWritingDetailName{
+  position: relative;
+  left: 80px;
+  top: 40px;
+}
+
+.main-freeWritingDetailLike{
+  position: relative;
+  left: 1000px;
+  top: 20px;
+}
+
+.main-freeWritingDetailView{
+  position: relative;
+  left: 1080px;
+  bottom: 3px;
+}
+
+/* 게시물 추가 버튼 */
+.to_Writing {
+  position: fixed;
+  bottom: 200px;
+  right: 180px;
+}
+
+.to_Writing img {
+  width: 45px;
+  height: 45px;
+}
+
+/* 페이지네이션 버튼 */
+.pagination{
+
+  max-width: 500px;
+  text-align: center;
+  background-color: #e9f6ff;
+  border-radius: 9999px;
+}
+
+.main-freeWritingDetailButton{
+  font-size: 20px;
+  text-align: center;
+  padding: 15px;
+  border: none;
+  background-color: #e9f6ff;
+  color: #a5a5a5;
+  font-weight: 600;
+}
+
+.active{
+  color: #5079e2;
+}
