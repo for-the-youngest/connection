@@ -111,36 +111,11 @@ function validateNickName() {
   return true;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-$(".header-menu").on("click", checkMenuOn);
-
-let $headerCommunityHiddenMenu = $(".header-communityHiddenMenu");
-
-function checkMenuOn() {
-  // 현재 display 속성을 가져와서 "none"인지 확인
-  if ($headerCommunityHiddenMenu.css("display") === "none") {
-    $headerCommunityHiddenMenu.css("display", "block");
-  } else {
-    $headerCommunityHiddenMenu.css("display", "none");
-  }
-};
-=======
 // 저장하기 버튼 시 알림 호출
 const buttons = document.querySelectorAll(".infoEdit-btnSave");
 
-=======
-// 저장하기 버튼 시 알림 호출
-const buttons = document.querySelectorAll(".infoEdit-btnSave");
-
->>>>>>> cjw
 buttons.forEach((button) => {
   button.addEventListener("click", function () {
     alert("수정이 완료되었습니다!");
   });
 });
-<<<<<<< HEAD
->>>>>>> mBw
-=======
->>>>>>> cjw

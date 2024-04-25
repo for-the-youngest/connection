@@ -6,119 +6,6 @@
   box-sizing: border-box;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-header {
-  position: fixed;
-  width: 100%;
-  height: 80px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  box-shadow: 0.5px 0.2px 0px 0px gray;
-  top: 0px;
-  border-bottom: 1px solid lightgrey;
-  background-color: white;
-  z-index: 2;
-}
-
-.header-introBar {
-  width: 100%;
-  max-width: 1200px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.header-nav {
-  display: flex;
-  align-items: center;
-  position: relative;
-}
-
-button {
-  border: 0px;
-  background-color: white;
-}
-
-.header-menuBar {
-  margin-right: 30px;
-}
-
-.header-logo img {
-  max-height: 100%;
-  max-width: 100%;
-}
-
-.header-profile img {
-  max-height: 100%; /* 로고 이미지 높이 100%로 설정 */
-  max-width: 100%; /* 로고 이미지 최대 너비 100%로 설정 */
-}
-
-a::visited {
-  color: black;
-}
-
-a {
-  text-decoration: none;
-  color: black;
-}
-
-ul {
-  list-style: none;
-}
-
-.header-menu {
-  cursor: pointer;
-}
-
-.header-menuApi{
-  margin-right: 30px;
-  font-weight: 500;
-}
-
-.header-menuCommunity {
-  font-weight: 500;
-}
-
-.header-communityHiddenMenu {
-  display: none;
-  width: 200px;
-  position: absolute;
-  transform: translate(20px, 80px);
-}
-
-.header-communityHiddenMenuUl {
-  display: flex;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  border-radius: 8px;
-  /* border: 1px solid rgba(112, 115, 124, 0.22); */
-  background-color: #e9f6ff;
-}
-
-.header-communityHiddenMenuli {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 168px;
-  /* font-size: 0.875rem; */
-  letter-spacing: 0px;
-
-  font-weight: 800;
-}
-
-.header-communityHiddenMenuA {
-  color: #a5a5a5;
-}
-
->>>>>>> 5e73998a8d1caefe2ce9712db29e5cd8eb6e1f84
-=======
->>>>>>> mBw
-=======
->>>>>>> cjw
 :root {
   --fc-daygrid-event-dot-width: 8px;
 }
@@ -140,18 +27,6 @@ div {
   padding: 0;
   border: 0;
   vertical-align: baseline;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-  /* display: block;
-  unicode-bidi: isolate; */
-=======
-  /* display: block; */
->>>>>>> 5e73998a8d1caefe2ce9712db29e5cd8eb6e1f84
-=======
->>>>>>> f64e76eefd98e66caffa27cbfbf0f482be68435f
-=======
->>>>>>> mBw
 }
 
 h2 {
@@ -161,39 +36,13 @@ h2 {
   background-color: white;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-.infoEdit-boundaryCtn{
-<<<<<<< HEAD
-  padding-bottom: 40px;
-=======
-=======
-.infoEdit-boundaryCtn {
->>>>>>> f64e76eefd98e66caffa27cbfbf0f482be68435f
-  padding-top: 140px;
-  padding-bottom: 140px;
->>>>>>> 5e73998a8d1caefe2ce9712db29e5cd8eb6e1f84
-=======
 .infoEdit-boundaryCtn {
   padding-top: 140px;
   padding-bottom: 140px;
->>>>>>> mBw
 }
 
 .infoEdit-boundaryCtn {
   margin: 0 auto;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-  background-color: #f8fafb;
-=======
-  /* background-color: #f8fafb; */
->>>>>>> 5e73998a8d1caefe2ce9712db29e5cd8eb6e1f84
-  /* background-color 주의 */
-=======
->>>>>>> f64e76eefd98e66caffa27cbfbf0f482be68435f
-=======
->>>>>>> mBw
 }
 
 section {
@@ -202,26 +51,12 @@ section {
   background-color: white;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> mBw
 section {
   display: block;
   unicode-bidi: isolate;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 5e73998a8d1caefe2ce9712db29e5cd8eb6e1f84
-section{
-=======
 section {
->>>>>>> f64e76eefd98e66caffa27cbfbf0f482be68435f
-=======
-section {
->>>>>>> mBw
   margin: 0;
   border: 0;
   vertical-align: baseline;
@@ -245,22 +80,7 @@ fieldset {
   min-inline-size: min-content;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-/* .infoEdit-formInput{
-
-} */
-
-=======
->>>>>>> 5e73998a8d1caefe2ce9712db29e5cd8eb6e1f84
-fieldset>div{
-=======
 fieldset > div {
->>>>>>> f64e76eefd98e66caffa27cbfbf0f482be68435f
-=======
-fieldset > div {
->>>>>>> mBw
   margin-bottom: 30px;
 }
 
@@ -279,28 +99,11 @@ label {
   vertical-align: baseline;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-label{
-  cursor: default;
-}
-
->>>>>>> 5e73998a8d1caefe2ce9712db29e5cd8eb6e1f84
-[type="text"]{
-=======
-=======
->>>>>>> mBw
 label {
   cursor: default;
 }
 
 [type="text"] {
-<<<<<<< HEAD
->>>>>>> f64e76eefd98e66caffa27cbfbf0f482be68435f
-=======
->>>>>>> mBw
   border: 1px solid #d9e0e6;
   background-color: #f8fafb;
   width: 100%;
@@ -319,29 +122,6 @@ input[type="text" i] {
 
 input {
   text-rendering: auto;
-<<<<<<< HEAD
-<<<<<<< HEAD
-    color: fieldtext;
-    letter-spacing: normal;
-    word-spacing: normal;
-    line-height: normal;
-    text-transform: none;
-    text-indent: 0px;
-    text-shadow: none;
-    display: inline-block;
-    text-align: start;
-    appearance: auto;
-    -webkit-rtl-ordering: logical;
-    cursor: text;
-    margin: 0em;
-<<<<<<< HEAD
-=======
-    padding-block: 1px;
-    padding-inline: 2px;
->>>>>>> 5e73998a8d1caefe2ce9712db29e5cd8eb6e1f84
-=======
-=======
->>>>>>> mBw
   color: fieldtext;
   letter-spacing: normal;
   word-spacing: normal;
@@ -357,10 +137,6 @@ input {
   margin: 0em;
   padding-block: 1px;
   padding-inline: 2px;
-<<<<<<< HEAD
->>>>>>> f64e76eefd98e66caffa27cbfbf0f482be68435f
-=======
->>>>>>> mBw
 }
 
 .infoEdit-formMessage {
@@ -386,27 +162,11 @@ p {
 
 p {
   display: block;
-<<<<<<< HEAD
-<<<<<<< HEAD
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    unicode-bidi: isolate;
-<<<<<<< HEAD
-=======
-=======
-=======
->>>>>>> mBw
   margin-block-start: 1em;
   margin-block-end: 1em;
   margin-inline-start: 0px;
   margin-inline-end: 0px;
   unicode-bidi: isolate;
-<<<<<<< HEAD
->>>>>>> f64e76eefd98e66caffa27cbfbf0f482be68435f
-=======
->>>>>>> mBw
 }
 
 .infoEdit-genderCtn {
@@ -640,56 +400,3 @@ select.infoEdit-birthDay {
   font-size: 12px;
   font-weight: 500;
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-footer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 180px;
-  padding: 0;
-  border-top: 1px solid lightgrey;
-  margin-bottom: 80px;
-}
-
-.footer-container {
-  margin-top: 80px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  max-width: 1200px;
-}
-
-.footer-logo {
-  line-height: 150px;
-  margin-left: 100px;
-}
-
-.footer-text {
-  margin: auto;
-}
-
-.footer-text li {
-  list-style: none;
-  margin-bottom: 20px;
-  font-size: 14px;
-  font-weight: 600;
-  color: rgba(55, 56, 60, .61);
-}
-
-.footer-img {
-  line-height: 150px;
-  margin-right: 100px;
-<<<<<<< HEAD
->>>>>>> 5e73998a8d1caefe2ce9712db29e5cd8eb6e1f84
-}
-=======
-}
->>>>>>> f64e76eefd98e66caffa27cbfbf0f482be68435f
-=======
->>>>>>> mBw
-=======
->>>>>>> cjw
