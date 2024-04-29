@@ -21,41 +21,63 @@ function displayPosts(page){
             break;
         }
         const postDiv = document.createElement('div');
-        postDiv.classList.add('main-freeWritingDetail');
+        postDiv.classList.add('leaguePost-commentCtn');
         // 게시글 제목과 내용을 생성
         const box = document.createElement('div');
-        box.classList.add('main-freeWritingDetailBox')
-        const type = document.createElement('div');
-        type.classList.add('main-freeWritingDetailType');
-        type.textContent = '게시물 유형 / 종목';
+        box.classList.add('leaguePost-commentProfile')
+        const type = document.createElement('p');
+        type.classList.add('leaguePost-commentProfileImg');
+        type.textContent = '🌌';
         const title = document.createElement('div');
-        title.classList.add('main-freeWritingDetailTitle');
-        const text = document.createElement('div');
-        text.classList.add('main-freeWritingDetailText');
-        text.textContent = `게시물 제목 ${i+1}`;
-        const content = document.createElement('div');
-        content.classList.add('main-freeWritingDetailName');
+        title.classList.add('leaguePost-commentUserNickname');
+        const text = document.createElement('p');
+        text.classList.add('leaguePost-commentUserNicknameText');
+        text.textContent = '꽃보다 풋살';
+        const content = document.createElement('p');
+        content.classList.add('leaguePost-commentdate');
+        content.textContent = '1일전';
         const nickname = document.createElement('div');
-        nickname.classList.add('main-freeWritingDetailNickname');
-        nickname.textContent = `😀게시물 작성자 ${i+1}`;
-        const count = document.createElement('div');
-        count.classList.add('main-freeWritingDetailLike');
-        const like = document.createElement('span');
-        like.classList.add('main-freeWritingDetailLike');
-        like.textContent = '하트';
-        const view = document.createElement('span');
-        view.classList.add('main-freeWritingDetailView');
-        view.textContent = '조회';
+        nickname.classList.add('leaguePost-commentMenu');
+        const count = document.createElement('button');
+        count.classList.add('leaguePost-commentButton');
+        
+        const like = document.createElement('div');
+        like.classList.add('leaguePost-commentmenuBarImg');
+        like.textContent = '✏️';
+        const view = document.createElement('ul');
+        view.classList.add('leaguePost-commentHidden');
+        
+        const lia = document.createElement('li');
+        lia.classList.add('lia');
+        const aa = document.createElement('a');
+        aa.classList.add('aa');
+        aa.textContent = '수정하기';
+        const ab = document.createElement('b');
+        ab.classList.add('ab');
+        ab.textContent = '삭제하기';
+        const lib = document.createElement('li');
+        lib.classList.add('lib');
+        const boardContent = document.createElement('div');
+        boardContent.classList.add('leaguePost-commentContentCtn'); 
+        const boardContentDetail = document.createElement('p');
+        boardContentDetail.classList.add('leaguePost-commentContent');
+        boardContentDetail.textContent = '맞아';
         // 제목과 내용을 게시글 div에 추가
         postDiv.appendChild(box);
         box.appendChild(type);
-        box.appendChild(title);
+        postDiv.appendChild(title);
         title.appendChild(text);
-        box.appendChild(content);
-        content.appendChild(nickname);
-        content.appendChild(count);
+        title.appendChild(content);
+        postDiv.appendChild(nickname);
+        nickname.appendChild(count);
         count.appendChild(like);
-        count.appendChild(view);
+        nickname.appendChild(view);
+        view.appendChild(lia);
+        lia.appendChild(aa);
+        lib.appendChild(ab);
+        view.appendChild(lib);
+        postDiv.appendChild(boardContent);
+        boardContent.appendChild(boardContentDetail);
         postsContainer.appendChild(postDiv);
     }
 }
@@ -167,3 +189,31 @@ function displayPaginationButtons(){
 // 초기 페이지 로드 시 첫 페이지의 게시물과 페이지네이션 버튼을 표시
 displayPosts(currentPage);
 displayPaginationButtons();
+
+
+
+// 좋아요 버튼 구현
+var btn = document.getElementById("like")
+
+  btn.addEventListener('click',function(){
+            btn.classList.toggle('active')
+    })
+
+// 게시글 메뉴 버튼 눌렀을때 목록 나오게하기
+document.getElementById('leaguePost-showListButton').addEventListener('click', function() {
+  var list = document.getElementById('leaguePost-list');
+  if (list.style.display === 'none') {
+      list.style.display = 'block';
+  } else {
+      list.style.display = 'none';
+  }
+});
+// 댓글 메뉴 버튼 눌렀을때 목록 나오게하기
+document.getElementsByClassName('leaguePost-commentButton')[0].addEventListener('click', function() {
+  var list = document.getElementsByClassName('leaguePost-commentHidden')[0];
+  if (list.style.display === 'none') {
+      list.style.display = 'block';
+  } else {
+      list.style.display = 'none';
+  }
+});
