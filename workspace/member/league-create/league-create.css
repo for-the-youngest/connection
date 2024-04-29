@@ -4,65 +4,11 @@
   padding: 0;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-header {
-  position: fixed;
-  width: 100%;
-  height: 80px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  box-shadow: 0.5px 0.2px 0px 0px gray;
-  top: 0px;
-  border-bottom: 1px solid lightgrey;
-  background-color: white;
-  z-index: 2;
-}
-
-.header-introBar {
-  width: 100%;
-  max-width: 1200px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.header-nav {
-  display: flex;
-  align-items: center;
-  position: relative;
-}
-
-=======
->>>>>>> mBw
-=======
->>>>>>> cjw
 button {
   border: 0px;
   background-color: white;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-.header-menuBar {
-  margin-right: 30px;
-}
-
-.header-logo img {
-  max-height: 100%;
-  max-width: 100%;
-}
-
-.header-profile img {
-  max-height: 100%; /* 로고 이미지 높이 100%로 설정 */
-  max-width: 100%; /* 로고 이미지 최대 너비 100%로 설정 */
-}
-
-=======
->>>>>>> mBw
-=======
->>>>>>> cjw
 a::visited {
   color: black;
 }
@@ -72,61 +18,6 @@ a {
   color: black;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-ul {
-  list-style: none;
-}
-
-.header-menu {
-  cursor: pointer;
-}
-
-.header-menuApi{
-  margin-right: 30px;
-  font-weight: 500;
-  margin-bottom: 10px;
-}
-
-.header-menuCommunity {
-  font-weight: 500;
-}
-
-.header-communityHiddenMenu {
-  display: none;
-  width: 200px;
-  position: absolute;
-  transform: translate(20px, 80px);
-}
-
-.header-communityHiddenMenuUl {
-  display: flex;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  border-radius: 8px;
-  /* border: 1px solid rgba(112, 115, 124, 0.22); */
-  background-color: #e9f6ff;
-}
-
-.header-communityHiddenMenuli {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 168px;
-  /* font-size: 0.875rem; */
-  letter-spacing: 0px;
-
-  font-weight: 800;
-}
-
-.header-communityHiddenMenuA {
-  color: #a5a5a5;
-}
-
-=======
->>>>>>> mBw
-=======
->>>>>>> cjw
 /* 게시글 작성 메인 */
 main {
   margin-top: 120px;
@@ -138,28 +29,12 @@ main {
   padding-bottom: 150px;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-.leagueCreate-title{
-=======
 .leagueCreate-title {
->>>>>>> mBw
-=======
-.leagueCreate-title {
->>>>>>> cjw
   width: 400px;
   height: 100px;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-.leagueCreate-titleText{
-=======
 .leagueCreate-titleText {
->>>>>>> mBw
-=======
-.leagueCreate-titleText {
->>>>>>> cjw
   font-size: 30px;
   color: #a5a5a5;
   font-weight: 500;
@@ -167,75 +42,29 @@ main {
   line-height: 100px;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-.leagueCreate-choiceCtn{
-=======
 .leagueCreate-choiceCtn {
->>>>>>> mBw
-=======
-.leagueCreate-choiceCtn {
->>>>>>> cjw
   padding-right: 10px;
   margin-right: 20px;
   padding-left: 10px;
   width: 100px;
   border-radius: 10px;
-<<<<<<< HEAD
-<<<<<<< HEAD
-  background-color: #E9F6FF;
-=======
   background-color: #e9f6ff;
->>>>>>> mBw
-=======
-  background-color: #e9f6ff;
->>>>>>> cjw
   position: relative;
   left: 150px;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-.leagueCreate-choice{
-=======
 .leagueCreate-choice {
->>>>>>> mBw
-=======
-.leagueCreate-choice {
->>>>>>> cjw
   color: #a5a5a5;
   font-weight: 800;
   /* padding-left: 10px;
   padding-right: 40px; */
   width: 100%;
   border: none;
-<<<<<<< HEAD
-<<<<<<< HEAD
-  background-color: #E9F6FF;
-=======
   background-color: #e9f6ff;
->>>>>>> mBw
-=======
-  background-color: #e9f6ff;
->>>>>>> cjw
   border-radius: 10px;
   /* appearance: none; */
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-.leagueCreate-mainContainer{
-=======
-.leagueCreate-mainContainer {
->>>>>>> cjw
-  width: 90%;
-  max-width: 1200px;
-  margin-top: 20px;
-}
-
-<<<<<<< HEAD
-.leagueCreate-boardTitle{
-=======
 .leagueCreate-mainContainer {
   width: 90%;
   max-width: 1200px;
@@ -243,10 +72,6 @@ main {
 }
 
 .leagueCreate-boardTitle {
->>>>>>> mBw
-=======
-.leagueCreate-boardTitle {
->>>>>>> cjw
   display: flex;
   flex-direction: row;
   padding: 5px;
@@ -255,49 +80,15 @@ main {
   justify-content: center;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-.leagueCreate-btInput{
-  margin: auto;
-  padding: 10px;
-  width:900px;
-=======
 .leagueCreate-btInput {
   margin: auto;
   padding: 10px;
   width: 900px;
->>>>>>> mBw
-=======
-.leagueCreate-btInput {
-  margin: auto;
-  padding: 10px;
-  width: 900px;
->>>>>>> cjw
   outline: none;
   border-width: 0 0 2px;
   border-color: lightgrey;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-.leagueCreate-btInput::placeholder{
-=======
-.leagueCreate-btInput::placeholder {
->>>>>>> cjw
-  color: lightgrey;
-}
-
-.leagueCreate-boardContent {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  padding: 20px;
-  justify-content: center;
-}
-
-<<<<<<< HEAD
-.leagueCreate-btnCtn{
-=======
 .leagueCreate-btInput::placeholder {
   color: lightgrey;
 }
@@ -311,25 +102,13 @@ main {
 }
 
 .leagueCreate-btnCtn {
->>>>>>> mBw
-=======
-.leagueCreate-btnCtn {
->>>>>>> cjw
   display: flex;
   flex-direction: row;
   justify-content: center;
 }
 
 button {
-<<<<<<< HEAD
-<<<<<<< HEAD
-  background-color:#E9F6FF;
-=======
   background-color: #e9f6ff;
->>>>>>> mBw
-=======
-  background-color: #e9f6ff;
->>>>>>> cjw
   border: none;
   color: black;
   padding: 15px 32px;
@@ -342,56 +121,24 @@ button {
   border-radius: 8px;
 }
 
-<<<<<<< HEAD
-button:hover {
-<<<<<<< HEAD
-  background-color:#E9F6FF;
-=======
-  background-color: #e9f6ff;
->>>>>>> mBw
-}
-=======
 /* button:hover {
   background-color: #e9f6ff;
 } */
->>>>>>> cjw
 
 #cancelBtn {
   color: #a5a5a5;
   font-weight: 800;
-<<<<<<< HEAD
-<<<<<<< HEAD
-  background-color: blanchedalmond; 
-}
-
-#submitBtn{
-=======
-  background-color: blanchedalmond;
-}
-
-#submitBtn {
->>>>>>> mBw
-=======
   background-color: blanchedalmond;
 }
 
 #submitBtn {
   background-color: #e9f6ff;
->>>>>>> cjw
   color: #a5a5a5;
   font-weight: 800;
 }
 
 #cancelBtn:hover {
-<<<<<<< HEAD
-<<<<<<< HEAD
-  background-color: blanchedalmond; 
-=======
   background-color: blanchedalmond;
->>>>>>> mBw
-=======
-  background-color: blanchedalmond;
->>>>>>> cjw
 }
 
 /* 에디터 스타일 */
@@ -408,51 +155,3 @@ button {
   margin-left: 10px;
   margin-right: 10px;
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-footer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 180px;
-  padding: 0;
-  border-top: 1px solid lightgrey;
-  margin-bottom: 80px;
-}
-
-.footer-container {
-  margin-top: 80px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  max-width: 1200px;
-}
-
-.footer-logo {
-  line-height: 150px;
-  margin-left: 100px;
-}
-
-.footer-text {
-  margin: auto;
-}
-
-.footer-text li {
-  list-style: none;
-  margin-bottom: 20px;
-  font-size: 14px;
-  font-weight: 600;
-  color: rgba(55, 56, 60, .61);
-}
-
-.footer-img {
-  line-height: 150px;
-  margin-right: 100px;
-}
-=======
->>>>>>> mBw
-=======
->>>>>>> cjw

@@ -24,8 +24,6 @@ function fetchAndInsert() {
       });
     });
 
-<<<<<<< HEAD
-=======
     fetch("../header1/header1.html")
     .then((response) => response.text())
     .then((data) => {
@@ -43,7 +41,6 @@ function fetchAndInsert() {
       });
     });
 
->>>>>>> cjw
   // 푸터를 가져옴
   fetch("../footer/footer.html")
     .then((response) => response.text())
