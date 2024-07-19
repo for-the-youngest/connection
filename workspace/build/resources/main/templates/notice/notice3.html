@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>공지사항3</title>
+  <link rel="stylesheet" th:href="@{/css/notice3.css}"/>
+  <link rel="stylesheet" th:href="@{/css/header.css}">
+  <link rel="stylesheet" th:href="@{/css/footer.css}">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+          href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap"
+          rel="stylesheet"
+  />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script defer th:src="@{/js/notice3.js}"></script>
+  <script defer th:src="@{/js/header.js}"></script>
+</head>
+<body>
+<!-- 헤더 -->
+<header th:replace="~{/layout/header :: header}"></header>
+<main>
+  <!-- 게시글 닉네임, 제목, 내용 -->
+  <div class="leaguePost-top">
+    <div class="leaguePost-profileCtn">
+      <!-- 유저 프로필 이미지 -->
+      <div class="leaguePost-profile">
+        <p class="leaguePost-commentProfileImg">📄</p>
+      </div>
+
+      <!-- 유저 닉네임 -->
+      <div class="leaguePost-userNicknameCtn">
+        <p class="leaguePost-userNickname">공지사항</p>
+        <p class="leaguePost-date">1일전</p>
+      </div>
+    </div>
+
+    <!-- 게시글 제목 -->
+    <div class="leaguePost-titleCtn">
+      <p class="leaguePost-title">제목 :</p>
+      <p class="leaguePost-titleContnet">커뮤니티 규칙 세부사항</p>
+    </div>
+
+    <div class="leaguePost-contentCtn">
+      <!-- 게시글 내용 -->
+      <div class="leaguePost-ctCtn">
+        <p class="leaguePost-content1">1. 모든 성인/후방 컨텐츠 금지</p>
+        <p class="leaguePost-content2">
+          참고 사항: 정보통신에 관한 심의 규정 8조 위반되는 글 처리대상
+          입니다.
+        </p>
+        <br />
+        <p class="leaguePost-content1">
+          2. 비정상적인 포인트 획득용 글, 추첨 및 이벤트성 글 금지(모든
+          형태의 포/댓글/추천 이벤트, 포 나눔 이벤트 포함)
+        </p>
+        <br />
+        <p class="leaguePost-content1">
+          3. 정치 글 전면 금지(아래 세부 규정 참고)
+        </p>
+        <p class="leaguePost-content2">
+          정치 글의 제재가 논란이 되는 경우, 대원칙인 "정치 글 전면 금지"
+          조항을 따름
+        </p>
+        <br />
+        <p class="leaguePost-content1">
+          4. 시위,신고,화력,청원,민원 요청/인증 금지
+        </p>
+        <p class="leaguePost-content2">
+          (시위는 [개인,단체] 등으로 소개하며, ~일차 시위글, [이메일]로
+          제보받는다 또는 해당 [개인,단체]를 대신하여 게시글,댓글을 업로드할
+          경우)(신고는 특정 개인, 단체, 사이트, 사업자에 대해 외부 기관에
+          신고 행위를 인증 및 유도하는 것을 의미)(청원, 민원 유도 자체가
+          목적인 글도 포함)
+        </p>
+        <br />
+        <p class="leaguePost-content1">5. 혐오자료 금지</p>
+        <br />
+        <p class="leaguePost-content1">
+          6. 홍보 및 타사이트 방문 유도글 금지 (간접 홍보 포함), 내용과
+          무관하게 (청원 포함) 반복적으로 같은 내용 올리는 행위 금지
+        </p>
+        <p class="leaguePost-content2">
+          외부 사이트에 운영자 사칭 이용한 간접 홍보도 제재 대상
+        </p>
+        <br />
+        <p class="leaguePost-content1">
+          7. 패드립, 고인비하, 지역비하, 인종차별, 단순 혐오 금지
+        </p>
+        <br />
+        <p class="leaguePost-content1">8. 단순 잡담 글 금지</p>
+        <br />
+        <p class="leaguePost-content1">9. 글, 댓글 스포 금지</p>
+      </div>
+      <br />
+      <br />
+      <div class="leaguePost-inventoryCtn">
+        <!-- 게시글 목록 -->
+        <div class="leaguePost-inventory">
+          <a th:href="@{/connection}" class="leaguePost-inventoryBtn">
+            <img src="/img/leaguePost-inventory.png" alt="" />
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<!-- 푸터 -->
+<footer th:replace="~{/layout/footer :: footer}"></footer>
+</body>
+</html>

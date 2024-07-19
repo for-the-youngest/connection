@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.connection.mapper.ReplyMapper">
+
+    <!--  댓글 삽입  -->
+    <insert id="insertReply" parameterType="ReplyWriteDTO">
+        <selectKey keyProperty="replyNumber" resultType="Long" order="BEFORE">
+            SELECT SEQ_REPLY.nextVal FROM DUAL
+        </selectKey>
+        INSERT INTO CNN_REPLY(
+                        REPLY_NUMBER,
+                        REPLY_DATE,
+                        REPLY_CONTENT,
+                        FREEBOARD_NUMBER,
+                        MEMBER_NUMBER
+        )
+        VALUES(
+            #{replyNumber},
+            SYSDATE,
+            #{replyContent},
+            #{freeboardNumber},
+            #{memberNumber}
+        )
+    </insert>
+
+    <!--  댓글 목록 조회  -->
+    <select id="selectReplyList" parameterType="Long" resultType="ReplyListDTO">
+        SELECT C.REPLY_NUMBER,
+               C.REPLY_DATE,
+               C.REPLY_CONTENT,
+               C.FREEBOARD_NUMBER,
+               P.MEMBER_NAME
+        FROM CNN_REPLY C JOIN CNN_MEMBER P
+                                      ON C.MEMBER_NUMBER = P.MEMBER_NUMBER
+                                             AND C.FREEBOARD_NUMBER = #{freeboardNumber}
+        ORDER BY C.REPLY_DATE DESC
+    </select>
+
+    <!--  댓글 페이징 처리  -->
+    <select id="selectReplySlice" resultType="ReplyListDTO">
+        <![CDATA[
+        SELECT REPLY_NUMBER,
+               REPLY_DATE,
+               REPLY_CONTENT,
+               FREEBOARD_NUMBER,
+               MEMBER_NUMBER,
+               MEMBER_NAME
+        FROM (
+                 SELECT ROWNUM AS RNUM,
+                        REPLY_NUMBER,
+                        REPLY_DATE,
+                        REPLY_CONTENT,
+                        FREEBOARD_NUMBER,
+                        MEMBER_NUMBER,
+                        MEMBER_NAME
+                 FROM (
+                          SELECT C.REPLY_NUMBER,
+                                 C.REPLY_DATE,
+                                 C.REPLY_CONTENT,
+                                 C.FREEBOARD_NUMBER,
+                                 C.MEMBER_NUMBER,
+                                 P.MEMBER_NAME
+                          FROM CNN_REPLY C JOIN CNN_MEMBER P
+                                                          ON C.FREEBOARD_NUMBER = #{freeboardNumber}
+                                                                 AND C.MEMBER_NUMBER = P.MEMBER_NUMBER
+                          ORDER BY C.REPLY_DATE DESC
+                      ) WHERE ROWNUM <= #{criteria.page} * #{criteria.amount} + 1
+             ) WHERE RNUM > (#{criteria.page} - 1) * #{criteria.amount}
+        ]]>
+    </select>
+
+    <!--  댓글 삭제  -->
+    <delete id="deleteReply" parameterType="Long">
+        DELETE FROM CNN_REPLY
+        WHERE REPLY_NUMBER = #{replyNumber}
+    </delete>
+</mapper>
