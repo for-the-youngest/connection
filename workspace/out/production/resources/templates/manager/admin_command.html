@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../static/css/manager/admin_command.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script defer src="../../static/js/manager/admin_command.js"></script>
+</head>
+<body>
+<div class="__entire">
+    <header>
+        <div class="intro-bar">
+            <div class="logo">
+                <a href="#">
+                    <img src="../../static/img/Connection.png" alt="">
+                </a>
+            </div>
+            <div class="header-nav">
+                <div class="menu-bar">
+                    <ul class="menu">
+                        <li class="menu-community">커뮤니티</li>
+                    </ul>
+                </div>
+                <div class="communityHiddenMenu">
+                    <ul class="community-hiddenMenu-ul">
+                        <li class="community-hiddenMenu-li">
+                            <a href="#" class="community-hiddenMenu-a">자유 게시판</a>
+                        </li>
+                        <li class="community-hiddenMenu-li">
+                            <a href="#" class="community-hiddenMenu-a">리그 게시판</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="profile">
+                    <a href="">
+                        <img src="../../static/img/profile-img.png" alt="">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="adminmode">
+            <span>관리자 모드</span>
+        </div>
+        <div class="admin_container">
+            <img src="../../static/img/profileimg.png">
+            <div class="board_writer">
+                <span class="writer_name">관리자</span>
+                <span class="write_date">1일전</span>
+            </div>
+            <div class="update-delete">
+                <span onclick="updatePage()">수정</span>
+                <span onclick="deletePage()">삭제</span>
+            </div>
+        </div>
+        <section class="notice">
+            <div class="notice_header">
+                <div class="notice_title">
+                    <h1>제목 공지합니다</h1>
+                </div>
+                <div class="notice_info">
+                    <span>카테고리 > 자유 게시판 > 축구</span>
+                </div>
+                <div class="notice_content">
+                    <p>인터넷에 돌아다니는 내용이 사실이라면 이건 좀.. 왜 인종을 가리키는 있는지</p>
+                </div>
+                <div class="notice_emoji">
+                    <a href="admin_board.html"><img src="../../static/img/Bulleted%20List.png" alt="Emoji"></a>
+                </div>
+                <div class="stats-container">
+                    <img src="../../static/img/Favorite.png" alt="Favorite"> <span id="likeCount">좋아요 <span id="likeCountNumber"></span></span>
+                    <img src="../../static/img/Eyelashes%202D.png" alt="Eyelashes"><span id="viewCount"> 조회수 <span id="viewCountNumber"></span></span>
+                </div>
+            </div>
+            <div class="container">
+                <span class="searchcontent">내용</span>
+                <input type="text" id="searchInput" placeholder="검색어를 입력하세요...">
+                <button class="search_btn" onclick="filterComments()">조회</button>
+                <div id="commentsList">
+                </div>
+                <button class="delete_btn" onclick="deleteComment()">삭제</button>
+            </div>
+            <div>
+                <div class="notice-detail">
+                    <a href="#">
+                        <div class="nd-1">
+                            <span class="nd-11">공지</span>
+                        </div>
+                        <div class="nd-2">
+                            <span class="nd-22">24/04/05</span>
+                        </div>
+                        <div class="nd-3">
+                            <span class="nd-33">공지사항에 대한 글입니다.</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="notice-detail">
+                    <a href="#">
+                        <div class="nd-1">
+                            <span class="nd-11">공지</span>
+                        </div>
+                        <div class="nd-2">
+                            <span class="nd-22">24/04/05</span>
+                        </div>
+                        <div class="nd-3">
+                            <span class="nd-33">공지사항에 대한 글입니다.</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="notice-detail">
+                    <a href="#">
+                        <div class="nd-1">
+                            <span class="nd-11">공지</span>
+                        </div>
+                        <div class="nd-2">
+                            <span class="nd-22">24/04/05</span>
+                        </div>
+                        <div class="nd-3">
+                            <span class="nd-33">공지사항에 대한 글입니다.</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="notice-detail">
+                    <a href="#">
+                        <div class="nd-1">
+                            <span class="nd-11">공지</span>
+                        </div>
+                        <div class="nd-2">
+                            <span class="nd-22">24/04/05</span>
+                        </div>
+                        <div class="nd-3">
+                            <span class="nd-33">공지사항에 대한 글입니다.</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-logo">
+                <img src="../../static/img/Connection.png" alt="">
+            </div>
+            <div class="footer-text">
+                <ul>
+                    <li class="text-top">
+                        이용약관&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;위치기반 서비스 이용약관&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;개인정보처리방침&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;개인정보 보호센터
+                    </li>
+                    <li class="text-middle">
+                        주식회사 커넥션  |  서울특별시 강남구 테헤란로 26길 12 제일비전타워 13층  |  고객센터 1234-1234
+                    </li>
+                    <li class="text-bottom">
+                        Copyright ⓒ 2024 (주)커넥션 All Rights Reserved.Hosting By (주)주막위
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-img">
+                <img src="../../static/img/footer-img.jpg" alt="">
+            </div>
+        </div>
+    </footer>
+</div>
+</body>
+</html>

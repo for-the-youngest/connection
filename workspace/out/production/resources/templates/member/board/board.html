@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>paging</title>
+  <!-- JS 연결 -->
+<!--  <script defer src="../../../static/js/member/board.js"></script>-->
+  <script defer th:src="@{/js/member/board.js}" type="text/javascript"></script>
+  <script defer th:src="@{/js/member/fetch.js}" type="text/javascript"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <!-- CSS 연결 -->
+  <link rel="stylesheet" type="text/css" th:href="@{/css/member/board.css}">
+  <!-- 폰트 -->
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <div th:replace="~{member/layout/header :: header}"></div>
+  <!-- 공지사항 -->
+  <main>
+    <section class="main-notice">
+      <div class="main-noticeTitleBar">
+        <a href="#">
+          <h2>😀 커넥션 자유 게시판</h2>
+        </a>
+        <div class="main-downscroll">
+          <div class="main-downscrollButtonBox">
+            <button class="main-downscrollButton">
+              <img th:src="@{/img/downscroll.png}" alt=""/>
+            </button>
+          </div>
+          <div class="main-downscrollType">
+            <ul class="main-sortOrder">
+              <li value="date">최신 순</li>
+              <li value="views">조회 순</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div>
+        <a th:href="@{/notice/notice1.html}">
+          <div class="main-noticeDetail">
+            <div class="main-noticeDetailBox1">
+              <span class="main-noticeDetailBox1Text">공지</span>
+            </div>
+            <div class="main-noticeDetailBox2">
+              <span class="main-noticeDetailBox2Text">24/04/05</span>
+            </div>
+            <div class="main-noticeDetailBox3">
+                <span class="main-noticeDetailBox3Text"
+                >리그 참가 신청서 양식입니다</span
+                >
+            </div>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <section class="main-freeWriting">
+      <div class="main-writingTypeChoice">
+        <div class="main-writingTypeChoiceBox1">
+          <select class="main-writingTypeChoiceSelect" name="sports" id="">
+            <option value="soccer">축구</option>
+            <option value="futsal">풋살</option>
+            <option value="basketball">농구</option>
+          </select>
+        </div>
+        <div class="main-writingTypeChoiceBox2">
+          <select class="main-writingTypeChoiceSelect" name="board" id="">
+            <option value="free">자유글</option>
+            <option value="substitute">대타 모집</option>
+          </select>
+        </div>
+      </div>
+      <div class="posts" id="posts"></div>
+    </section>
+
+    <div>
+      <div th:each="freeboardList : ${freeboardList}">
+        <div class="fw-detail">
+          <div class="fwd_box">
+            <a th:href="@{/member/board/board}">
+              <div class="fwd-type">
+                <span th:text="${FreeboardList.freeboardCategorySports}"></span>
+              </div>
+              <div class="fwd-title">
+                <span class="fwdt-text" th:text="${FreeboardList.freeboardTitle}"></span>
+              </div>
+              <div class="fwd-detail-box">
+                <div class="fwd-nickname">
+                  <span>😀</span>
+                  <span th:text="${FreeboardList.memberNickname}"></span>
+                </div>
+                <div class="fwd-count">
+                  <span th:text="'조회수 ' + ${FreeboardList.freeboardView}"></span>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 페이징 처리하는 페이지  -->
+    <div class="boardList-paging">
+      <ul class="paging-backward">
+        <a th:href="@{/FreeboardList(page=${page.startPage - 1})}" class="page-a" th:if="${page.prev}">&lt;</a></ul>
+      <th:block th:each="i : ${#numbers.sequence(page.startPage, page.endPage)}">
+        <a th:href="@{/boardList(page=${i})}" class="page-a">
+          <li class="page-num" th:classappend="${i == page.criteria.page ? 'active' : ''}" th:text="${i}"></li>
+        </a>
+      </th:block>
+      <a th:href="@{/FreeboardList(page=${page.endPage + 1})}" class="page-a" th:if="${page.next}">
+        <li class="page-num next">&gt</li>
+      </a>
+    </div>
+  </main>
+</body>
+</html>

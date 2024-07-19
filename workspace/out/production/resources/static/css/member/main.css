@@ -1,0 +1,219 @@
+* {
+    font-family: "Noto Sans KR", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* 메인페이지 랭킹 css */
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    margin: auto;
+    margin-top: 80px;
+    margin-bottom: 30px;
+}
+
+.main-rank-ctn {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+}
+
+.main-rank-div {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: opacity 0.5s ease;
+}
+
+.main-backgroundImg {
+    display: block;
+    width: 2328px;
+    height: 350px;
+    transition: opacity 0.5s ease;
+}
+
+h2 {
+    position: absolute;
+    color: white;
+    top: 0px;
+    align-items: center;
+    text-align: center;
+    text-decoration: underline 1px;
+}
+
+table {
+    border-collapse: collapse;
+    position: absolute;
+    color: white;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: opacity 0.5s ease;
+}
+
+td {
+    padding: 12px;
+    text-align: center;
+    margin: 20px;
+}
+
+tr:not(:last-child) {
+    border-bottom: 1px solid white;
+}
+
+td:not(:last-child) {
+    border-right: 1px solid white;
+}
+
+.main-prevBtn-slide,
+.main-nextBtn-slide {
+    position: absolute;
+    text-align: center;
+    line-height: 50%;
+    font-size: 70px;
+    font-weight: 100;
+    cursor: pointer;
+    color: white;
+    margin-top: 140px;
+}
+
+.main-prevBtn-slide:hover,
+.main-nextBtn-slide:hover {
+    color: skyblue;
+}
+
+.main-prevBtn-slide {
+    left: 400px;
+    padding-right: 5px;
+}
+
+.main-nextBtn-slide {
+    right: 400px;
+    padding-left: 5px;
+}
+
+.main-amblum {
+    width: 30px;
+    height: 30px;
+}
+
+/* 공지사항 css */
+
+.notice {
+    /* margin-top: 50px; */
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    margin-top: 60px;
+}
+
+.notice_title_bar {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.notice-detail {
+    display: flex;
+    align-items: center;
+    height: 50px;
+    margin-bottom: 20px;
+    background-color: #e9f6ff;
+    border-radius: 9999px;
+}
+
+.nd-1 {
+    border-radius: 9999px;
+    background-color: #d9d9d9;
+    display: flex;
+    align-items: center;
+    width: 100px;
+    height: 30px;
+    margin-left: 50px;
+}
+
+.nd-11 {
+    margin-left: 35px;
+    font-weight: 500;
+}
+
+.nd-2 {
+    margin-left: 50px;
+}
+
+.nd-22 {
+    color: #d9d9d9;
+    font-weight: 800;
+}
+
+.nd-3 {
+    margin-left: 50px;
+}
+
+.nd-33 {
+    font-weight: 600;
+}
+
+/* 인기게시글 css */
+
+.free-writing {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
+.writing_type_choice {
+    display: flex;
+    margin-bottom: 40px;
+}
+.wt_choice_1 {
+    margin-right: 20px;
+}
+
+.fw-detail {
+    display: flex;
+    height: 150px;
+    border-radius: 9999px;
+    background-color: #e9f6ff;
+    margin-bottom: 20px;
+}
+
+.fwd_box {
+    width: 1200px;
+    padding-right: 70px;
+    margin-left: 80px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.fwd-type {
+    color: #5079e2;
+    margin-bottom: 25px;
+}
+
+.fwd-title {
+    margin-bottom: 30px;
+}
+
+.fwdt-text {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.fwd-detail-box {
+    display: flex;
+    justify-content: space-between;
+}

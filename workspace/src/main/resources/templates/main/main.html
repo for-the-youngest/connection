@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Connection</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
+  <link
+          href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap"
+          rel="stylesheet"
+  />
+  <link rel="stylesheet" th:href="@{/css/main.css}">
+  <link rel="stylesheet" th:href="@{/css/header.css}">
+  <link rel="stylesheet" th:href="@{/css/footer.css}">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script defer th:src="@{/js/main.js}"></script>
+  <script defer th:src="@{/js/header.js}"></script>
+</head>
+<body>
+<div id="origin-main">
+
+  <header th:replace="~{/layout/header :: header}"></header>
+  <!-- 페이지 이름 - 기능이름 - 태그역할 -->
+  <main class="main">
+    <section class="main-rank-section">
+      <div class="main-rank-ctn" style="width: 2328px">
+        <div class="main-rank-div">
+          <h2 class="main-title-h2">Ranking-Football</h2>
+          <img
+                  th:src="@{/img/main-banner-img1.PNG}"
+                  alt="첫번째 이미지"
+                  class="main-backgroundImg"
+          />
+          <table class="main-table">
+            <tr>
+              <td>1.</td>
+              <td>
+                <img th:src="@{/img/tottenham.png}" class="main-amblum" />
+              </td>
+              <td>For the youngest</td>
+            </tr>
+            <tr>
+              <td>2.</td>
+              <td>
+                <img th:src="@{/img/chelsea.png}" class="main-amblum" />
+              </td>
+              <td>Storm Warriors</td>
+            </tr>
+            <tr>
+              <td>3.</td>
+              <td>
+                <img th:src="@{/img/liverpool.png}" class="main-amblum" />
+              </td>
+              <td>Earth Champions</td>
+            </tr>
+            <tr>
+              <td>4.</td>
+              <td>
+                <img th:src="@{/img/ajax.png}" class="main-amblum" />
+              </td>
+              <td>Beach Surfers</td>
+            </tr>
+            <tr>
+              <td>5.</td>
+              <td>
+                <img th:src="@{/img/arsenal.png}" class="main-amblum" />
+              </td>
+              <td>Forest Sprites</td>
+            </tr>
+          </table>
+        </div>
+
+        <div class="main-rank-div">
+          <h2 class="main-title-h2">Ranking-Futsal</h2>
+          <img
+                  th:src="@{/img/main-banner-img3.png}"
+                  alt="두번째 이미지"
+                  class="main-backgroundImg"
+          />
+          <table class="main-table">
+            <tr>
+              <td>1.</td>
+              <td>
+                <img th:src="@{/img/madrid.png}" class="main-amblum" />
+              </td>
+              <td>Lightning Strikers</td>
+            </tr>
+            <tr>
+              <td>2.</td>
+              <td>
+                <img th:src="@{/img/city.png}" class="main-amblum" />
+              </td>
+              <td>Steel Racers</td>
+            </tr>
+            <tr>
+              <td>3.</td>
+              <td>
+                <img th:src="@{/img/manchester.png}" class="main-amblum" />
+              </td>
+              <td>Typhoon Kickers</td>
+            </tr>
+            <tr>
+              <td>4.</td>
+              <td>
+                <img th:src="@{/img/napoli.png}" class="main-amblum" />
+              </td>
+              <td>Flame Sprinters</td>
+            </tr>
+            <tr>
+              <td>5.</td>
+              <td>
+                <img th:src="@{/img/barcelona.png}" class="main-amblum" />
+              </td>
+              <td>Sky Riders</td>
+            </tr>
+          </table>
+        </div>
+
+        <div class="main-rank-div">
+          <h2 class="main-title-h2">Ranking-BasketBall</h2>
+          <img
+                  th:src="@{/img/main-banner-img2.PNG}"
+                  alt="세번째 이미지"
+                  class="main-backgroundImg"
+          />
+          <table class="main-table">
+            <tr>
+              <td>1.</td>
+              <td>
+                <img th:src="@{/img/minesota.png}" class="main-amblum" />
+              </td>
+              <td>Lakers</td>
+            </tr>
+            <tr>
+              <td>2.</td>
+              <td>
+                <img th:src="@{/img/miami.png}" class="main-amblum" />
+              </td>
+              <td>Elite Basket</td>
+            </tr>
+            <tr>
+              <td>3.</td>
+              <td>
+                <img th:src="@{/img/knicks.png}" class="main-amblum" />
+              </td>
+              <td>Speed Stars</td>
+            </tr>
+            <tr>
+              <td>4.</td>
+              <td>
+                <img th:src="@{/img/indiana.png}" class="main-amblum" />
+              </td>
+              <td>Blaze</td>
+            </tr>
+            <tr>
+              <td>5.</td>
+              <td>
+                <img th:src="@{/img/golden.png}" class="main-amblum" />
+              </td>
+              <td>Blue Storm</td>
+            </tr>
+          </table>
+        </div>
+
+        <div class="main-prevBtn-slide">&lt</div>
+        <div class="main-nextBtn-slide">&gt</div>
+      </div>
+    </section>
+
+    <!-- 공지사항 & 게시판 -->
+
+    <section class="notice">
+      <div class="notice_title_bar">
+        <a href="#">
+          <h3>공지사항</h3>
+        </a>
+      </div>
+      <div>
+        <a th:href="@{/connection/notice/notice1}">
+          <div class="main-noticeDetail">
+            <div class="main-noticeDetailBox1">
+              <span class="main-noticeDetailBox1Text">공지</span>
+            </div>
+            <div class="main-noticeDetailBox2">
+              <span class="main-noticeDetailBox2Text">24/04/05</span>
+            </div>
+            <div class="main-noticeDetailBox3">
+                  <span class="main-noticeDetailBox3Text"
+                  >리그 참가 신청서 양식입니다</span
+                  >
+            </div>
+          </div>
+        </a>
+        <a th:href="@{/connection/notice/notice2}">
+          <div class="main-noticeDetail">
+            <div class="main-noticeDetailBox1">
+              <span class="main-noticeDetailBox1Text">공지</span>
+            </div>
+            <div class="main-noticeDetailBox2">
+              <span class="main-noticeDetailBox2Text">24/04/05</span>
+            </div>
+            <div class="main-noticeDetailBox3">
+                  <span class="main-noticeDetailBox3Text"
+                  >커뮤니티 규칙 (삭제, 차단 요소)</span
+                  >
+            </div>
+          </div>
+        </a>
+        <a th:href="@{/connection/notice/notice3}">
+          <div class="main-noticeDetail">
+            <div class="main-noticeDetailBox1">
+              <span class="main-noticeDetailBox1Text">공지</span>
+            </div>
+            <div class="main-noticeDetailBox2">
+              <span class="main-noticeDetailBox2Text">24/04/05</span>
+            </div>
+            <div class="main-noticeDetailBox3">
+                  <span class="main-noticeDetailBox3Text"
+                  >커뮤니티 규칙 세부사항</span
+                  >
+            </div>
+          </div>
+        </a>
+        <a th:href="@{/connection/notice/notice4}">
+          <div class="main-noticeDetail">
+            <div class="main-noticeDetailBox1">
+              <span class="main-noticeDetailBox1Text">공지</span>
+            </div>
+            <div class="main-noticeDetailBox2">
+              <span class="main-noticeDetailBox2Text">24/04/05</span>
+            </div>
+            <div class="main-noticeDetailBox3">
+              <span class="main-noticeDetailBox3Text">풋살 경기 규칙</span>
+            </div>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <section class="free-writing">
+
+      <div class="notice_title_bar">
+        <a th:href="@{/board/board}">
+          <h3>인기 게시글</h3>
+        </a>
+      </div>
+
+      <div>
+        <div th:each="freeboardDTO : ${freeboardList}">
+          <div class="fw-detail">
+            <div class="fwd_box">
+              <a th:href="@{/connection/board/post(freeboardNumber=${freeboardDTO.freeboardNumber})}">
+                <div class="fwd-type">
+                  <span th:text="${freeboardDTO.freeboardCategorySports}"></span>
+                </div>
+                <div class="fwd-title">
+                  <span class="fwdt-text" th:text="${freeboardDTO.freeboardTitle}"></span>
+                </div>
+                <div class="fwd-detail-box">
+                  <div class="fwd-nickname">
+                    <span>😀</span>
+                    <span th:text="${freeboardDTO.memberNickname}"></span>
+                  </div>
+                  <div class="fwd-count">
+                    <span th:text="'조회수 ' + ${freeboardDTO.freeboardView}"></span>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+  </main>
+
+  <footer th:replace="~{/layout/footer :: footer}"></footer>
+
+</div>
+</body>
+</html>

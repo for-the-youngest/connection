@@ -1,0 +1,126 @@
+* {
+    font-family: "Noto Sans KR", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+button {
+    border: 0px;
+    background-color: white;
+}
+
+a::visited {
+    color: black;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+ul {
+    list-style: none;
+}
+
+/*join.css 시작점 */
+
+div {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: baseline;
+}
+
+fieldset {
+    border-style: none;
+}
+
+.join-logo-container {
+    margin-top: 140px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.join-auth-register--input {
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    margin: 20px auto;
+    width: 100%;
+    gap: 8px;
+}
+
+.join-auth-register--inputtitle {
+    color: rgba(55, 56, 60, 0.61);
+    margin-bottom: 8px;
+}
+
+[type="text"],
+[type="password"],
+[type="number"],
+[type="email"],
+select {
+    background-color: #f8fafb;
+    width: 100%;
+    height: 48px;
+    padding: 0px 12px;
+    box-sizing: border-box;
+    border: 1px solid rgba(112, 115, 124, 0.22);
+    border-radius: 10px;
+    color: rgb(23, 23, 25);
+    font-size: 16px;
+    font-weight: 400;
+}
+
+::placeholder,
+#join-sex,
+#id-years {
+    color: rgb(23, 23, 25);
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.join-allyears-contaniner {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 4px;
+    align-self: stretch;
+}
+
+.join-allagree-container {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    max-width: 1200px;
+    margin: 20px auto;
+    margin-top: 50px;
+    margin-bottom: 70px;
+}
+
+.join-joinbutton-button {
+    display: flex;
+    margin: auto;
+    max-width: 1200px;
+    justify-content: center;
+}
+
+button {
+    background-color: #1570ff;
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+    width: 80%;
+    font-size: 16px;
+    color: white;
+    height: 50px;
+    margin-bottom: 100px;
+}
+
+.join-button{
+    color: #a5a5a5;
+    background-color: #e9f6ff;
+    font-size: 16px;
+    font-weight: 600;
+}
