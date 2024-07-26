@@ -114,4 +114,5 @@ public class FreeboardController {
         freeboardService.removeBoard(freeboardNumber);
         return "redirect:/connection/board";
     }
+
 }

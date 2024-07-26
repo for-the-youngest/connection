@@ -172,10 +172,16 @@ public class FreeboardServiceImpl implements FreeboardService {
         return new SimpleDateFormat("yyyy/MM/dd").format(new Date());
     }
 
-    // 수정수정 특정 사람의 게시글 조회
+    // 특정 사람의 게시글 조회
     @Override
     public List<FreeboardDTO> findAllByAuthor(Long memberNumber) {
-        return freeboardMapper.findAllByAuthorId(memberNumber);
+        List<FreeboardDTO> freeboardList = freeboardMapper.findAllByAuthorId(memberNumber);
+
+        return freeboardList.stream()
+                .filter(freeboard -> freeboard.getFreeboardCategorySports() != null || freeboard.getFreeboardCategoryPost() != null)
+                .sorted(Comparator.comparing(FreeboardDTO::getFreeboardView).reversed())
+                .limit(5)
+                .collect(Collectors.toList());
     }
 
 }
