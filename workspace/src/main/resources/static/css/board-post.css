@@ -294,6 +294,7 @@ main {
 .leaguePost-commentUserNickname {
     margin-left: 5px;
     margin-top: 10px;
+    width: 80px;
 }
 
 .leaguePost-commentUserNicknameText {
@@ -330,6 +331,8 @@ main {
     border-radius: 10px;
     margin: auto;
     margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
 }
 
 .leaguePost-commentContent {
@@ -341,7 +344,7 @@ main {
 
 /* 댓글 메뉴 */
 .leaguePost-commentMenu {
-    display: flex;
+
 }
 
 #leaguePost-commentButton,
@@ -422,6 +425,14 @@ main {
 
 .leaguePost-freeWritingDetailBox a {
     text-decoration-line: none;
+}
+
+.comments-menuButton {
+    font-size: 14px;
+    width: 80px;
+    text-align: center;
+    margin-top: 10px;
+    cursor: pointer;
 }
 
 

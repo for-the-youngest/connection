@@ -70,126 +70,94 @@ function displayImgAjax() {
 
 // ================================================================================================================
 
+// 댓글 작성 및 처리
 let $btnComment = document.querySelector('.leaguePost-commentSubmit');
 
 $btnComment?.addEventListener("click", function () {
     let content = document.querySelector('#replyContent').value;
 
-    if(!content){
+    if (!content) {
         alert("댓글을 입력해주세요.");
         return;
     }
 
-    console.log(content);
-
     let commentInfo = {
-        freeboardNumber : freeboardNumber,
-        content : content
+        freeboardNumber: freeboardNumber,
+        content: content
     };
 
-    console.log("content:" + commentInfo.content );
-    console.log(commentInfo.freeboardNumber);
-
-    postModule.registerComment(commentInfo, ()=> {
+    postModule.registerComment(commentInfo, () => {
         document.querySelector('#replyContent').value = '';
         page = 1;
         postModule.getCommentList2(freeboardNumber, page, function (data) {
             hasNext = data.hasNext;
-            console.log("hasNext:"+ hasNext);
-            console.log(data.contentList);
-
             displayComment(data.contentList);
         });
-
     });
 });
 
 postModule.getCommentList2(freeboardNumber, page, function (data) {
-    // data.contentList = undefined;
     hasNext = data.hasNext;
-    console.log("hasNext222:"+ hasNext);
-    console.log(data);
     displayComment(data.contentList);
 });
 
+window.addEventListener('scroll', function () {
+    if (!hasNext) return;
 
+    let { scrollTop, scrollHeight, clientHeight } = document.documentElement;
 
-window.addEventListener('scroll', function (){
-
-    if(!hasNext) return;
-
-    let {scrollTop, scrollHeight, clientHeight} = document.documentElement;
-
-    if (clientHeight + scrollTop >= scrollHeight - 5) { //스크롤이 페이지 끝에 도달했는지 확인
-        console.log("바닥!!!!!")
-
-        page++; //페이지 번호 증가
-
-        postModule.getCommentList2(freeboardNumber, page, function (data){ //다음 페이지의 댓글 목록을 가져옴
+    if (clientHeight + scrollTop >= scrollHeight - 5) {
+        page++;
+        postModule.getCommentList2(freeboardNumber, page, function (data) {
             hasNext = data.hasNext;
-            console.log("hasNext33:"+ hasNext);
-
-            appendComment(data.contentList); //댓글 목록을 화면에 추가
+            appendComment(data.contentList);
         });
     }
 });
 
-let proMemNum = document.querySelector('#memberNumber').value;
-// console.log("proMemNum:", proMemNum);
+let memberNumber = document.querySelector('#memberNumber').value;
 
+function displayComment(commentList) {
+    let $commentWrap = document.querySelector('.leaguePost-commentCtn');
+    let tags = '';
 
-function displayComment(commentList){
-    let $commentWrap = document.querySelector('.leaguePost-commentCtn'); //댓글 목록을 감싸는 요소
-
-    let tags = ''; //HTML 태그를 저장할 변수 초기화
-
-    console.log(commentList);
-    commentList.forEach(e => { //댓글 목록을 순회하며 각 댓글을 html로 생성
+    commentList.forEach(e => {
         tags += `
-              <div class="comments-list-own" data-id = "${e.freeboardNumber}">
+            <div class="comments-list-own" data-id="${e.replyNumber}">
                 <div class="leaguePost-replyCtn">
                     <div class="leaguePost-commentProfile">
                         <p class="leaguePost-commentProfileImg">🌌</p>
                     </div>
-    
                     <div class="leaguePost-commentUserNickname">
                         <p class="leaguePost-commentUserNicknameText">${e.memberName}</p>
                         <p class="leaguePost-commentdate">${postModule.timeForToday(e.replyDate)}</p>
                     </div>
                 </div>
-                <div class="leaguePost-commentMenu">
-                    <ul id="leaguePost-commentHidden">
-                        <li>${e.memberNumber == memberNumber ? '<div>삭제하기</div>' : ''}</li>
-                    </ul>
-                </div>
-
                 <div class="leaguePost-commentContentCtn">
                     <p class="leaguePost-commentContent">${e.replyContent}</p>
+                    <div class="leaguePost-commentMenu">
+                        <ul id="leaguePost-commentHidden">
+                            <li>${e.memberNumber == memberNumber ? '<div class="comments-menuButton">삭제하기</div>' : ''}</li>
+                        </ul>
+                    </div>
                 </div>
-              </div>`;
-
+            </div>`;
     });
 
-    $commentWrap.innerHTML = tags; //생성된 HTML을 삽입하여 댓글 목록을 화면에 표시
+    $commentWrap.innerHTML = tags;
 }
-
 
 function appendComment(commentList) {
     let $commentWrap = document.querySelector('.leaguePost-commentCtn');
-
     let tags = '';
-    let session = window.sessionStorage.memberNumber;
 
     commentList.forEach(e => {
-        // console.log(reply)
-
         tags += `
-              <div class="comments-list-own" data-id = "${e.freeboardNumber}">
+            <div class="comments-list-own" data-id="${e.replyNumber}">
                 <div class="leaguePost-replyCtn">
                     <div class="leaguePost-commentProfile">
                         <p class="leaguePost-commentProfileImg">🌌</p>
                     </div>
-    
                     <div class="leaguePost-commentUserNickname">
                         <p class="leaguePost-commentUserNicknameText">${e.memberName}</p>
                         <p class="leaguePost-commentdate">${postModule.timeForToday(e.replyDate)}</p>
@@ -197,19 +165,16 @@ function appendComment(commentList) {
                 </div>
                 <div class="leaguePost-commentMenu">
                     <ul id="leaguePost-commentHidden">
-                        <li>${e.memberNumber == memberNumber ? '<div>삭제하기</div>' : ''}</li>
+                        <li>${e.memberNumber == memberNumber ? '<div class="comments-menuButton">삭제하기</div>' : ''}</li>
                     </ul>
                 </div>
-
                 <div class="leaguePost-commentContentCtn">
                     <p class="leaguePost-commentContent">${e.replyContent}</p>
                 </div>
-              </div>`;
-
+            </div>`;
     });
 
     $commentWrap.insertAdjacentHTML("beforeend", tags);
-
 }
 
 let $commentWrap = document.querySelector('.leaguePost-commentCtn');
@@ -217,25 +182,17 @@ let $commentWrap = document.querySelector('.leaguePost-commentCtn');
 $commentWrap.addEventListener('click', function (e) {
     let $target = e.target;
     if ($target.classList.contains('comments-menuButton')) {
-        /* 삭제 버튼이 클릭되었는지 확인하고, 해당 요소를 처리 */
-        // $target.closest('.delete-btn').classList.add('none');
-        let replyNumber = $target.closest('.comments-list-own').dataset.id; // 댓글 ID 가져오기
+        let replyNumber = $target.closest('.comments-list-own').dataset.id;
 
-
-        if(confirm("삭제하시겠습니까?")){
+        if (confirm("삭제하시겠습니까?")) {
             postModule.remove(replyNumber, () => {
-                // 댓글 삭제 함수 호출
-                page = 1; // 페이지를 초기화
+                page = 1;
                 postModule.getCommentList2(freeboardNumber, page, function (data) {
-                    // 댓글 목록을 다시 가져옴
                     hasNext = data.hasNext;
-                    // 다음 페이지 여부를 갱신
-                    displayComment(data.contentList); // displayComment 함수를 사용하여 댓글 목록을 화면에 표시
+                    displayComment(data.contentList);
                 });
             });
         }
-
-
     }
 });
 
