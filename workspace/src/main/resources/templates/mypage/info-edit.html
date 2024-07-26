@@ -29,7 +29,7 @@
   >
     <h2>프로필 수정</h2>
     <!-- 프로필 수정 폼 -->
-    <form th:action="@{/connection/member/info}" th:object="${memberDTO}" method="post">
+    <form th:action="@{/connection/member/info}" th:object="${memberDTO}" method="post" onsubmit="return validateForm(event)">
       <section class="infoEdit-adjustCtn">
         <div class="infoEdit-body">
           <div class="infoEdit-bodyCtn">
@@ -37,7 +37,7 @@
                 <div class="infoEdit-formInput">
                   <div class="infoEdit-formWrap">
                     <label for="infoEdit-userName"> 이름 </label>
-                    <input name="memberName" type="text" id="infoEdit-userName" th:value="${memberDTO.memberName}" placeholder="  이름을 입력해주세요" oninput="validateName()" required>
+                    <input name="memberName" type="text" id="infoEdit-userName" th:value="${memberDTO.memberName}" placeholder="  이름을 입력해주세요" required>
 
                   </div>
                   <div class="infoEdit-formMessage">
@@ -49,7 +49,7 @@
                 <div class="infoEdit-formInput">
                   <div class="infoEdit-formWrap">
                     <label for="infoEdit-userNickName"> 닉네임 </label>
-                    <input name="memberNickname" type="text" id="infoEdit-userNickName" th:value="${memberDTO.memberNickname}" placeholder="  닉네임을 입력해주세요" oninput="validateNickName()" required>
+                    <input name="memberNickname" type="text" id="infoEdit-userNickName" th:value="${memberDTO.memberNickname}" placeholder="  닉네임을 입력해주세요" required>
                   </div>
                   <div class="infoEdit-formMessage">
                     <div class="infoEdit-errorMessageNickName" id="infoEdit-errorMsgNkName"></div>
