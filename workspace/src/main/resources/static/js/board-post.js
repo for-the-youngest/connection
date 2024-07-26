@@ -19,13 +19,32 @@ btn.addEventListener('click',function(){
     btn.classList.toggle('active')
 })
 
-// 게시글 메뉴 버튼 눌렀을때 목록 나오게하기
-document.getElementById('leaguePost-showListButton').addEventListener('click', function() {
-    var list = document.getElementById('leaguePost-list');
-    if (list.style.display === 'none') {
-        list.style.display = 'block';
+// 페이지가 로드되었을 때 실행
+document.addEventListener('DOMContentLoaded', () => {
+    // 'leaguePost-showListButton' 요소를 선택합니다.
+    const showListButton = document.getElementById('leaguePost-showListButton');
+
+    // 요소가 존재하는지 확인합니다.
+    if (showListButton) {
+        // 버튼이 존재할 때만 이벤트 리스너를 추가합니다.
+        showListButton.addEventListener('click', () => {
+            // 'leaguePost-list' 요소를 선택합니다.
+            const list = document.getElementById('leaguePost-list');
+
+            // 'leaguePost-list' 요소가 존재할 때만 동작합니다.
+            if (list) {
+                // 요소의 표시 상태를 토글합니다.
+                if (list.style.display === 'none' || list.style.display === '') {
+                    list.style.display = 'block';
+                } else {
+                    list.style.display = 'none';
+                }
+            } else {
+                console.error('Element with ID "leaguePost-list" not found.');
+            }
+        });
     } else {
-        list.style.display = 'none';
+        console.error('Element with ID "leaguePost-showListButton" not found.');
     }
 });
 
