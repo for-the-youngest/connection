@@ -157,4 +157,15 @@
         #{memberNumber}
         )
     </insert>
+
+    <!-- 특정 사용자의 게시글 조회 추가 -->
+    <select id="findAllByAuthorId" parameterType="long" resultType="freeboardDTO">
+        SELECT F.FREEBOARD_NUMBER, F.FREEBOARD_CATEGORY_POST, F.FREEBOARD_CATEGORY_SPORTS, F.FREEBOARD_TITLE, M.MEMBER_NICKNAME, F.FREEBOARD_VIEW
+        FROM CNN_FREEBOARD F
+                 JOIN CNN_MEMBER M
+                      ON F.MEMBER_NUMBER = M.MEMBER_NUMBER
+        WHERE F.MEMBER_NUMBER = #{memberNumber}
+        ORDER BY F.FREEBOARD_VIEW DESC
+    </select>
+
 </mapper>

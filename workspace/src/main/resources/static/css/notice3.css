@@ -127,9 +127,6 @@ main {
 }
 
 /* 게시글 내용 */
-.leaguePost-top {
-    border-bottom: 2px solid lightgrey;
-}
 
 .leaguePost-contentCtn {
     height: 950px;

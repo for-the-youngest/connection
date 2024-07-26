@@ -46,4 +46,8 @@ public interface FreeboardService {
 
     // 게시글 파일 저장
     FileDTO saveFile(MultipartFile file) throws IOException;
+
+    // 특정 사용자의 게시글 조회
+    List<FreeboardDTO> findAllByAuthor(Long memberNumber);
+
 }

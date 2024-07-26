@@ -254,6 +254,8 @@
               <a th:href="@{/connection/board/post(freeboardNumber=${freeboardDTO.freeboardNumber})}">
                 <div class="fwd-type">
                   <span th:text="${freeboardDTO.freeboardCategorySports}"></span>
+                  <span>/</span>
+                  <span th:text="${freeboardDTO.freeboardCategoryPost}"></span>
                 </div>
                 <div class="fwd-title">
                   <span class="fwdt-text" th:text="${freeboardDTO.freeboardTitle}"></span>

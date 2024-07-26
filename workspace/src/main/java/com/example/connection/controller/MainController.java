@@ -42,16 +42,31 @@ public class MainController {
         return "place/find-place";
     }
 
+//    @GetMapping("/mypage")
+//    public String findMyPage(Model model, @SessionAttribute("memberNumber")Long memberNumber){
+//        MemberInfoDTO member = memberService.memberInfo(memberNumber);
+//        List<FreeboardDTO> freeboardList = freeboardService.selectByViews();
+//        if (freeboardList.isEmpty()) {
+//            System.out.println("No data found");
+//        } else {
+//            freeboardList.forEach(System.out::println);
+//        }
+//        model.addAttribute("memberInfo", member);
+//        model.addAttribute("freeboardList", freeboardList);
+//
+//        return "mypage/mypage";
+//    }
     @GetMapping("/mypage")
-    public String findMyPage(Model model, @SessionAttribute("memberNumber")Long memberNumber){
-        MemberInfoDTO member = memberService.memberInfo(memberNumber);
-        List<FreeboardDTO> freeboardList = freeboardService.selectByViews();
+    public String findMyPage(Model model, @SessionAttribute("memberNumber") Long memberNumber) {
+        MemberDTO memberDTO = memberService.findByMemberNumber(memberNumber);
+        List<FreeboardDTO> freeboardList = freeboardService.findAllByAuthor(memberNumber);
+//        List<FreeboardDTO> freeboardList = freeboardService.selectByViews();수정됨
         if (freeboardList.isEmpty()) {
-            System.out.println("No data found");
+                System.out.println("No data found");
         } else {
-            freeboardList.forEach(System.out::println);
+                freeboardList.forEach(System.out::println);
         }
-        model.addAttribute("memberInfo", member);
+        model.addAttribute("memberInfo", memberDTO);
         model.addAttribute("freeboardList", freeboardList);
 
         return "mypage/mypage";
