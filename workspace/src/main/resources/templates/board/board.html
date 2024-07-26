@@ -75,25 +75,6 @@
       </div>
     </section>
 
-    <section class="main-freeWriting">
-      <div class="main-writingTypeChoice">
-        <div class="main-writingTypeChoiceBox1">
-          <select class="main-writingTypeChoiceSelect" name="sports">
-            <option value="soccer">축구</option>
-            <option value="futsal">풋살</option>
-            <option value="basketball">농구</option>
-          </select>
-        </div>
-        <div class="main-writingTypeChoiceBox2">
-          <select class="main-writingTypeChoiceSelect" name="board">
-            <option value="free">자유글</option>
-            <option value="substitute">대타 모집</option>
-          </select>
-        </div>
-      </div>
-      <div class="posts" id="posts"></div>
-    </section>
-
     <div>
       <div th:each="boardLists : ${boardLists}">
         <div class="fw-detail">
@@ -101,6 +82,8 @@
             <a th:href="@{/connection/board/post(freeboardNumber=${boardLists.freeboardNumber})}">
               <div class="fwd-type">
                 <span th:text="${boardLists.freeboardCategorySports}"></span>
+                <span> / </span>
+                <span th:text="${boardLists.freeboardCategoryPost}"></span>
               </div>
               <div class="fwd-title">
                 <span class="fwdt-text" th:text="${boardLists.freeboardTitle}"></span>
