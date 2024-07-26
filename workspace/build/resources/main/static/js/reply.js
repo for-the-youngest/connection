@@ -47,7 +47,7 @@ export function getCommentList2(freeboardNumber, page, callback){
 
 
 //댓글 삭제하는 함수
-export function remove(commentRecomNum, callback){
+export function remove(replyNumber, callback){
     fetch(`/v3/freeboard/replys/${replyNumber}`, {
         method: 'DELETE'
     }).then(resp => {
