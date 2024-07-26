@@ -39,7 +39,7 @@
             </div>
 
             <!-- 게시글 메뉴 -->
-            <div class="leaguePost-menuBar">
+            <div class="leaguePost-menuBar" th:if="${session.memberNumber == boards.memberNumber}">
                 <button id="leaguePost-showListButton">
                     <img
                             class="leaguePost-menuBarImg"
@@ -53,6 +53,8 @@
                     <li><button class="remove" type="button" th:data-id="${boards.freeboardNumber}">삭제하기</button></li>
                 </ul>
             </div>
+
+            <div class="none" th:unless="${session.memberNumber == null}"></div>
         </div>
 
         <!-- 게시글 제목 -->
