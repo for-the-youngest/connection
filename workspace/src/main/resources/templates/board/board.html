@@ -82,6 +82,8 @@
             <a th:href="@{/connection/board/post(freeboardNumber=${boardLists.freeboardNumber})}">
               <div class="fwd-type">
                 <span th:text="${boardLists.freeboardCategorySports}"></span>
+                <span> / </span>
+                <span th:text="${boardLists.freeboardCategoryPost}"></span>
               </div>
               <div class="fwd-title">
                 <span class="fwdt-text" th:text="${boardLists.freeboardTitle}"></span>
