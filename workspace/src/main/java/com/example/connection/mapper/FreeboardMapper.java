@@ -40,4 +40,8 @@ public interface FreeboardMapper {
 
     // 게시글 작성
     void insertBoard(FreeboardWriteDTO freeboardWriteDTO);
+
+    // 특정 사용자의 게시글 조회
+    List<FreeboardDTO> findAllByAuthorId(@Param("memberNumber") Long memberNumber);
+
 }

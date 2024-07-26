@@ -73,12 +73,12 @@
                     <label> 성별 </label>
                     <ul class="infoEdit-genderCtn">
                       <li class="infoEdit-genderItem">
-                        <input name="memberGender" type="radio" class="infoEdit-genderSelect" id="gender-male" th:value="${memberDTO.memberGender}" value="M" required/>
+                        <input name="memberGender" type="radio" class="infoEdit-genderSelect" id="gender-male" value="M" th:checked="${memberDTO.memberGender == 'M'}" required/>
                         <label for="gender-male" class="infoEdit-gender">남자</label>
                       </li>
 
                       <li class="infoEdit-genderItem">
-                        <input name="memberGender" type="radio" class="infoEdit-genderSelect" id="gender-female" th:value="${memberDTO.memberGender}" value="F" required/>
+                        <input name="memberGender" type="radio" class="infoEdit-genderSelect" id="gender-female" value="F" th:checked="${memberDTO.memberGender == 'F'}" required/>
                         <label for="gender-female" class="infoEdit-gender">여자</label>
                       </li>
                     </ul>

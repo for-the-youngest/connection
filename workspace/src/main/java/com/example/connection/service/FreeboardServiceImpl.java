@@ -171,4 +171,11 @@ public class FreeboardServiceImpl implements FreeboardService {
     private String getUploadPath() {
         return new SimpleDateFormat("yyyy/MM/dd").format(new Date());
     }
+
+    // 수정수정 특정 사람의 게시글 조회
+    @Override
+    public List<FreeboardDTO> findAllByAuthor(Long memberNumber) {
+        return freeboardMapper.findAllByAuthorId(memberNumber);
+    }
+
 }
