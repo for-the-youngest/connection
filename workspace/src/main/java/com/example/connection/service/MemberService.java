@@ -5,10 +5,11 @@ import com.example.connection.domain.dto.MemberInfoDTO;
 import com.example.connection.domain.dto.MemberSessionDTO;
 import com.example.connection.domain.dto.MemberUpdateDTO;
 import com.example.connection.domain.vo.MemberVO;
+import org.apache.ibatis.javassist.bytecode.DuplicateMemberException;
 
 public interface MemberService {
     // 회원가입
-    void registerMember(MemberDTO memberDTO);
+    void registerMember(MemberDTO memberDTO) throws DuplicateMemberException;
     // 로그인
     MemberSessionDTO loginMember(String memberEmail, String memberPassword);
 
@@ -26,4 +27,7 @@ public interface MemberService {
 
     // 회원 정보 조회
     MemberInfoDTO memberInfo(Long memberNumber);
+
+    // 이메일 확인
+    boolean existsByEmail(String memberEmail);
 }
