@@ -11,6 +11,20 @@ document.addEventListener("DOMContentLoaded", () => {
         return errorElement;
     }
 
+    // 필드 유효성 검사
+    function validateField(input, validator, errorMsg) {
+        const errorElement = getOrCreateErrorElement(input.parentElement, input.name + "Error");
+        if (!validator(input.value)) {
+            errorElement.textContent = errorMsg;
+            input.classList.add('is-invalid');
+            return false;
+        } else {
+            errorElement.textContent = "";
+            input.classList.remove('is-invalid');
+            return true;
+        }
+    }
+
     // 이름 유효성 검사
     function validateName(value) {
         return value.trim().length >= 2 && value.trim().length <= 10;
@@ -33,93 +47,16 @@ document.addEventListener("DOMContentLoaded", () => {
         return nicknameRegex.test(value);
     }
 
-    // 생년월일 유효성 검사
+    // 생년월일 유효성 검사 (문자열로 처리)
     function validateDate(year, month, day) {
-        return year.length === 4 && !isNaN(year) &&
-            month.length === 2 && !isNaN(month) &&
-            day.length === 2 && !isNaN(day);
+        const dateString = `${year}-${month}-${day}`;
+        const dateRegex = /^(19|20)\d{2}-(0[1-9]|1[0-2])-(0[1-9]|[12]\d|3[01])$/;
+        return dateRegex.test(dateString);
     }
 
-    // 폼의 각 필드에 대한 유효성 검사 수행
-    function validateField(input, validator, errorMsg) {
-        const errorElement = getOrCreateErrorElement(input.parentElement, input.name + "Error");
-        if (!validator(input.value)) {
-            errorElement.textContent = errorMsg;
-            return false;
-        } else {
-            errorElement.textContent = "";
-            return true;
-        }
-    }
-
-    function validateForm() {
-        let isValid = true;
-
-        // 이름 유효성 검사
-        const nameInput = document.querySelector('input[name="memberName"]');
-        isValid = validateField(nameInput, validateName, "이름은 2자 이상 10자 이하로 입력해야 합니다.") && isValid;
-
-        // 이메일 유효성 검사
-        const emailInput = document.querySelector('input[name="memberEmail"]');
-        isValid = validateField(emailInput, validateEmail, "올바른 이메일 형식이 아닙니다.") && isValid;
-
-        // 비밀번호 유효성 검사
-        const passwordInput = document.querySelector('input[name="memberPassword"]');
-        const confirmPasswordInput = document.querySelector('input[name="confirmPassword"]');
-        const passwordError = getOrCreateErrorElement(passwordInput.parentElement, "passwordError");
-        let passwordIsValid = true;
-        if (!validatePassword(passwordInput.value)) {
-            passwordError.textContent = "비밀번호는 최소 6자 이상이어야 합니다.";
-            passwordIsValid = false;
-        } else if (passwordInput.value !== confirmPasswordInput.value) {
-            passwordError.textContent = "비밀번호와 비밀번호 확인이 일치하지 않습니다.";
-            passwordIsValid = false;
-        } else {
-            passwordError.textContent = "";
-        }
-        isValid = passwordIsValid && isValid;
-
-        // 닉네임 유효성 검사
-        const nicknameInput = document.querySelector('input[name="memberNickname"]');
-        isValid = validateField(nicknameInput, validateNickname, "닉네임은 2자 이상 10자 이하로 입력하며, 알파벳, 숫자, 언더스코어(_), 한글을 사용할 수 있습니다.") && isValid;
-
-        // 성별 선택 유효성 검사
-        const genderSelect = document.querySelector('select[name="memberGender"]');
-        const genderError = getOrCreateErrorElement(genderSelect.parentElement, "genderError");
-        if (genderSelect.value === "0") {
-            genderError.textContent = "성별을 선택해주세요.";
-            isValid = false;
-        } else {
-            genderError.textContent = "";
-        }
-
-        // 생년월일 유효성 검사
-        const yearInput = document.querySelector('input[name="memberYear"]');
-        const monthInput = document.querySelector('input[name="memberMonth"]');
-        const dayInput = document.querySelector('input[name="memberDay"]');
-        const dateError = getOrCreateErrorElement(yearInput.parentElement, "dateError");
-        if (!validateDate(yearInput.value, monthInput.value, dayInput.value)) {
-            dateError.textContent = "생년월일은 올바른 형식으로 입력해야 합니다 (YYYY-MM-DD).";
-            isValid = false;
-        } else {
-            dateError.textContent = "";
-        }
-
-        // 전체 동의 체크박스 유효성 검사
-        const allAgreeCheckbox = document.getElementById("join-id_a");
-        const requiredChecks = document.querySelectorAll('input[name="checkBox"]');
-        const agreeError = getOrCreateErrorElement(allAgreeCheckbox.parentElement, "agreeError");
-        if (!allAgreeCheckbox.checked) {
-            agreeError.textContent = "모든 필수 동의 사항을 체크해야 합니다.";
-            isValid = false;
-        } else if (requiredChecks.length > 0 && !Array.from(requiredChecks).every(checkbox => checkbox.checked)) {
-            agreeError.textContent = "모든 필수 체크박스를 체크해야 합니다.";
-            isValid = false;
-        } else {
-            agreeError.textContent = "";
-        }
-
-        return isValid;
+    // 성별 유효성 검사 (M 또는 F)
+    function validateGender(value) {
+        return value === 'M' || value === 'F';
     }
 
     // 필드별 이벤트 리스너 등록
@@ -138,18 +75,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
     document.querySelector('select[name="memberGender"]').addEventListener('change', () => {
         const genderSelect = document.querySelector('select[name="memberGender"]');
-        const genderError = getOrCreateErrorElement(genderSelect.parentElement, "genderError");
-        if (genderSelect.value === "0") {
-            genderError.textContent = "성별을 선택해주세요.";
-        } else {
-            genderError.textContent = "";
-        }
+        validateField(genderSelect, validateGender, "성별을 선택해주세요.");
     });
 
     const yearInput = document.querySelector('input[name="memberYear"]');
     const monthInput = document.querySelector('input[name="memberMonth"]');
     const dayInput = document.querySelector('input[name="memberDay"]');
-    function validateDate() {
+    function validateDateInputs() {
         const dateError = getOrCreateErrorElement(yearInput.parentElement, "dateError");
         let dateIsValid = validateDate(yearInput.value, monthInput.value, dayInput.value);
         if (!dateIsValid) {
@@ -159,18 +91,59 @@ document.addEventListener("DOMContentLoaded", () => {
         }
         return dateIsValid;
     }
-    yearInput.addEventListener('input', validateDate);
-    monthInput.addEventListener('input', validateDate);
-    dayInput.addEventListener('input', validateDate);
+    yearInput.addEventListener('input', validateDateInputs);
+    monthInput.addEventListener('input', validateDateInputs);
+    dayInput.addEventListener('input', validateDateInputs);
 
     // 폼 제출 시 유효성 검사 실행
     const form = document.querySelector("form");
-    form.addEventListener("submit", (event) => {
-        if (!validateForm()) {
-            event.preventDefault(); // 유효성 검사 실패 시 폼 제출 방지
-            alert("입력된 내용에 오류가 있습니다. 확인해주세요.");
+    form.addEventListener("submit", async (event) => {
+        event.preventDefault();
+        let isValid = true;
+
+        const inputs = form.querySelectorAll('input, select');
+        inputs.forEach(input => {
+            if (input.name === "memberName") {
+                isValid = validateField(input, validateName, "이름은 2자 이상 10자 이하로 입력해야 합니다.") && isValid;
+            } else if (input.name === "memberEmail") {
+                isValid = validateField(input, validateEmail, "올바른 이메일 형식이 아닙니다.") && isValid;
+            } else if (input.name === "memberPassword") {
+                isValid = validateField(input, validatePassword, "비밀번호는 최소 6자 이상이어야 합니다.") && isValid;
+            } else if (input.name === "confirmPassword") {
+                const passwordInput = form.querySelector('input[name="memberPassword"]');
+                isValid = validateField(input, value => passwordInput.value === value, "비밀번호와 비밀번호 확인이 일치하지 않습니다.") && isValid;
+            } else if (input.name === "memberNickname") {
+                isValid = validateField(input, validateNickname, "닉네임은 2자 이상 10자 이하로 입력하며, 알파벳, 숫자, 언더스코어(_), 한글을 사용할 수 있습니다.") && isValid;
+            } else if (input.name === "memberGender") {
+                isValid = validateField(input, validateGender, "성별을 선택해주세요.") && isValid;
+            } else if (input.name === "memberYear" || input.name === "memberMonth" || input.name === "memberDay") {
+                isValid = validateDateInputs() && isValid;
+            }
+        });
+
+        if (isValid) {
+            try {
+                const formData = new FormData(form);
+                const response = await fetch(form.action, {
+                    method: 'POST',
+                    body: new URLSearchParams(formData),
+                });
+
+                const result = await response.json();
+
+                if (response.ok) { // 성공 응답
+                    alert(result.message);
+                    window.location.href = '/connection/member/login';
+                } else if (response.status === 409) { // 중복된 이메일 오류
+                    alert(result.message || "이미 존재하는 이메일입니다.");
+                } else { // 다른 오류
+                    alert("회원가입 중 오류가 발생했습니다.");
+                }
+            } catch (error) {
+                alert("회원가입 중 오류가 발생했습니다.");
+            }
         } else {
-            alert("가입이 완료되었습니다!");
+            alert("입력된 내용에 오류가 있습니다. 확인해주세요.");
         }
     });
 

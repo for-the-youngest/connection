@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org" lang="en">
 <head>
     <meta charset="UTF-8" />
@@ -16,160 +17,114 @@
     <script defer th:src="@{/js/header.js}"></script>
 </head>
 <body>
-    <div class="__entire">
-        <header th:replace="~{/layout/header :: header}"></header>
-        <div class="join-logo-container">
-            <!--회원 가입 페이지 로고-->
-            <img src="/img/Connection.png" />
-        </div>
-
-        <form method="post" th:action="@{/connection/member/join}" class="join-auth-register--body">
-            <!--회원가입 필요 정보 폼 양식-->
-            <fieldset>
-                <div class="join-auth-register--input">
-                    <!--이름 입력 label + div-->
-                    <label class="join-auth-register--inputtitle">이름</label>
-
-                    <input
-                            type="text"
-                            name="memberName"
-                            placeholder="이름을 입력해주세요"
-                            required="required"
-                    />
-                </div>
-
-                <div class="join-auth-register--input">
-                    <!--아이디 이메일 입력 label + div-->
-                    <label class="join-auth-register--inputtitle">아이디(이메일)</label>
-
-                    <input
-                            type="text"
-                            name="memberEmail"
-                            placeholder="이메일을 입력해주세요"
-                            required="required"
-                    />
-                </div>
-
-                <div class="join-auth-register--input">
-                    <!--비밀번호 입력 label + div-->
-                    <label class="join-auth-register--inputtitle">비밀번호</label>
-                    <input
-                            type="password"
-                            name="memberPassword"
-                            placeholder="비밀번호를 입력해주세요"
-                            required="required"
-                    />
-                </div>
-
-                <div class="join-auth-register--input">
-                    <!--비밀번호(확인) 입력 label + div-->
-                    <label class="join-auth-register--inputtitle">비밀번호(확인)</label>
-                    <input
-                            type="password"
-                            name="confirmPassword"
-                            placeholder="비밀번호를 입력해주세요"
-                            required="required"
-                    />
-                </div>
-
-                <div class="join-auth-register--input">
-                    <!--닉네임 입력 label + div-->
-                    <label class="join-auth-register--inputtitle">닉네임</label>
-                    <input
-                            type="text"
-                            name="memberNickname"
-                            placeholder="닉네임을 입력해주세요"
-                            required="required"
-                    />
-                </div>
-
-                <div class="join-auth-register--input">
-                    <!--성별 입력 label + div-->
-                    <label class="join-auth-register--inputtitle">성별</label>
-                    <select name="memberGender" type="number" class="sexchoice" id="join-sex">
-                        <option value="0">성별을 선택하세요</option>
-                        <option value="M">M</option>
-                        <option value="F">F</option>
-                    </select>
-                </div>
-
-                <div class="join-auth-register--input">
-                    <label class="join-auth-register--inputtitle" id="id-years">생년월일</label>
-                    <div class="join-allyears-contaniner">
-                        <div>
-                            <input
-                                    type="text"
-                                    name="memberYear"
-                                    placeholder="0000년"
-                                    required="required"
-                            >
-                        </div>
-
-                        <div>
-                            <input
-                                    type="text"
-                                    name="memberMonth"
-                                    placeholder="00월"
-                                    required="required"
-                            >
-                        </div>
-
-                        <div>
-                            <input
-                                    type="text"
-                                    name="memberDay"
-                                    placeholder="00일"
-                                    required="required"
-                            >
-                        </div>
-                    </div>
-                </div>
-
-                <div class="join-allagree-container">
-                    <!--전체 동의 ~ 이벤트 프로모션 까지.-->
-                    <div class="join-agree-container">
-                        <label>
-                            <input type="checkbox" id="join-id_a" name="all" /> 전체 동의
-                        </label>
-                    </div>
-
-                    <hr />
-
-                    <div class="join-all-agree">
-                        <label>
-                            <input type="checkbox" id="join-id_b" name="checkBox" /> 이용
-                            약관 동의(필수)
-                        </label>
-                    </div>
-
-                    <div class="join-all-agree">
-                        <label>
-                            <input type="checkbox" id="join-id_c" name="checkBox" /> 만 14세
-                            이상입니다(필수)
-                        </label>
-                    </div>
-
-                    <div class="join-all-agree">
-                        <label>
-                            <input type="checkbox" id="join-id_d" name="checkBox" />
-                            이벤트,프로모션 등 sns 맞춤 정보 받기(선택)
-                        </label>
-                    </div>
-
-                    <div class="join-all-agree">
-                        <label>
-                            <input type="checkbox" id="join-id_e" name="checkBox" />
-                            이벤트.프로모션 등 이메일 맞춤 정보 받기(선택)
-                        </label>
-                    </div>
-                </div>
-            </fieldset>
-            <div class="join-joinbutton-button">
-                <button class="join-button" type="submit">가입하기</button>
-            </div>
-        </form>
-
-        <footer th:replace="~{/layout/footer :: footer}"></footer>
+<div class="__entire">
+    <header th:replace="~{/layout/header :: header}"></header>
+    <div class="join-logo-container">
+        <!--회원 가입 페이지 로고-->
+        <img src="/img/Connection.png" />
     </div>
+
+    <form method="post" th:action="@{/connection/member/join}" class="join-auth-register--body">
+        <!--회원가입 필요 정보 폼 양식-->
+        <fieldset>
+            <div class="join-auth-register--input">
+                <!--이름 입력 label + div-->
+                <label class="join-auth-register--inputtitle">이름</label>
+                <input type="text" name="memberName" placeholder="이름을 입력해주세요" required="required"/>
+            </div>
+
+            <div class="join-auth-register--input">
+                <!--아이디 이메일 입력 label + div-->
+                <label class="join-auth-register--inputtitle">아이디(이메일)</label>
+                <input type="text" name="memberEmail" placeholder="이메일을 입력해주세요" required="required"/>
+            </div>
+
+            <div class="join-auth-register--input">
+                <!--비밀번호 입력 label + div-->
+                <label class="join-auth-register--inputtitle">비밀번호</label>
+                <input type="password" name="memberPassword" placeholder="비밀번호를 입력해주세요" required="required"/>
+            </div>
+
+            <div class="join-auth-register--input">
+                <!--비밀번호(확인) 입력 label + div-->
+                <label class="join-auth-register--inputtitle">비밀번호(확인)</label>
+                <input type="password" name="confirmPassword" placeholder="비밀번호를 입력해주세요" required="required"/>
+            </div>
+
+            <div class="join-auth-register--input">
+                <!--닉네임 입력 label + div-->
+                <label class="join-auth-register--inputtitle">닉네임</label>
+                <input type="text" name="memberNickname" placeholder="닉네임을 입력해주세요" required="required"/>
+            </div>
+
+            <div class="join-auth-register--input">
+                <!--성별 입력 label + div-->
+                <label class="join-auth-register--inputtitle">성별</label>
+                <select name="memberGender" type="number" class="sexchoice" id="join-sex">
+                    <option value="0">성별을 선택하세요</option>
+                    <option value="M">M</option>
+                    <option value="F">F</option>
+                </select>
+            </div>
+
+            <div class="join-auth-register--input">
+                <label class="join-auth-register--inputtitle" id="id-years">생년월일</label>
+                <div class="join-allyears-contaniner">
+                    <div>
+                        <input type="text" name="memberYear" placeholder="0000년" required="required">
+                    </div>
+
+                    <div>
+                        <input type="text" name="memberMonth" placeholder="00월" required="required">
+                    </div>
+
+                    <div>
+                        <input type="text" name="memberDay" placeholder="00일" required="required">
+                    </div>
+                </div>
+            </div>
+
+            <div class="join-allagree-container">
+                <!--전체 동의 ~ 이벤트 프로모션 까지.-->
+                <div class="join-agree-container">
+                    <label>
+                        <input type="checkbox" id="join-id_a" name="all" /> 전체 동의
+                    </label>
+                </div>
+
+                <hr />
+
+                <div class="join-all-agree">
+                    <label>
+                        <input type="checkbox" id="join-id_b" name="checkBox" required /> 이용 약관 동의(필수)
+                    </label>
+                </div>
+
+                <div class="join-all-agree">
+                    <label>
+                        <input type="checkbox" id="join-id_c" name="checkBox" required /> 만 14세 이상입니다(필수)
+                    </label>
+                </div>
+
+                <div class="join-all-agree">
+                    <label>
+                        <input type="checkbox" id="join-id_d" name="checkBox" /> 이벤트,프로모션 등 sns 맞춤 정보 받기(선택)
+                    </label>
+                </div>
+
+                <div class="join-all-agree">
+                    <label>
+                        <input type="checkbox" id="join-id_e" name="checkBox" /> 이벤트.프로모션 등 이메일 맞춤 정보 받기(선택)
+                    </label>
+                </div>
+            </div>
+        </fieldset>
+        <div class="join-joinbutton-button">
+            <button class="join-button" type="submit">가입하기</button>
+        </div>
+    </form>
+
+    <footer th:replace="~{/layout/footer :: footer}"></footer>
+</div>
 </body>
 </html>
