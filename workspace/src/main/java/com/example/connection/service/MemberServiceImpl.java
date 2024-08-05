@@ -7,6 +7,7 @@ import com.example.connection.domain.dto.MemberUpdateDTO;
 import com.example.connection.domain.vo.MemberVO;
 import com.example.connection.mapper.MemberMapper;
 import lombok.RequiredArgsConstructor;
+import org.apache.ibatis.javassist.bytecode.DuplicateMemberException;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -19,7 +20,10 @@ public class MemberServiceImpl implements MemberService{
 
     // 회원가입
     @Override
-    public void registerMember(MemberDTO memberDTO) {
+    public void registerMember(MemberDTO memberDTO) throws DuplicateMemberException {
+        if (memberMapper.existsByEmail(memberDTO.getMemberEmail())) {
+            throw new DuplicateMemberException("이미 존재하는 이메일입니다: " + memberDTO.getMemberEmail());
+        }
         memberMapper.insertMember(memberDTO);
     }
 
@@ -54,5 +58,9 @@ public class MemberServiceImpl implements MemberService{
         return memberMapper.memberInfo(memberNumber);
     }
 
+    @Override
+    public boolean existsByEmail(String memberEmail) {
+        return memberMapper.existsByEmail(memberEmail);
+    }
 
 }

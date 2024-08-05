@@ -4,18 +4,20 @@ import com.example.connection.domain.dto.FreeboardDTO;
 import com.example.connection.domain.dto.MemberDTO;
 import com.example.connection.domain.dto.MemberSessionDTO;
 import com.example.connection.domain.dto.MemberUpdateDTO;
-import com.example.connection.domain.vo.MemberVO;
 import com.example.connection.service.FreeboardService;
 import com.example.connection.service.MemberService;
 import jakarta.servlet.http.HttpSession;
 import lombok.RequiredArgsConstructor;
+import org.apache.ibatis.javassist.bytecode.DuplicateMemberException;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import org.springframework.web.servlet.view.RedirectView;
 
-import java.io.IOException;
+import java.util.Collections;
 import java.util.List;
 
 @Controller
@@ -30,11 +32,25 @@ public class MemberController {
         return "/login/join";
     }
 
+//    @PostMapping("/join")
+//    public String join(MemberDTO memberDTO) {
+//        memberService.registerMember(memberDTO);
+//        return "redirect:/connection/member/login";
+//    }
+
+
     @PostMapping("/join")
-    public String join(MemberDTO memberDTO) {
-        memberService.registerMember(memberDTO);
-        return "redirect:/connection/member/login";
+    public ResponseEntity<?> join(@ModelAttribute MemberDTO memberDTO, RedirectAttributes redirectAttributes, Model model) {
+        try {
+            memberService.registerMember(memberDTO);
+            return ResponseEntity.ok(Collections.singletonMap("message", "회원가입이 완료되었습니다."));
+        } catch (DuplicateMemberException e) {
+            return ResponseEntity.status(HttpStatus.CONFLICT).body(Collections.singletonMap("message", e.getMessage()));
+        } catch (Exception e) {
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(Collections.singletonMap("message", "회원가입 중 오류가 발생했습니다. 다시 시도해주세요."));
+        }
     }
+
 
     @GetMapping("/login")
     public String login(){
@@ -60,19 +76,6 @@ public class MemberController {
         return new RedirectView("/connection/member/login");
     }
 
-//    @GetMapping("/info")
-//    public String updateProfile(Model model, @SessionAttribute(value = "memberNumber") Long memberNumber) {
-//        MemberDTO memberDTO = memberService.findByMemberNumber(memberNumber);
-//        model.addAttribute("memberDTO", memberDTO);
-//        return "mypage/info-edit";
-//    }
-//
-//    @PostMapping("/info")
-//    public String updateProfile(MemberUpdateDTO memberUpdateDTO, RedirectAttributes redirectAttributes) {
-//        memberService.updateMember(memberUpdateDTO);
-//        redirectAttributes.addAttribute("memberNumber", memberUpdateDTO.getMemberNumber());
-//        return "redirect:/connection/mypage";
-//    }
     @GetMapping("/info")
     public String updateProfile(Model model, @SessionAttribute(value = "memberNumber") Long memberNumber) {
         MemberDTO memberDTO = memberService.findByMemberNumber(memberNumber);
