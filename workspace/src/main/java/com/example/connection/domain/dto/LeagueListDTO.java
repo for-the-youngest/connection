@@ -14,7 +14,9 @@ import java.time.LocalDateTime;
 public class LeagueListDTO {
     private Long leaguepostNumber;
     private String leaguepostTitle;
+    private String leaguepostContent;
     private LocalDateTime leaguepostDate;
-    private String memberNickname;
     private String leaguepostCategory;
+    private Long memberNumber;
+    private String memberNickname;
 }

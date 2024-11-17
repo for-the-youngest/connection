@@ -106,7 +106,7 @@ main {
     justify-content: center;
 }
 
-button {
+button, #cancelBtn {
     background-color: #e9f6ff;
     border: none;
     color: black;

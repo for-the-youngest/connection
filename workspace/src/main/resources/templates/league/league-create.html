@@ -27,7 +27,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
 <body>
-<div id="header1"></div>
+<header th:replace="~{/layout/header :: header}"></header>
 <!-- main -->
 <main>
   <div class="leagueCreate-title">
@@ -52,6 +52,7 @@
                   placeholder="제목을 입력하세요"
                   name="leaguepostTitle"
                   class="leagueCreate-btInput"
+                  required
           />
         </label>
       </form>
@@ -62,16 +63,13 @@
     </div>
 
     <div class="main-btnCtn">
-      <a th:href="@{/connection/league}">
-        <button id="cancelBtn">취소</button>
-      </a>
+      <a th:href="@{/connection/league}" id="cancelBtn">취소</a>
       <button id="submitBtn" type="submit">등록</button>
     </div>
   </div>
   </form>
 </main>
 
-<div id="footer"></div>
-<!-- 메인화면 페이지 로드 함수 -->
+<footer th:replace="~{/layout/footer :: footer}"></footer>
 </body>
 </html>

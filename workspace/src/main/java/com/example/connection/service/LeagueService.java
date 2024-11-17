@@ -10,35 +10,26 @@ import java.util.List;
 
 public interface LeagueService {
 
-    // 게시글 삭제
-    void removeLeague(Long leagueNumber);
+    // 게시글 리스트 조회
+    List<LeagueViewDTO> leagueListViews();
+
+    // 게시글 페이징 처리
+    List<LeagueViewDTO> leagueListPaging(Criteria criteria);
+
+    int leagueFindTotal();
 
     // 게시글 상세페이지 조회
     LeagueViewDTO selectLeague(Long leaguepostNumber);
 
-    void registerLeaguepost(LeagueWriteDTO leagueWriteDTO);
-
     // 게시글 수정
     void updateLeague(LeagueUpdateDTO leagueUpdateDTO)throws IOException;
 
-    // 게시글 조회수 증가
-    void leagueViewCnt(Long leaguepostNumber);
 
-//    void registerLeagueWithFile(LeagueWriteDTO leagueWriteDTO, List<MultipartFile> files) throws IOException;
+    // 게시글 삭제
+    void removeLeague(Long leagueNumber);
 
-//    FileDTO saveFile(MultipartFile file) throws IOException;
+    // 게시글 작성
+    Long insertLeague(LeagueWriteDTO leagueWriteDTO);
 
-    void removeLeaguepost(Long leaguepostNumber);
 
-//    void modifyFile(FreeboardUpdateDTO freeboardUpdateDTO, List<MultipartFile> files) throws IOException;
-
-    LeagueViewDTO findLeaguepostNum(Long leagueNumber);
-
-    List<LeagueListDTO> findAll();
-
-    List<LeagueListDTO> findLeaguepostAll(Criteria criteria);
-
-    int findTotal();
-
-    List<LeagueDTO> selectAllByViews(String leaguepostCategory);
 }

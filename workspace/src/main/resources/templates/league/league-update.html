@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>리그 게시글 수정</title>
+    <title>league-create</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
     <link
@@ -18,7 +18,7 @@
             href="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.8/summernote.css"
             rel="stylesheet"
     />
-    <link rel="stylesheet" th:href="@{/css/league.css}" />
+    <link rel="stylesheet" th:href="@{/css/league-create.css}" />
     <link rel="stylesheet" th:href="@{/css/header.css}">
     <link rel="stylesheet" th:href="@{/css/footer.css}">
 
@@ -34,7 +34,7 @@
         <p class="leagueCreate-titleText">리그 참가 신청서</p>
     </div>
 
-    <form th:action="@{/connection/league/update(leaguepostNumber=${boards.leaguepostNumber})}" method="post" enctype="multipart/form-data">
+    <form th:action="@{/connection/league/update(leaguepostNumber=${leagues.leaguepostNumber})}" method="post" enctype="multipart/form-data">
         <div class="leagueCreate-mainContainer">
             <div class="leagueCreate-choiceCtn">
                 <select class="leagueCreate-choice" name="leaguepostCategory">
@@ -53,20 +53,18 @@
                                 name="leaguepostTitle"
                                 class="leagueCreate-btInput"
                                 required
-                                th:value="${boards.leaguepostTitle}"
+                                th:value="${leagues.leaguepostTitle}"
                         />
                     </label>
                 </form>
             </div>
 
             <div class="main-boardContent">
-                <textarea name="leaguepostContent" class="main-boardContentDetail" th:text="${boards.leaguepostContent}" required></textarea>
+                <textarea name="leaguepostContent" class="main-boardContentDetail" th:text="${leagues.leaguepostContent}" required></textarea>
             </div>
 
             <div class="main-btnCtn">
-                <a th:href="@{/connection/league}">
-                    <button id="cancelBtn">취소</button>
-                </a>
+                <a th:href="@{/connection/league}" id="cancelBtn">취소</a>
                 <button id="submitBtn" type="submit">등록</button>
             </div>
         </div>

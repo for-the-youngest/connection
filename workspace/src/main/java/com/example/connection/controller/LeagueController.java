@@ -27,11 +27,11 @@ public class LeagueController {
 
     @GetMapping()
     public String LeagueList(Criteria criteria, Model model, @RequestParam(required = false, defaultValue = "latest") String sort) {
-        List<LeagueListDTO> leagueList = leagueService.findLeaguepostAll(criteria);
-        int total = leagueService.findTotal();
+        List<LeagueViewDTO> leagueLists = leagueService.leagueListPaging(criteria);
+        int total = leagueService.leagueFindTotal();
         Page page = new Page(criteria, total);
 
-        model.addAttribute("leagueList", leagueList);
+        model.addAttribute("leagueLists", leagueLists);
         model.addAttribute("page", page);
         model.addAttribute("sort", sort);
 
@@ -39,28 +39,7 @@ public class LeagueController {
         return "league/league";
     }
 
-//    @GetMapping("/create")
-//    public String leagueCreate(@SessionAttribute(value="memberNumber", required=false)Long memberNumber) {
-//        return memberNumber == null ? "redirect:/connection/member/login" : "league/league-create";
-//    }
-
-    @GetMapping("/create")
-    public String leagueCreate(@SessionAttribute(value="memberNumber", required=false)Long memberNumber) {
-        return "league/league-create";
-    }
-
-    @PostMapping("/create")
-    public String leagueCreate(LeagueWriteDTO leagueWriteDTO, @SessionAttribute(value = "memberNumber") Long memberNumber, RedirectAttributes redirectAttributes){
-        leagueWriteDTO.setLeaguepostNumber(memberNumber);
-
-
-        Long leaguepostNumber = leagueWriteDTO.getLeaguepostNumber();
-        redirectAttributes.addFlashAttribute("leaguepostNumber", leaguepostNumber);
-
-        return "redirect:/connection/league/post?leaguepostNumber=" + leaguepostNumber;
-    }
-
-    // 자유 게시판 게시글 삭제
+    // 리그 게시판 게시글 삭제
     //게시글 삭제
     @GetMapping("/remove")
     public RedirectView removeLeague(Long leaguepostNumber){
@@ -68,27 +47,39 @@ public class LeagueController {
         return new RedirectView("/connection/league");
     }
 
-    // 자유 게시판 게시글 수정
+    // 리그 게시판 게시글 수정
     @GetMapping("/update")
     public String update(Long leaguepostNumber, Model model) {
-        LeagueViewDTO boards = leagueService.selectLeague(leaguepostNumber);
-        model.addAttribute("boards",boards);
+        LeagueViewDTO leagues = leagueService.selectLeague(leaguepostNumber);
+        model.addAttribute("leagues",leagues);
 
         return "league/league-update";
     }
 
-    @PostMapping("/update")
-    public String update(LeagueUpdateDTO leagueUpdateDTO, RedirectAttributes redirectAttributes){
-        try{
-            leagueService.updateLeague(leagueUpdateDTO);
-        }catch (IOException e){
-            throw new RuntimeException(e);
-        }
 
-        redirectAttributes.addAttribute("boardId", leagueUpdateDTO.getLeagueNumber());
-        return "redirect:/connection/league";
+    // 리그 게시판 게시글 작성
+    @GetMapping("/create")
+    public String leagueCreate(@SessionAttribute(value="memberNumber", required=false)Long memberNumber) {
+        return memberNumber == null ? "redirect:/connection/member/login" : "league/league-create";
     }
 
+    @PostMapping("/create")
+    public String leagueCreate(LeagueWriteDTO leagueWriteDTO,
+                               @SessionAttribute(value = "memberNumber") Long memberNumber,
+                               RedirectAttributes redirectAttributes) {
+
+        leagueWriteDTO.setMemberNumber(memberNumber);
+
+        Long leaguepostNumber = leagueService.insertLeague(leagueWriteDTO);
+
+        if (leaguepostNumber == null) {
+            throw new IllegalStateException("leaguepostNumber가 생성되지 않았습니다.");
+        }
+
+        redirectAttributes.addFlashAttribute("leaguepostNumber", leaguepostNumber);
+
+        return "redirect:/connection/league/post?leaguepostNumber=" + leaguepostNumber;
+    }
 
     // 자유 게시판 게시글 상세페이지
     @GetMapping("/post")
@@ -97,16 +88,16 @@ public class LeagueController {
         if (memberNumber == null) {
             return "redirect:/connection/member/login";
         }
-        LeagueViewDTO boards = leagueService.selectLeague(leaguepostNumber);
-        leagueService.leagueViewCnt(leaguepostNumber);
+        LeagueViewDTO leagues = leagueService.selectLeague(leaguepostNumber);
 
-        model.addAttribute("boards", boards);
+        model.addAttribute("leagues", leagues);
+
 
         return "league/league-post";
     }
 
     @PostMapping("/post/{leaguepostNumber}")
-    public String boardList( @PathVariable("leaguepostNumber") Long leaguepostNumber){
+    public String leagueList( @PathVariable("leaguepostNumber") Long leaguepostNumber){
         leagueService.removeLeague(leaguepostNumber);
         return "redirect:/connection/league";
     }

@@ -26,63 +26,42 @@ public class LeagueServiceImpl implements LeagueService {
     private final LeagueMapper leagueMapper;
 
     @Override
-    public void removeLeague(Long leagueNumber) {
-        leagueMapper.deleteLeaguepost(leagueNumber);
+    public List<LeagueViewDTO> leagueListViews() {
+        return leagueMapper.leagueListViews();
+    }
+
+    @Override
+    public List<LeagueViewDTO> leagueListPaging(Criteria criteria) {
+        return leagueMapper.leagueListPaging(criteria);
+    }
+
+    @Override
+    public int leagueFindTotal() {
+        return leagueMapper.leagueFindTotal();
     }
 
     @Override
     public LeagueViewDTO selectLeague(Long leaguepostNumber) {
+        // 게시물 번호가 유효하지 않으면 예외를 던지기 전에 빈 Optional을 처리
         return leagueMapper.selectLeague(leaguepostNumber).orElseThrow(() -> new IllegalArgumentException("유효하지 않은 게시물 번호"));
     }
 
-    @Override
-    public void registerLeaguepost(LeagueWriteDTO leagueWriteDTO) {
-        leagueMapper.insertLeaguepost(leagueWriteDTO);
-    }
 
     @Override
-    public void updateLeague(LeagueUpdateDTO leagueUpdateDTO) throws IOException {
+    public void updateLeague(LeagueUpdateDTO leagueUpdateDTO)  {
         // 게시글 업데이트
         leagueMapper.updateLeague(leagueUpdateDTO);
-        Long boardId = leagueUpdateDTO.getLeagueNumber();
     }
 
-    // 게시글 조회수 증가
     @Override
-    public void leagueViewCnt(Long leaguepostNumber) {
-        leagueMapper.leagueViewCnt(leaguepostNumber);
+    public void removeLeague(Long leaguepostNumber) {
+        leagueMapper.deleteLeague(leaguepostNumber);
     }
 
 
     @Override
-    public void removeLeaguepost(Long leaguepostNumber) {
-        leagueMapper.deleteLeaguepost(leaguepostNumber);
-    }
-
-    @Override
-    public LeagueViewDTO findLeaguepostNum(Long leagueNumber) {
-        return leagueMapper.selectLeaguepostNum(leagueNumber).orElseThrow(() -> new IllegalStateException("유효하지 않은 게시물 번호"));
-    }
-
-    @Override
-    public List<LeagueListDTO> findAll() {
-        return leagueMapper.selectAll();
-    }
-
-    @Override
-    public List<LeagueListDTO> findLeaguepostAll(Criteria criteria) {
-        return leagueMapper.selectLeaguepostALL(criteria);
-    }
-
-    @Override
-    public int findTotal() {
-        return leagueMapper.selectTotal();
-    }
-
-    @Override
-    public List<LeagueDTO> selectAllByViews(String leaguepostCategory) {
-        List<LeagueDTO> leagueList = leagueMapper.selectAllByViews(leaguepostCategory);
-
-        return leagueList;
+    public Long insertLeague(LeagueWriteDTO leagueWriteDTO) {
+        leagueMapper.insertLeague(leagueWriteDTO);
+        return leagueWriteDTO.getLeaguepostNumber();
     }
 }

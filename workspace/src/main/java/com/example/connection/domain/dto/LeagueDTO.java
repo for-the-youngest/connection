@@ -13,11 +13,11 @@ import java.time.LocalDateTime;
 @ToString
 @NoArgsConstructor
 public class LeagueDTO {
-    private long leaguepostNumber;
+    private Long leaguepostNumber;
     private String leaguepostTitle;
     private String leaguepostContent;
     private LocalDateTime leaguepostDate;
     private String leaguepostCategory;
     private String memberNickname;
-    private long memberNumber;
+    private Long memberNumber;
 }

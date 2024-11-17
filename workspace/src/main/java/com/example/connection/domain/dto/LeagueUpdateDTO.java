@@ -12,8 +12,9 @@ import java.time.LocalDateTime;
 @ToString
 @NoArgsConstructor
 public class LeagueUpdateDTO {
-    private Long leagueNumber;
-    private String leagueTitle;
-    private String leagueContent;
-    private LocalDateTime leagueDate;
+    private Long leaguepostNumber;
+    private String leaguepostTitle;
+    private String leaguepostContent;
+    private LocalDateTime leaguepostDate;
+    private String leaguepostCategory;
 }

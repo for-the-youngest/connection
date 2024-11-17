@@ -11,25 +11,24 @@ import java.util.Optional;
 
 @Mapper
 public interface LeagueMapper {
-    void insertLeaguepost(LeagueWriteDTO leagueWriteDTO);
 
-    void deleteLeaguepost(Long leaguepostNumber);
+    // 게시글 리스트 조회
+    List<LeagueViewDTO> leagueListViews();
 
-    // 게시글 조회수 증가
-    int leagueViewCnt(Long leaguepostNumber);
+    // 게시글 페이징 처리
+    List<LeagueViewDTO> leagueListPaging(Criteria criteria);
 
-    void updateLeague(LeagueUpdateDTO leagueUpdateDTO);
-
-    Optional<LeagueViewDTO> selectLeaguepostNum(Long leaguepostNumber);
-
-    List<LeagueListDTO> selectAll();
-
-    List<LeagueListDTO> selectLeaguepostALL(Criteria criteria);
-
-    int selectTotal();
-
-    List<LeagueDTO> selectAllByViews(@Param("leaguepostCategory") String leaguepostCategory);
+    int leagueFindTotal();
 
     // 게시글 상세페이지 조회
     Optional<LeagueViewDTO> selectLeague(Long leaguepostNumber);
+
+    void updateLeague(LeagueUpdateDTO leagueUpdateDTO);
+
+    void deleteLeague(Long leaguepostNumber);
+
+    void insertLeague(LeagueWriteDTO leagueWriteDTO);
+
+
+
 }

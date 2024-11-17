@@ -2,12 +2,110 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.example.connection.mapper.LeagueMapper">
 
-    <!--  게시글 삽입  -->
-    <insert id="insertLeaguepost" parameterType="LeagueWriteDTO">
+    <!--  게시글 리스트 조회  -->
+    <select id="leagueListViews" resultType="LeagueViewDTO">
+        SELECT LEAGUEPOST_NUMBER,
+               LEAGUEPOST_TITLE,
+               LEAGUEPOST_CONTENT,
+               LEAGUEPOST_DATE,
+               LEAGUEPOST_CATEGORY,
+               MEMBER_NUMBER
+        FROM CNN_LEAGUEPOST
+        WHERE rownum BETWEEN 1 AND 100
+        ORDER BY LEAGUEPOST_DATE DESC
+    </select>
+
+    <!--  게시글 페이징 처리  -->
+    <select id="leagueListPaging" resultType="LeagueViewDTO" parameterType="Criteria">
+    <![CDATA[
+        SELECT LEAGUEPOST_NUMBER,
+               LEAGUEPOST_TITLE,
+               LEAGUEPOST_DATE,
+               LEAGUEPOST_CATEGORY,
+               LEAGUEPOST_CONTENT,
+               MEMBER_NICKNAME,
+               MEMBER_NUMBER
+        FROM (
+                 SELECT RNUM,
+                        LEAGUEPOST_NUMBER,
+                        LEAGUEPOST_TITLE,
+                        LEAGUEPOST_DATE,
+                        LEAGUEPOST_CATEGORY,
+                        LEAGUEPOST_CONTENT,
+                        MEMBER_NICKNAME,
+                        MEMBER_NUMBER
+                 FROM (
+                          SELECT ROWNUM AS RNUM,
+                                 LEAGUEPOST_NUMBER,
+                                 LEAGUEPOST_TITLE,
+                                 LEAGUEPOST_DATE,
+                                 LEAGUEPOST_CATEGORY,
+                                 LEAGUEPOST_CONTENT,
+                                 MEMBER_NICKNAME,
+                                 MEMBER_NUMBER
+                          FROM (
+                                   SELECT LEAGUEPOST_NUMBER,
+                                          LEAGUEPOST_TITLE,
+                                          LEAGUEPOST_DATE,
+                                          LEAGUEPOST_CATEGORY,
+                                          LEAGUEPOST_CONTENT,
+                                          MEMBER_NICKNAME,
+                                          M.MEMBER_NUMBER
+                                   FROM CNN_LEAGUEPOST F
+                                            JOIN CNN_MEMBER M ON F.MEMBER_NUMBER = M.MEMBER_NUMBER
+                                   ORDER BY LEAGUEPOST_DATE DESC
+                               )
+                          WHERE ROWNUM <= #{page} * #{amount}
+                      )
+                 WHERE RNUM > (#{page} - 1) * #{amount}
+             )
+        ]]>
+    </select>
+
+    <select id="leagueFindTotal">
+        SELECT COUNT(*)FROM CNN_LEAGUEPOST
+    </select>
+
+    <!--  게시글 상세페이지 조회  -->
+    <select id="selectLeague" resultType="LeagueViewDTO">
+        SELECT *
+        FROM CNN_LEAGUEPOST F
+                 JOIN CNN_MEMBER M
+                      ON F.MEMBER_NUMBER = M.MEMBER_NUMBER
+        WHERE F.LEAGUEPOST_NUMBER = #{leaguepostNumber}
+    </select>
+
+
+
+    <!--  update  -->
+
+    <!--  게시글 수정  -->
+    <update id="updateLeague" parameterType="LeagueUpdateDTO">
+        UPDATE CNN_LEAGUEPOST
+        SET LEAGUEPOST_TITLE = #{leaguepostTitle},
+            LEAGUEPOST_CONTENT = #{leaguepostContent},
+            LEAGUEPOST_DATE = SYSDATE,
+            LEAGUEPOST_CATEGORY = #{leaguepostCategory}
+        WHERE LEAGUEPOST_NUMBER = #{leaguepostNumber}
+    </update>
+
+
+    <!--  delete  -->
+
+    <!--  게시글 삭제  -->
+    <delete id="deleteLeague" parameterType="Long">
+        DELETE
+        FROM CNN_LEAGUEPOST
+        WHERE LEAGUEPOST_NUMBER = #{leaguepostNumber}
+    </delete>
+
+    <!--  insert  -->
+    <insert id="insertLeague" parameterType="LeagueWriteDTO">
         <selectKey keyProperty="leaguepostNumber" resultType="Long" order="BEFORE">
-            SELECT SEQ_LEAGUEPOST.nextVal FROM DUAL
+            SELECT SEQ_LEAGUEPOST.NEXTVAL FROM DUAL
         </selectKey>
-        INSERT INTO CNN_LEAGUEPOST(
+        INSERT INTO CNN_LEAGUEPOST
+        (
         LEAGUEPOST_NUMBER,
         LEAGUEPOST_TITLE,
         LEAGUEPOST_CONTENT,
@@ -15,7 +113,8 @@
         LEAGUEPOST_CATEGORY,
         MEMBER_NUMBER
         )
-        VALUES(
+        VALUES
+        (
         #{leaguepostNumber},
         #{leaguepostTitle},
         #{leaguepostContent},
@@ -25,75 +124,4 @@
         )
     </insert>
 
-    <!--  게시글 삭제  -->
-    <delete id="deleteLeaguepost" parameterType="Long">
-        DELETE FROM CNN_LEAGUEPOST
-        WHERE LEAGUEPOST_NUMBER = #{leaguepostNumber}
-    </delete>
-
-    <!--  게시글 수정  -->
-    <update id="updateLeaguepost" parameterType="LeagueUpdateDTO">
-        UPDATE CNN_LEAGUEPOST
-        SET LEAGUEPOST_TITLE = #{leaguepostTitle},
-            LEAGUEPOST_CONTENT = #{leaguepostContent},
-            LEAGUEPOST_DATE = SYSDATE
-        WHERE LEAGUEPOST_NUMBER = #{leaguepostNumber}
-    </update>
-
-    <!--  게시글 조회  -->
-    <select id="selectLeaguepostNum" parameterType="Long" resultType="LeagueViewDTO">
-        SELECT L.LEAGUEPOST_NUMBER,
-               L.LEAGUEPOST_CATEGORY,
-               L.LEAGUEPOST_TITLE,
-               L.LEAGUEPOST_DATE,
-               M.MEMBER_NICKNAME,
-               M.MEMBER_NUMBER
-        FROM CNN_LEAGUEPOST L JOIN CNN_MEMBER M
-                                  ON L.LEAGUEPOST_NUMBER = #{leaguepostNumber} AND L.MEMBER_NUMBER = M.MEMBER_NUMBER
-    </select>
-
-    <!--  게시글 전체 조회  -->
-    <select id="selectALL" resultType="LeagueListDTO">
-        SELECT LEAGUEPOST_NUMBER,
-               LEAGUEPOST_TITLE,
-               M.MEMBER_EMAIL
-        FROM CNN_LEAGUEPOST L JOIN CNN_MEMBER M
-                                  ON L.MEMBER_NUMBER = M.MEMBER_NUMBER
-        ORDER BY LEAGUEPOST_DATE DESC
-    </select>
-
-    <!--  게시글 페이징처리  -->
-    <select id="selectLeaguepostALL" parameterType="Criteria" resultType="LeagueListDTO">
-        <![CDATA[
-        SELECT LEAGUEPOST_NUMBER, LEAGUEPOST_CATEGORY, LEAGUEPOST_TITLE, LEAGUEPOST_DATE, MEMBER_NICKNAME, MEMBER_NUMBER
-        FROM (
-                 SELECT ROWNUM AS RNUM, LEAGUEPOST_NUMBER, LEAGUEPOST_CATEGORY, LEAGUEPOST_TITLE, LEAGUEPOST_DATE, MEMBER_NICKNAME, MEMBER_NUMBER
-                 FROM(
-                         SELECT B.LEAGUEPOST_NUMBER, B.LEAGUEPOST_CATEGORY, B.LEAGUEPOST_TITLE, B.LEAGUEPOST_DATE, U.MEMBER_NICKNAME, U.MEMBER_NUMBER
-                         FROM CNN_LEAGUEPOST B JOIN CNN_MEMBER U
-                                                   ON B.MEMBER_NUMBER = U.MEMBER_NUMBER
-                         ORDER BY LEAGUEPOST_NUMBER DESC
-                     )
-                 WHERE ROWNUM <= #{page} * #{amount}
-             )
-        WHERE RNUM > (#{page}-1) * #{amount}
-        ORDER BY LEAGUEPOST_DATE DESC
-        ]]>
-    </select>
-
-    <!-- 총 게시글 수 조회  -->
-    <select id="selectTotal" resultType="int">
-        SELECT COUNT(LEAGUEPOST_NUMBER) FROM CNN_LEAGUEPOST
-    </select>
-
-    <!--  메인 페이지 조회수  -->
-    <select id="selectAllByViews" resultType="LeagueDTO">
-        SELECT F.LEAGUEPOST_NUMBER, F.LEAGUEPOST_CATEGORY, F.LEAGUEPOST_TITLE, M.MEMBER_NICKNAME
-        FROM CNN_LEAGUEPOST F
-                 JOIN CNN_MEMBER M
-                      ON F.MEMBER_NUMBER = M.MEMBER_NUMBER
-        WHERE F.LEAGUEPOST_CATEGORY = #{leaguepostCategory, jdbcType=VARCHAR}
-        ORDER BY F.LEAGUEPOST_DATE DESC
-    </select>
 </mapper>
-

@@ -51,6 +51,75 @@ radios.forEach((radio) => {
     });
 });
 
+// 이름, 닉네임 유효성 검사
+
+// function validateName() {
+//     const inputName = document.getElementById("infoEdit-userName").value;
+//
+//     // 이름의 길이가 2자 이상 10자 이하인지 확인
+//     if (inputName.length < 2 || inputName.length > 10) {
+//         document.getElementById("infoEdit-errMsgName").textContent =
+//             "2자 이상 10자 이하로 입력해야 합니다";
+//         document.getElementById("infoEdit-errMsgName").style.display = "block";
+//         return false;
+//     }
+//
+//     // 이름에 한글 또는 영어가 포함되어 있는지 확인
+//     const regex = /^[가-힣a-zA-Z]+$/;
+//     if (!regex.test(inputName)) {
+//         document.getElementById("infoEdit-errMsgName").textContent =
+//             "이름은 한글 또는 영어만 포함해야 합니다";
+//         document.getElementById("infoEdit-errMsgName").style.display = "block";
+//         return false;
+//     }
+//
+//     document.getElementById("infoEdit-errMsgName").textContent = ""; // 오류 메시지 초기화
+//     return true;
+// }
+//
+// function validateNickName() {
+//     const inputNickName = document.getElementById("infoEdit-userNickName").value;
+//
+//     // 2자 이상 10자 이하, 공백 없이 특수문자 '_'만 사용 가능
+//
+//     // 2자 이상 10자 이하인지 확인
+//     if (inputNickName.length < 2 || inputNickName.length > 10) {
+//         document.getElementById("infoEdit-errorMsgNkName").textContent =
+//             "2자 이상 10자 이하로 입력해야 합니다";
+//         document.getElementById("infoEdit-errorMsgNkName").style.display = "block";
+//         return false;
+//     }
+//
+//     // 공백 확인
+//     if (inputNickName.includes(" ")) {
+//         document.getElementById("infoEdit-errorMsgNkName").textContent =
+//             "공백이 없어야 합니다";
+//         document.getElementById("infoEdit-errorMsgNkName").style.display = "block";
+//         return false;
+//     }
+//
+//     // 특수문자 확인
+//     const Regex = /^[가-힣a-zA-Z_]+$/;
+//     if (!Regex.test(inputNickName)) {
+//         document.getElementById("infoEdit-errorMsgNkName").textContent =
+//             '공백 없이 특수문자 "_"만 사용 가능합니다';
+//         document.getElementById("infoEdit-errorMsgNkName").style.display = "block";
+//         return false;
+//     }
+//
+//     document.getElementById("infoEdit-errorMsgNkName").textContent = ""; // 오류 메시지 초기화
+//     return true;
+// }
+
+// 저장하기 버튼 시 알림 호출
+// const buttons = document.querySelectorAll(".infoEdit-btnSave");
+//
+// buttons.forEach((button) => {
+//     button.addEventListener("click", function () {
+//         alert("수정이 완료되었습니다!");
+//     });
+// });
+
 // 이름 유효성 검사
 function validateName() {
     const inputName = document.getElementById("infoEdit-userName").value;

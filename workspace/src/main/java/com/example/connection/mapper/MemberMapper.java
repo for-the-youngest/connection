@@ -35,8 +35,4 @@ public interface MemberMapper {
 
     // 회원 정보 조회
     MemberInfoDTO memberInfo(Long memberNumber);
-
-    // 이메일 확인
-    boolean existsByEmail(String memberEmail);
-
 }

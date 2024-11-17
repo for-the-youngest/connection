@@ -119,6 +119,7 @@ public class FreeboardServiceImpl implements FreeboardService {
     // 게시글 작성
     @Override
     public void insertBoard(FreeboardWriteDTO freeboardWriteDTO) {
+
         freeboardMapper.insertBoard(freeboardWriteDTO);
     }
 

@@ -267,16 +267,59 @@ main {
     height: 45px;
 }
 
-.boardList-paging {
+.fw-detail {
+    display: flex;
+    height: 150px;
+    border-radius: 9999px;
+    background-color: #e9f6ff;
+    margin-bottom: 20px;
+    width: 1200px;
+}
+
+.fwd_box {
+    width: 1050px;
+    margin: auto;
+    /*padding-right: 70px;*/
+    /*margin-left: 80px;*/
+    /*padding-top: 10px;*/
+    /*padding-bottom: 10px;*/
+}
+
+.fwd-view{
+    margin-right: 10px;
+}
+
+.fwd-type {
+    color: #5079e2;
+    margin-bottom: 25px;
+}
+
+.fwd-title {
+    margin-bottom: 30px;
+}
+
+.fwdt-text {
     font-size: 20px;
-    list-style: none;
-    padding-left: 10px;
-    padding-right: 10px;
+    font-weight: 700;
+}
+
+.fwd-detail-box {
+    display: flex;
+    justify-content: space-between;
+}
+
+.boardList-paging {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
 }
 
 .page-a {
     font-size: 20px;
     list-style: none;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 .page-num {

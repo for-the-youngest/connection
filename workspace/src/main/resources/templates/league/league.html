@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>리그 게시판</title>
+  <title>league</title>
   <link rel="stylesheet" th:href="@{/css/league.css}" />
   <link rel="stylesheet" th:href="@{/css/header.css}">
   <link rel="stylesheet" th:href="@{/css/footer.css}">
@@ -26,12 +26,28 @@
         <a href="#">
           <h2>😀 커넥션 리그 게시판</h2>
         </a>
+        <div class="main-downscroll">
+          <div class="main-downscrollButtonBox">
+            <button class="main-downscrollButton">
+              <img th:src="@{/img/downscroll.png}" alt="" />
+            </button>
+          </div>
+          <div class="main-downscrollType">
+            <ul class="main-sortOrder">
+              <li>최신 순</li>
+              <li>조회 순</li>
+            </ul>
+          </div>
+        </div>
       </div>
       <div>
         <a th:href="@{/connection/notice/notice1}">
           <div class="main-noticeDetail">
             <div class="main-noticeDetailBox1">
               <span class="main-noticeDetailBox1Text">공지</span>
+            </div>
+            <div class="main-noticeDetailBox2">
+              <span class="main-noticeDetailBox2Text">24/04/05</span>
             </div>
             <div class="main-noticeDetailBox3">
                   <span class="main-noticeDetailBox3Text"
@@ -45,6 +61,9 @@
             <div class="main-noticeDetailBox1">
               <span class="main-noticeDetailBox1Text">공지</span>
             </div>
+            <div class="main-noticeDetailBox2">
+              <span class="main-noticeDetailBox2Text">24/04/05</span>
+            </div>
             <div class="main-noticeDetailBox3">
                   <span class="main-noticeDetailBox3Text"
                   >커뮤니티 규칙 (삭제, 차단 요소)</span
@@ -57,6 +76,9 @@
             <div class="main-noticeDetailBox1">
               <span class="main-noticeDetailBox1Text">공지</span>
             </div>
+            <div class="main-noticeDetailBox2">
+              <span class="main-noticeDetailBox2Text">24/04/05</span>
+            </div>
             <div class="main-noticeDetailBox3">
                   <span class="main-noticeDetailBox3Text"
                   >커뮤니티 규칙 세부사항</span
@@ -68,6 +90,9 @@
           <div class="main-noticeDetail">
             <div class="main-noticeDetailBox1">
               <span class="main-noticeDetailBox1Text">공지</span>
+            </div>
+            <div class="main-noticeDetailBox2">
+              <span class="main-noticeDetailBox2Text">24/04/05</span>
             </div>
             <div class="main-noticeDetailBox3">
               <span class="main-noticeDetailBox3Text">풋살 경기 규칙</span>
@@ -88,24 +113,24 @@
       </div>
     </section>
 
-    <div class="free-writing">
-      <div th:each="leagueList : ${leagueList}">
-        <div class="main-freeWritingDetail">
-          <div class="main-freeWritingDetailBox">
-            <a th:href="@{/league/league}">
-              <div class="main-freeWritingDetailType">
-                <span th:text="${leagueList.leaguepostCategory}"></span>
+    <div>
+      <div th:each="leagueLists : ${leagueLists}">
+        <div class="fw-detail">
+          <div class="fwd_box">
+            <a th:href="@{/connection/league/post(leaguepostNumber=${leagueLists.leaguepostNumber})}">
+              <div class="fwd-type">
+                <span th:text="${leagueLists.leaguepostCategory}"></span>
               </div>
-              <div class="main-freeWritingDetailTitle">
-                <span class="main-freeWritingDetailText" th:text="${leagueList.leaguepostTitle}"></span>
+              <div class="fwd-title">
+                <span class="fwdt-text" th:text="${leagueLists.leaguepostTitle}"></span>
               </div>
               <div class="fwd-detail-box">
-                <div class="main-freeWritingDetailNickname">
+                <div class="fwd-nickname">
                   <span>😀</span>
-                  <span th:text="${leagueList.memberNickname}"></span>
+                  <span th:text="${leagueLists.memberNickname}"></span>
                 </div>
                 <div class="fwd-count">
-                  <span th:text="'작성일 ' + ${leagueList.leaguepostDate}"></span>
+                  <span th:text="'작성일 ' + ${leagueLists.leaguepostDate}"></span>
                 </div>
               </div>
             </a>
@@ -122,16 +147,15 @@
 
     <!-- 페이징 처리하는 페이지  -->
     <div class="boardList-paging">
-      <ul class="paging-backward">
-        <a th:href="@{/leagueList(page=${page.startPage - 1})}" class="page-a" th:if="${page.prev}">&lt;</a></ul>
+      <a th:href="@{/connection/league(page=${page.startPage - 1})}" class="page-a" th:if="${page.prev}">&lt</a>
+
       <th:block th:each="i : ${#numbers.sequence(page.startPage, page.endPage)}">
-        <a th:href="@{/leagueList(page=${i})}" class="page-a">
+        <a th:href="@{/connection/leegue(page=${i})}" class="page-a">
           <li class="page-num" th:classappend="${i == page.criteria.page ? 'active' : ''}" th:text="${i}"></li>
         </a>
       </th:block>
-      <a th:href="@{/leagueList(page=${page.endPage + 1})}" class="page-a" th:if="${page.next}">
-        <li class="page-num next">&gt</li>
-      </a>
+
+      <a th:href="@{/connection/league(page=${page.endPage + 1})}" class="page-a" th:if="${page.next}">&gt</a>
     </div>
 
   </main>

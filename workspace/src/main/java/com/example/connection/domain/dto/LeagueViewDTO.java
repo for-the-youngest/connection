@@ -16,5 +16,7 @@ public class LeagueViewDTO {
     private String leaguepostTitle;
     private String leaguepostContent;
     private LocalDateTime leaguepostDate;
+    private String leaguepostCategory;
     private Long memberNumber;
+    private String memberNickname;
 }
