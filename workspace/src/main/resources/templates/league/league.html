@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>league</title>
+  <link rel="stylesheet" th:href="@{/css/league.css}" />
+  <link rel="stylesheet" th:href="@{/css/header.css}">
+  <link rel="stylesheet" th:href="@{/css/footer.css}">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+          href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap"
+          rel="stylesheet"
+  />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script defer th:src="@{/js/league.js}"></script>
+  <script defer th:src="@{/js/header.js}"></script>
+</head>
+<body>
+<div class="__entire">
+  <header th:replace="~{/layout/header :: header}"></header>
+  <main>
+    <section class="main-notice">
+      <div class="main-noticeTitleBar">
+        <a href="#">
+          <h2>😀 커넥션 리그 게시판</h2>
+        </a>
+        <div class="main-downscroll">
+          <div class="main-downscrollButtonBox">
+            <button class="main-downscrollButton">
+              <img th:src="@{/img/downscroll.png}" alt="" />
+            </button>
+          </div>
+          <div class="main-downscrollType">
+            <ul class="main-sortOrder">
+              <li>최신 순</li>
+              <li>조회 순</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div>
+        <a th:href="@{/connection/notice/notice1}">
+          <div class="main-noticeDetail">
+            <div class="main-noticeDetailBox1">
+              <span class="main-noticeDetailBox1Text">공지</span>
+            </div>
+            <div class="main-noticeDetailBox2">
+              <span class="main-noticeDetailBox2Text">24/04/05</span>
+            </div>
+            <div class="main-noticeDetailBox3">
+                  <span class="main-noticeDetailBox3Text"
+                  >리그 참가 신청서 양식입니다</span
+                  >
+            </div>
+          </div>
+        </a>
+        <a th:href="@{/connection/notice/notice2}">
+          <div class="main-noticeDetail">
+            <div class="main-noticeDetailBox1">
+              <span class="main-noticeDetailBox1Text">공지</span>
+            </div>
+            <div class="main-noticeDetailBox2">
+              <span class="main-noticeDetailBox2Text">24/04/05</span>
+            </div>
+            <div class="main-noticeDetailBox3">
+                  <span class="main-noticeDetailBox3Text"
+                  >커뮤니티 규칙 (삭제, 차단 요소)</span
+                  >
+            </div>
+          </div>
+        </a>
+        <a th:href="@{/connection/notice/notice3}">
+          <div class="main-noticeDetail">
+            <div class="main-noticeDetailBox1">
+              <span class="main-noticeDetailBox1Text">공지</span>
+            </div>
+            <div class="main-noticeDetailBox2">
+              <span class="main-noticeDetailBox2Text">24/04/05</span>
+            </div>
+            <div class="main-noticeDetailBox3">
+                  <span class="main-noticeDetailBox3Text"
+                  >커뮤니티 규칙 세부사항</span
+                  >
+            </div>
+          </div>
+        </a>
+        <a th:href="@{/connection/notice/notice4}">
+          <div class="main-noticeDetail">
+            <div class="main-noticeDetailBox1">
+              <span class="main-noticeDetailBox1Text">공지</span>
+            </div>
+            <div class="main-noticeDetailBox2">
+              <span class="main-noticeDetailBox2Text">24/04/05</span>
+            </div>
+            <div class="main-noticeDetailBox3">
+              <span class="main-noticeDetailBox3Text">풋살 경기 규칙</span>
+            </div>
+          </div>
+        </a>
+      </div>
+    </section>
+    <section class="main-freeWriting">
+      <div class="main-writingTypeChoice">
+        <div class="main-writingTypeChoiceBox1">
+          <select class="main-writingTypeChoiceSelect" name="sports" id="">
+            <option value="soccer">축구</option>
+            <option value="futsal">풋살</option>
+            <option value="basketball">농구</option>
+          </select>
+        </div>
+      </div>
+    </section>
+
+    <div>
+      <div th:each="leagueLists : ${leagueLists}">
+        <div class="fw-detail">
+          <div class="fwd_box">
+            <a th:href="@{/connection/league/post(leaguepostNumber=${leagueLists.leaguepostNumber})}">
+              <div class="fwd-type">
+                <span th:text="${leagueLists.leaguepostCategory}"></span>
+              </div>
+              <div class="fwd-title">
+                <span class="fwdt-text" th:text="${leagueLists.leaguepostTitle}"></span>
+              </div>
+              <div class="fwd-detail-box">
+                <div class="fwd-nickname">
+                  <span>😀</span>
+                  <span th:text="${leagueLists.memberNickname}"></span>
+                </div>
+                <div class="fwd-count">
+                  <span th:text="'작성일 ' + ${leagueLists.leaguepostDate}"></span>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="to_Writing">
+      <a th:href="@{/connection/league/create}">
+        <img th:src="@{/img/to_Writing_button.png}" alt="" />
+      </a>
+    </div>
+
+    <!-- 페이징 처리하는 페이지  -->
+    <div class="boardList-paging">
+      <a th:href="@{/connection/league(page=${page.startPage - 1})}" class="page-a" th:if="${page.prev}">&lt</a>
+
+      <th:block th:each="i : ${#numbers.sequence(page.startPage, page.endPage)}">
+        <a th:href="@{/connection/leegue(page=${i})}" class="page-a">
+          <li class="page-num" th:classappend="${i == page.criteria.page ? 'active' : ''}" th:text="${i}"></li>
+        </a>
+      </th:block>
+
+      <a th:href="@{/connection/league(page=${page.endPage + 1})}" class="page-a" th:if="${page.next}">&gt</a>
+    </div>
+
+  </main>
+  <footer th:replace="~{/layout/footer :: footer}"></footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>leaguePost</title>
+  <link rel="stylesheet" th:href="@{/css/league-post.css}" />
+  <link rel="stylesheet" th:href="@{/css/header.css}">
+  <link rel="stylesheet" th:href="@{/css/footer.css}">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+          href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap"
+          rel="stylesheet"
+  />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script defer th:src="@{/js/league-post.js}"></script>
+  <script defer th:src="@{/js/header.js}"></script>
+</head>
+<body>
+<!-- 헤더 -->
+
+<header th:replace="~{/layout/header :: header}"></header>
+
+<main>
+  <input type="hidden" id="memberNumber" th:value="${session.memberNumber}">
+  <input type="hidden" id="leaguepostNumber" th:value="${leagues.leaguepostNumber}">
+  <!-- 게시글 닉네임, 제목, 내용 -->
+  <div class="leaguePost-top">
+    <div class="leaguePost-profileCtn">
+      <!-- 유저 프로필 이미지 -->
+      <div class="leaguePost-profile">
+        <p class="leaguePost-commentProfileImg">🌎</p>
+      </div>
+
+      <!-- 유저 닉네임 -->
+      <div class="leaguePost-userNicknameCtn">
+        <p class="leaguePost-userNickname" th:text="${leagues.memberNickname}"></p>
+        <p class="leaguePost-date" th:text="${leagues.leaguepostDate}"></p>
+      </div>
+
+      <!-- 게시글 메뉴 -->
+      <div class="leaguePost-menuBar" th:if="${session.memberNumber == leagues.memberNumber}">
+        <button id="leaguePost-showListButton">
+          <img
+                  class="leaguePost-menuBarImg"
+                  src="/img/boardMenuImg.png"
+                  alt=""
+          />
+        </button>
+        <!-- 히든 메뉴 -->
+        <ul id="leaguePost-list">
+          <li><a th:href="@{/connection/league/update(leaguepostNumber=${leagues.leaguepostNumber})}">수정하기</a></li>
+          <li><button class="remove" type="button" th:data-id="${leagues.leaguepostNumber}">삭제하기</button></li>
+        </ul>
+      </div>
+
+      <div class="none" th:unless="${session.memberNumber == null}"></div>
+    </div>
+
+    <!-- 게시글 제목 -->
+    <div class="leaguePost-titleCtn">
+      <p class="leaguePost-title">제목 :</p>
+      <p class="leaguePost-titleContent" th:text="${leagues.leaguepostTitle}"></p>
+    </div>
+
+    <div class="leaguePost-contentCtn">
+      <!-- 게시글 내용 -->
+      <div class="leaguePost-ctCtn">
+        <p class="leaguePost-content" th:text="${leagues.leaguepostContent}"></p>
+      </div>
+
+      <div class="leaguePost-inventoryCtn">
+        <!-- 게시글 목록 -->
+        <div class="leaguePost-inventory">
+          <a th:href="@{/connection/league}" class="leaguePost-inventoryBtn">
+            <img src="/img/leaguePost-inventory.png" alt="" />
+          </a>
+        </div>
+
+        <!-- 게시글 좋아요 -->
+        <div class="leaguePost-like">
+          <button class="leaguePost-likeBtn">
+            <svg
+                    id="like"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 512 512"
+            >
+              <path
+                      d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z"
+              />
+            </svg>
+          </button>
+          <span class="leaguePost-likeText">좋아요</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<!-- 푸터 -->
+<footer th:replace="~{/layout/footer :: footer}"></footer>
+</body>
+</html>

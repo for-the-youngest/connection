@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.connection.mapper.MemberMapper">
+
+    <!--  회원가입  -->
+    <insert id="insertMember" parameterType="MemberDTO">
+        <selectKey keyProperty="memberNumber" resultType="Long" order="BEFORE">
+            SELECT SEQ_MEMBER.NEXTVAL FROM DUAL
+        </selectKey>
+        INSERT INTO CNN_MEMBER(
+        MEMBER_NUMBER,
+        MEMBER_NAME,
+        MEMBER_NICKNAME,
+        MEMBER_EMAIL,
+        MEMBER_PASSWORD,
+        MEMBER_GENDER,
+        MEMBER_YEAR,
+        MEMBER_MONTH,
+        MEMBER_DAY
+        )
+        values(
+        #{memberNumber},
+        #{memberName},
+        #{memberNickname},
+        #{memberEmail},
+        #{memberPassword},
+        #{memberGender},
+        #{memberYear},
+        #{memberMonth},
+        #{memberDay}
+        )
+    </insert>
+    <!--  로그인  -->
+    <select id="selectMember" resultType="Long">
+        SELECT MEMBER_NUMBER
+        FROM CNN_MEMBER
+        WHERE MEMBER_EMAIL = #{memberEmail} AND MEMBER_PASSWORD = #{memberPassword}
+    </select>
+    <!--  로그인  -->
+    <select id="selectMemberInfo" resultType="MemberSessionDTO">
+        SELECT MEMBER_NUMBER, MEMBER_EMAIL
+        FROM CNN_MEMBER
+        WHERE MEMBER_EMAIL = #{memberEmail} AND MEMBER_PASSWORD = #{memberPassword}
+    </select>
+
+    <!--  탈퇴  -->
+    <delete id="deleteMemberNumber" parameterType="Long">
+        DELETE
+        FROM CNN_MEMBER
+        WHERE MEMBER_NUMBER = #{memberNumber}
+    </delete>
+
+    <!--  회원 정보 조회  -->
+    <select id="memberInfo" resultType="MemberInfoDTO" parameterType="Long">
+        SELECT MEMBER_NUMBER,
+               MEMBER_NAME,
+               MEMBER_NICKNAME
+        FROM CNN_MEMBER
+        WHERE MEMBER_NUMBER = #{memberNumber}
+    </select>
+
+    <select id="findByMemberNumber" resultType="MemberDTO" parameterType="long">
+        SELECT * FROM CNN_MEMBER WHERE MEMBER_NUMBER = #{memberNumber}
+    </select>
+
+    <update id="updateMember" parameterType="MemberUpdateDTO">
+        UPDATE CNN_MEMBER
+        SET MEMBER_NAME = #{memberName},
+            MEMBER_NICKNAME = #{memberNickname},
+            MEMBER_GENDER = #{memberGender},
+            MEMBER_YEAR = #{memberYear},
+            MEMBER_MONTH = #{memberMonth},
+            MEMBER_DAY = #{memberDay}
+        WHERE MEMBER_NUMBER = #{memberNumber}
+    </update>
+</mapper>
